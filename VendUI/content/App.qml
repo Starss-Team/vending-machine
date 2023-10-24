@@ -3,16 +3,32 @@
 
 import QtQuick 6.5
 import VendUI
+import "Vending Machine"
 
 Window {
-    width: mainScreen.width
-    height: mainScreen.height
+    width: screen01.width
+    height: screen01.height
 
     visible: true
     title: "VendUI"
 
+    StateGroup {
+        id: stateGroup
+        state: "Start"
+        states: [
+            State {
+                name: "Start"
+            },
+            State {
+                name: "Next"
+            }
+        ]
+    }
+
     Screen01 {
-        id: mainScreen
+        id: screen01
+        x: 0
+        y: 0
     }
 
 }
