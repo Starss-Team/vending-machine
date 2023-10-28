@@ -5,50 +5,50 @@ import QtQuick.Shapes 1.0
 
 Rectangle {
     id: idle_Screen
-    width: 960
-    height: 1440
-    color: "#ffffff"
+    width: 960 / 2
+    height: 1440 / 2
+    //color: "#ff0000"
+    border.width: 12
     property alias welcome_to_Starss_Vending_MachineText: welcome_to_Starss_Vending_Machine.text
 
     Rectangle {
         id: rectangle_1
-        x: -4
-        y: -17
-        width: 960
-        height: 1457
         color: "#d9d9d9"
+        anchors.fill: parent
     }
 
     Text {
         id: welcome_to_Starss_Vending_Machine
         y: 143
-        width: 911
-        height: 230
+        width: 911 / 2
+        height: 230 / 2
         color: "#000000"
         text: qsTr("Welcome to Starss\nVending Machine")
-        font.pixelSize: 96
+        anchors.top: parent.top
+        font.pixelSize: 45
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
+        anchors.topMargin: 20
         font.weight: Font.Normal
         font.italic: true
         font.family: "Recursive"
-        anchors.horizontalCenterOffset: -4
+        anchors.horizontalCenterOffset: -12
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     Item {
         id: decoration
         x: 0
-        y: 1135
-        width: 421
-        height: 305
+        y: 416
+        width: 421 / 2
+        height: 305 / 2
         ArcItem {
             id: ellipse_3
-            x: 276
-            y: 153
-            width: 145
-            height: 142
+            x: 185
+            y: 199
+            width: 145 / 2
+            height: 142 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -62,10 +62,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_8
-            x: 65
+            x: 39
             y: 235
-            width: 70
-            height: 70
+            width: 70 / 2
+            height: 70 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -79,10 +79,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_4
-            x: 159
-            y: 43
-            width: 138
-            height: 122
+            x: 151
+            y: 131
+            width: 138 / 2
+            height: 122 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -97,10 +97,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_9
-            x: 1
-            y: 197
-            width: 57
-            height: 51
+            x: 4
+            y: 217
+            width: 57 / 2
+            height: 51 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -115,10 +115,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_5
-            x: 135
-            y: 166
-            width: 130
-            height: 138
+            x: 95
+            y: 201
+            width: 130 / 2
+            height: 138 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -132,10 +132,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_7
-            x: 2
-            y: 249
-            width: 62
-            height: 56
+            x: 0
+            y: 262
+            width: 62 / 2
+            height: 56 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -149,10 +149,10 @@ Rectangle {
 
         ArcItem {
             id: ellipse_6
-            x: 46
-            y: 156
-            width: 78
-            height: 68
+            x: 37
+            y: 195
+            width: 78 / 2
+            height: 68 / 2
             strokeWidth: 0
             strokeStyle: 0
             strokeColor: "transparent"
@@ -166,8 +166,8 @@ Rectangle {
 
         Image {
             id: ellipse_2
-            x: 4
-            y: 0
+            x: 4 / 2
+            y: 0 / 2
             source: "assets/ellipse_2.png"
         }
     }
@@ -178,6 +178,7 @@ Rectangle {
         y: 579
         width: 500
         height: 426
+        visible: false
         Image {
             id: ellipse_1
             x: -4
@@ -191,6 +192,26 @@ Rectangle {
             source: "assets/please_tap_to_begin.png"
             anchors.horizontalCenterOffset: -4
             anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+
+    Button {
+        id: intro_button
+        y: 571
+        width: 508 / 2
+        height: 434 / 2
+        visible: true
+        text: qsTr("Please Tap To Begin")
+        anchors.top: welcome_to_Starss_Vending_Machine.bottom
+        anchors.horizontalCenterOffset: -13
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.topMargin: 80
+        font.pointSize: 15
+        background: Rectangle {
+            color: "#5067B8"
+            height: 434 / 2
+            width: 508 / 2
+            radius: 360
         }
     }
 }
