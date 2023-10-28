@@ -27,7 +27,19 @@ Rectangle {
             id: order_Screen
             x: 959
             y: 0
+
+            Checkout_Screen {
+                id: checkout_Screen
+                x: 959
+                y: 0
+            }
         }
+    }
+
+    Thank_You_Screen {
+        id: thank_You_Screen
+        x: 2880
+        y: 0
     }
     states: [
         State {
