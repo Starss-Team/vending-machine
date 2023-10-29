@@ -18,6 +18,11 @@ Rectangle {
         id: idle_Screen
         x: 0
         y: 0
+
+        Connections {
+            target: idle_Screen
+            onVisibleChanged: console.log("something happened")
+        }
     }
 
     Order_Screen {

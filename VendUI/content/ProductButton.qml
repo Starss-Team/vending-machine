@@ -25,6 +25,8 @@ Button {
     background: buttonBackground
     Rectangle {
         id: buttonBackground
+        x: 0
+        y: 0
         color: "#00000000"
         implicitWidth: 100
         implicitHeight: 40
@@ -36,8 +38,8 @@ Button {
     contentItem: textItem
     Text {
         id: textItem
-        x: 8
-        y: 352
+        x: 4
+        y: 70
         width: 632
         height: 108
 
@@ -47,6 +49,16 @@ Button {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         font.pointSize: 20
+    }
+
+    Image {
+        id: image
+        x: 196
+        y: 47
+        width: 234
+        height: 217
+        source: "assets/pngtree_potato_chips_png_image_9164649_1.png"
+        fillMode: Image.PreserveAspectFit
     }
 
     states: [

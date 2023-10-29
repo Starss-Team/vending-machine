@@ -213,6 +213,11 @@ Rectangle {
             width: 508 / 2
             radius: 360
         }
+
+        Connections {
+            target: intro_button
+            onClicked: console.log("test")
+        }
     }
 }
 

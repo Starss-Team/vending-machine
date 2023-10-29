@@ -6,8 +6,8 @@ import VendUI
 import "Vending Machine"
 
 Window {
-    width: 500
-    height: 500
+    width: 480
+    height: 720
 
     visible: true
     title: "VendUI"
