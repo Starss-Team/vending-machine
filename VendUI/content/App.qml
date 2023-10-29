@@ -6,8 +6,8 @@ import VendUI
 import "Vending Machine"
 
 Window {
-    width: screen01.width
-    height: screen01.height
+    width: 500
+    height: 500
 
     visible: true
     title: "VendUI"
@@ -25,11 +25,10 @@ Window {
         ]
     }
 
-    Screen01 {
-        id: screen01
+    ScreenForm {
+        id: screenForm
         x: 0
         y: 0
     }
-
 }
 
