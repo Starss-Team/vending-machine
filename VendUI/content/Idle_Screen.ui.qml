@@ -9,6 +9,7 @@ Rectangle {
     height: 1440 / 2
     //color: "#ff0000"
     border.width: 12
+    property alias intro_button: intro_button
     property alias welcome_to_Starss_Vending_MachineText: welcome_to_Starss_Vending_Machine.text
 
     Rectangle {
@@ -212,11 +213,6 @@ Rectangle {
             height: 434 / 2
             width: 508 / 2
             radius: 360
-        }
-
-        Connections {
-            target: intro_button
-            onClicked: console.log("test")
         }
     }
 }
