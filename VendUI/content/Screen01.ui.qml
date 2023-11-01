@@ -16,7 +16,6 @@ Rectangle {
     id: rectangle
 
     color: Constants.backgroundColor
-    state: "start"
 
     Thank_You_Screen {
         id: thank_You_Screen
@@ -38,15 +37,7 @@ Rectangle {
 
     Idle_Screen {
         id: idle_Screen
-        x: -7
+        x: -284
         y: 0
     }
-    states: [
-        State {
-            name: "start"
-        },
-        State {
-            name: "Select"
-        }
-    ]
 }
