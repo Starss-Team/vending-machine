@@ -21,7 +21,6 @@ Rectangle {
     property alias change_display11Text: change_display11.text
     property alias element3Text: element3.text
     property alias cash_Inserted_Text: cash_Inserted_.text
-    property alias total_1Text: total_1.text
     property alias change_display8Text: change_display8.text
     property alias elementText: element.text
     property alias change_display9Text: change_display9.text
@@ -336,8 +335,8 @@ Rectangle {
 
     Text {
         id: total_
-        x: 205
-        y: 924
+        x: 198
+        y: 954
         width: 406
         height: 82
         color: "#000000"
@@ -368,7 +367,7 @@ Rectangle {
 
     Text {
         id: change_
-        x: 205
+        x: 200
         y: 1011
         width: 406
         height: 82
@@ -383,25 +382,9 @@ Rectangle {
     }
 
     Text {
-        id: total_1
-        x: 205
-        y: 924
-        width: 406
-        height: 82
-        color: "#000000"
-        text: qsTr("Total:                           $   ")
-        font.pixelSize: 45
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.Wrap
-        font.weight: Font.Normal
-        font.family: "Corben"
-    }
-
-    Text {
         id: change_display14
         x: 619
-        y: 1004
+        y: 1030
         width: 125
         height: 82
         color: "#000000"
@@ -417,7 +400,7 @@ Rectangle {
     Text {
         id: change_display15
         x: 616
-        y: 917
+        y: 948
         width: 125
         height: 82
         color: "#000000"
@@ -442,6 +425,7 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
+        scale: 1
         styleColor: "#000000"
         style: Text.Outline
         font.weight: Font.Normal
@@ -452,7 +436,7 @@ Rectangle {
     SvgPathItem {
         id: change_line_Stroke_
         x: 205
-        y: 921
+        y: 956
         width: 535
         height: 3
         strokeWidth: 3
@@ -558,12 +542,11 @@ D{i:14;uuid:"becca8b7-b92f-55f4-8ce9-3c0d047ff967"}D{i:15;uuid:"8c57eaae-e516-5d
 D{i:16;uuid:"af60d6b3-bddc-518b-a03c-4677352c3e0c"}D{i:17;uuid:"8ebb727f-3c8d-5de8-a461-8e925d3919ec"}
 D{i:18;uuid:"8719fe42-c70c-5e39-abbf-416070235b93"}D{i:19;uuid:"693f88f7-b6dc-5008-876d-4099f5001be6"}
 D{i:20;uuid:"36e0cbee-c612-5ecf-b0bb-240dbfe2c571"}D{i:21;uuid:"5642fdac-77cd-5372-ae8e-6a16b2118e18"}
-D{i:22;uuid:"5f9812e2-37dd-5ddb-a8dc-48a9e6588aaf"}D{i:23;uuid:"4803e7f8-abc7-5f00-ba29-26988aa7bc32"}
-D{i:24;uuid:"466254d4-cd67-5dc1-b9e4-a409d7b66018"}D{i:25;uuid:"8a5b45b0-f3a1-5c86-8c72-2c3a628c88ab"}
-D{i:26;uuid:"a7c4a619-4c7f-5bcc-bdec-ce62533db562"}D{i:27;uuid:"97a08b44-c956-556c-bad2-a9e1ed2eb6ab"}
-D{i:28;uuid:"5294dbed-e9cf-5438-a8f6-8fda526b3808"}D{i:29;uuid:"b3e123a4-552d-5e0a-95fe-9680e333a88d"}
-D{i:30;uuid:"6e9ff6bf-3c8f-5bb2-accf-4a3c51fbc8c2"}D{i:31;uuid:"9b116bdf-2e69-5fc7-8d46-e6b8fbe6e050"}
-D{i:32;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}
+D{i:22;uuid:"5f9812e2-37dd-5ddb-a8dc-48a9e6588aaf"}D{i:23;uuid:"466254d4-cd67-5dc1-b9e4-a409d7b66018"}
+D{i:24;uuid:"8a5b45b0-f3a1-5c86-8c72-2c3a628c88ab"}D{i:25;uuid:"a7c4a619-4c7f-5bcc-bdec-ce62533db562"}
+D{i:26;uuid:"97a08b44-c956-556c-bad2-a9e1ed2eb6ab"}D{i:27;uuid:"5294dbed-e9cf-5438-a8f6-8fda526b3808"}
+D{i:28;uuid:"b3e123a4-552d-5e0a-95fe-9680e333a88d"}D{i:29;uuid:"6e9ff6bf-3c8f-5bb2-accf-4a3c51fbc8c2"}
+D{i:30;uuid:"9b116bdf-2e69-5fc7-8d46-e6b8fbe6e050"}D{i:31;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}
 }
 ##^##*/
 
