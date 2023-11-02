@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: checkout_Screen
+    id: receipt_Screen
     width: 960
     height: 1440
     color: "#c2d5f2"

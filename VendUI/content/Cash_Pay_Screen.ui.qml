@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: cash_Pay_Screen
+    id: checkout_Screen
     width: 960
     height: 1440
     color: "#bcadd6"
