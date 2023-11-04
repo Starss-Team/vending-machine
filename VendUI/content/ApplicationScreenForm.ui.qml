@@ -27,8 +27,8 @@ Rectangle {
 
     Order_Screen {
         id: order_Screen
-        x: 480
-        y: 0
+        x: 238
+        y: -360
     }
 
     Timeline {
