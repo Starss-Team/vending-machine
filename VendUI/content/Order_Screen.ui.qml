@@ -12,19 +12,12 @@ Rectangle {
     property alias total_Cost_Text: total_Cost_.text
 
     Cancel_Button {
-        id: cancel_Button_instance
-        x: 8
-        y: 672
-        width: 232 / 2
-        height: 74 / 2
-    }
-
-    Cancel_Button {
         id: confirmButton
-        x: 356
-        y: 672
-        width: 232 / 2
-        height: 74 / 2
+        x: 265
+        y: 644
+        width: 232
+        height: 74
+        scale: 0.66
         cancelText: "Confirm"
     }
 
@@ -74,6 +67,13 @@ Rectangle {
         wrapMode: Text.NoWrap
         font.weight: Font.Normal
         font.family: "Corben"
+
+        Cancel_Button {
+            id: cancel_Button
+            x: 45
+            y: 96
+            scale: 0.655
+        }
     }
 
     Text {
@@ -142,12 +142,12 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"eb1efc2c-6d6d-56e5-b8d9-7de19c799aa7"}D{i:1;uuid:"40a90771-0310-5a38-b549-d85ac5ce3389_instance"}
-D{i:2;uuid:"a6ffd766-bb39-59d2-8349-0812122f1146"}D{i:3;uuid:"c61843dd-843e-5dad-befd-667f66c307f7"}
-D{i:4;uuid:"4e149b1c-fac5-5ade-89c0-a77a3bd88e3b"}D{i:5;uuid:"00dac698-3909-5ed4-b38f-0fe64ac5b7cb"}
-D{i:6;uuid:"a2e4f285-35d1-5084-ab91-e34d8398993b"}D{i:7;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}
-D{i:8;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}D{i:9;uuid:"aff44feb-35d3-5572-87b2-25fea31f5c09"}
-D{i:10;uuid:"56c71497-61b1-53b7-ab07-870ebda04e86"}D{i:11;uuid:"1e9f3ec4-96c4-55fa-8dba-d1e77cb95807"}
+    D{i:0;uuid:"eb1efc2c-6d6d-56e5-b8d9-7de19c799aa7"}D{i:1;uuid:"a6ffd766-bb39-59d2-8349-0812122f1146"}
+D{i:2;uuid:"c61843dd-843e-5dad-befd-667f66c307f7"}D{i:3;uuid:"4e149b1c-fac5-5ade-89c0-a77a3bd88e3b"}
+D{i:4;uuid:"00dac698-3909-5ed4-b38f-0fe64ac5b7cb"}D{i:6;uuid:"a2e4f285-35d1-5084-ab91-e34d8398993b"}
+D{i:7;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}D{i:8;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}
+D{i:9;uuid:"aff44feb-35d3-5572-87b2-25fea31f5c09"}D{i:10;uuid:"56c71497-61b1-53b7-ab07-870ebda04e86"}
+D{i:11;uuid:"1e9f3ec4-96c4-55fa-8dba-d1e77cb95807"}
 }
 ##^##*/
 
