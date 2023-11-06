@@ -52,7 +52,7 @@ Rectangle {
     Image {
         id: rectangle_4
         x: -124
-        y: 286
+        y: 272
         source: "assets/rectangle_4.png"
     }
 
@@ -546,7 +546,7 @@ Rectangle {
         width: 497
         height: 83
         color: "#000000"
-        text: qsTr("Total:                                      $ ")
+        text: qsTr("Total:                         $ ")
         font.pixelSize: 45
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
@@ -563,7 +563,7 @@ Rectangle {
         width: 497
         height: 83
         color: "#000000"
-        text: qsTr("Change:                              $ ")
+        text: qsTr("Change:                     $ ")
         font.pixelSize: 45
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
@@ -622,8 +622,8 @@ Rectangle {
 
     Text {
         id: receipt
-        x: 418
-        y: 307
+        x: 411
+        y: 313
         width: 124
         height: 65
         color: "#000000"
@@ -643,7 +643,7 @@ Rectangle {
         width: 548
         height: 46
         color: "#000000"
-        text: qsTr("Name                                               Quantity                     Price")
+        text: qsTr("Name                       Quantity                     Price")
         font.pixelSize: 25
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop

@@ -44,8 +44,8 @@ Rectangle {
 
     Image {
         id: cylinder
-        x: 330
-        y: 345
+        x: 31
+        y: 223
         source: "assets/cylinder.png"
         rotation: 90.003
     }

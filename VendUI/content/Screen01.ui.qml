@@ -16,25 +16,28 @@ Rectangle {
     id: rectangle
 
     color: Constants.backgroundColor
-    state: "start"
+
+    Thank_You_Screen {
+        id: thank_You_Screen
+        x: 2880
+        y: 0
+    }
+
+    Order_Screen {
+        id: order_Screen
+        x: 959
+        y: 0
+    }
+
+    Checkout_Screen {
+        id: checkout_Screen
+        x: 1918
+        y: 0
+    }
 
     Idle_Screen {
         id: idle_Screen
-        x: 0
+        x: -284
         y: 0
-
-        Order_Screen {
-            id: order_Screen
-            x: 959
-            y: 0
-        }
     }
-    states: [
-        State {
-            name: "start"
-        },
-        State {
-            name: "Select"
-        }
-    ]
 }
