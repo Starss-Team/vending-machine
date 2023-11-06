@@ -3,14 +3,14 @@ import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: checkout_Screen
+    id: checkout_screen
     width: 960
     height: 1440
-    color: "#bcadd6"
+    color: "#c2d5f2"
     border.color: "#000000"
     border.width: 1
     property alias element4Text: ten_dollar.text
-    property alias change_is_dispensed_in_the_tray_below_Text: change_is_dispensed_in_the_tray_below_.text
+    property alias change_is_dispensed_in_the_tray_below_Text: direction_text.text
     property alias change_display3Text: ten_dollar_plus.text
     property alias change_displayText: one_dollar_plus.text
     property alias element3Text: twenty_dollar.text
@@ -312,7 +312,7 @@ Rectangle {
     }
 
     Text {
-        id: change_is_dispensed_in_the_tray_below_
+        id: direction_text
         x: 123
         y: 1203
         width: 714
@@ -328,7 +328,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: arrow_1_Stroke_
+        id: direction_arrow
         x: 425
         y: 1310
         width: 96
