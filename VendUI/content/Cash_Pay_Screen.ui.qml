@@ -9,35 +9,35 @@ Rectangle {
     color: "#c2d5f2"
     border.color: "#000000"
     border.width: 1
-    property alias element4Text: ten_dollar.text
-    property alias change_is_dispensed_in_the_tray_below_Text: direction_text.text
-    property alias change_display3Text: ten_dollar_plus.text
-    property alias change_displayText: one_dollar_plus.text
-    property alias element3Text: twenty_dollar.text
-    property alias cash_Inserted_Text: cash_inserted.text
-    property alias change_display8Text: twenty_dollar_qty.text
-    property alias elementText: five_dollar.text
-    property alias change_display9Text: ten_dollar_qty.text
-    property alias change_display10Text: five_dollar_qty.text
-    property alias total_Text: total_text.text
-    property alias change_display14Text: change_dollar_amt.text
-    property alias element6Text: one_dollar.text
-    property alias change_Text: change_text.text
-    property alias change_display4Text: twenty_dollar_plus.text
+    property alias element4Text: tenDollar.text
+    property alias change_is_dispensed_in_the_tray_below_Text: directionText.text
+    property alias change_display3Text: tenDollarPlus.text
+    property alias change_displayText: oneDollarPlus.text
+    property alias element3Text: twentyDollar.text
+    property alias cash_Inserted_Text: cashInserted.text
+    property alias change_display8Text: twentyDollarQty.text
+    property alias elementText: fiveDollar.text
+    property alias change_display9Text: tenDollarQty.text
+    property alias change_display10Text: fiveDollarQty.text
+    property alias total_Text: totalText.text
+    property alias change_display14Text: changeDollarAmt.text
+    property alias element6Text: oneDollar.text
+    property alias change_Text: changeText.text
+    property alias change_display4Text: twentyDollarPlus.text
     property alias checkoutText: checkout.text
-    property alias change_display12Text: one_dollar_qty.text
-    property alias change_display15Text: total_dollar_amt.text
-    property alias change_display2Text: five_dollar_plus.text
+    property alias change_display12Text: oneDollarQty.text
+    property alias change_display15Text: totalDollarAmt.text
+    property alias change_display2Text: fiveDollarPlus.text
 
     Image {
-        id: transaction_text_frame
+        id: transactionTextFrame
         x: 59
-        y: 209
+        y: 198
         source: "assets/transaction_text_frame.png"
     }
 
     Text {
-        id: one_dollar_plus
+        id: oneDollarPlus
         x: 585
         y: 410
         width: 46
@@ -53,9 +53,9 @@ Rectangle {
     }
 
     Text {
-        id: five_dollar_plus
+        id: fiveDollarPlus
         x: 585
-        y: 540
+        y: 530
         width: 46
         height: 82
         color: "#000000"
@@ -69,9 +69,9 @@ Rectangle {
     }
 
     Text {
-        id: ten_dollar_plus
+        id: tenDollarPlus
         x: 585
-        y: 670
+        y: 650
         width: 46
         height: 82
         color: "#000000"
@@ -85,9 +85,9 @@ Rectangle {
     }
 
     Text {
-        id: twenty_dollar_plus
+        id: twentyDollarPlus
         x: 585
-        y: 800
+        y: 770
         width: 46
         height: 82
         color: "#000000"
@@ -101,9 +101,9 @@ Rectangle {
     }
 
     Text {
-        id: twenty_dollar_qty
+        id: twentyDollarQty
         x: 445
-        y: 800
+        y: 770
         width: 125
         height: 82
         color: "#000000"
@@ -117,9 +117,9 @@ Rectangle {
     }
 
     Text {
-        id: ten_dollar_qty
+        id: tenDollarQty
         x: 445
-        y: 670
+        y: 650
         width: 125
         height: 82
         color: "#000000"
@@ -133,9 +133,9 @@ Rectangle {
     }
 
     Text {
-        id: five_dollar_qty
+        id: fiveDollarQty
         x: 445
-        y: 540
+        y: 530
         width: 125
         height: 82
         color: "#000000"
@@ -149,7 +149,7 @@ Rectangle {
     }
 
     Text {
-        id: one_dollar_qty
+        id: oneDollarQty
         x: 445
         y: 410
         width: 125
@@ -165,9 +165,9 @@ Rectangle {
     }
 
     Text {
-        id: five_dollar
+        id: fiveDollar
         x: 300
-        y: 540
+        y: 530
         width: 100
         height: 60
         color: "#000000"
@@ -181,9 +181,9 @@ Rectangle {
     }
 
     Text {
-        id: twenty_dollar
+        id: twentyDollar
         x: 300
-        y: 800
+        y: 770
         width: 100
         height: 83
         color: "#000000"
@@ -197,7 +197,7 @@ Rectangle {
     }
 
     Text {
-        id: total_text
+        id: totalText
         x: 198
         y: 974
         width: 406
@@ -213,7 +213,7 @@ Rectangle {
     }
 
     Text {
-        id: cash_inserted
+        id: cashInserted
         x: 188
         y: 331
         width: 428
@@ -229,7 +229,7 @@ Rectangle {
     }
 
     Text {
-        id: change_text
+        id: changeText
         x: 199
         y: 1042
         width: 406
@@ -245,7 +245,7 @@ Rectangle {
     }
 
     Text {
-        id: change_dollar_amt
+        id: changeDollarAmt
         x: 616
         y: 1042
         width: 125
@@ -261,7 +261,7 @@ Rectangle {
     }
 
     Text {
-        id: total_dollar_amt
+        id: totalDollarAmt
         x: 616
         y: 974
         width: 125
@@ -297,7 +297,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: change_line_stroke
+        id: changeLineStroke
         x: 205
         y: 950
         width: 535
@@ -312,7 +312,7 @@ Rectangle {
     }
 
     Text {
-        id: direction_text
+        id: directionText
         x: 123
         y: 1203
         width: 714
@@ -328,7 +328,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: direction_arrow
+        id: directionArrow
         x: 425
         y: 1310
         width: 96
@@ -344,9 +344,9 @@ Rectangle {
     }
 
     Text {
-        id: ten_dollar
+        id: tenDollar
         x: 300
-        y: 670
+        y: 650
         width: 100
         height: 60
         color: "#000000"
@@ -360,7 +360,7 @@ Rectangle {
     }
 
     Text {
-        id: one_dollar
+        id: oneDollar
         x: 300
         y: 410
         width: 100
@@ -368,6 +368,38 @@ Rectangle {
         color: "#000000"
         text: qsTr("$1")
         font.pixelSize: 50
+        horizontalAlignment: Text.AlignLeft
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Corben"
+    }
+
+    Text {
+        id: cashInputtedAmt
+        x: 616
+        y: 875
+        width: 125
+        height: 82
+        color: "#000000"
+        text: qsTr("0")
+        font.pixelSize: 50
+        horizontalAlignment: Text.AlignRight
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Corben"
+    }
+
+    Text {
+        id: cashInputtedText
+        x: 198
+        y: 875
+        width: 406
+        height: 82
+        color: "#000000"
+        text: qsTr("Cash Inputted:    $   ")
+        font.pixelSize: 45
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
@@ -389,7 +421,8 @@ D{i:14;uuid:"5f9812e2-37dd-5ddb-a8dc-48a9e6588aaf"}D{i:15;uuid:"466254d4-cd67-5d
 D{i:16;uuid:"8a5b45b0-f3a1-5c86-8c72-2c3a628c88ab"}D{i:17;uuid:"a7c4a619-4c7f-5bcc-bdec-ce62533db562"}
 D{i:18;uuid:"97a08b44-c956-556c-bad2-a9e1ed2eb6ab"}D{i:19;uuid:"5294dbed-e9cf-5438-a8f6-8fda526b3808"}
 D{i:20;uuid:"b3e123a4-552d-5e0a-95fe-9680e333a88d"}D{i:21;uuid:"6e9ff6bf-3c8f-5bb2-accf-4a3c51fbc8c2"}
-D{i:22;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}
+D{i:22;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}D{i:23;uuid:"413793c8-8805-5944-838e-88dd0c273038"}
+D{i:24;uuid:"36e0cbee-c612-5ecf-b0bb-240dbfe2c571"}
 }
 ##^##*/
 
