@@ -686,6 +686,26 @@ Rectangle {
         text: qsTr("$")
         font.pixelSize: 45
     }
+
+    EllipseItem {
+        id: circle
+        x: 837
+        y: 8
+        width: 115
+        height: 114
+        fillColor: "#ffff00"
+        strokeColor: "#ffff00"
+    }
+
+    Image {
+        id: feedbackIcon
+        x: 845
+        y: 15
+        width: 100
+        height: 100
+        source: "../../../../../../Downloads/feedback icon.png"
+        fillMode: Image.PreserveAspectFit
+    }
 }
 
 /*##^##
