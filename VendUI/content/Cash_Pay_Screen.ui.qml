@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: checkout_screen
+    id: checkoutScreen
     width: 960
     height: 1440
     color: "#c2d5f2"
@@ -33,10 +33,14 @@ Rectangle {
     Image {
         id: transactionTextFrame
         property int property: 0
-        x: 59
-        y: 198
+        x: 41
+        y: 196
+        width: 872
+        height: 1062
         visible: true
-        source: "Vending Machine (1)/assets/transaction_text_frame.png"
+        source: "assets/transaction_text_frame.png"
+        sourceSize.height: 110
+        sourceSize.width: 900
 
         Button {
             id: twentyDollarPlusButton
@@ -505,7 +509,7 @@ Rectangle {
 
         Connections {
             target: cancelButton
-            onClicked: checkout_screen.state = ""
+            onClicked: checkoutScreen.state = ""
         }
     }
 
@@ -527,7 +531,7 @@ Rectangle {
     }
 
     Connections {
-        target: checkout_screen
+        target: checkoutScreen
         onActiveFocusChanged: console.log("clicked")
     }
 }
