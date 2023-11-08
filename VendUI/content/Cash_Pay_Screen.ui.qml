@@ -44,10 +44,10 @@ Rectangle {
 
         Button {
             id: twentyDollarPlusButton
-            x: 534
-            y: 579
-            width: 35
-            height: 51
+            x: 542
+            y: 584
+            width: 56
+            height: 53
             opacity: 0
             visible: true
             text: qsTr("Button")
@@ -65,10 +65,10 @@ Rectangle {
         }
         Button {
             id: oneDollarPlusButton
-            x: 534
+            x: 542
             y: 219
-            width: 35
-            height: 51
+            width: 50
+            height: 58
             opacity: 0
             visible: true
             text: qsTr("Button")
@@ -85,10 +85,10 @@ Rectangle {
         }
         Button {
             id: fiveDollarPlusButton
-            x: 534
+            x: 542
             y: 341
-            width: 35
-            height: 51
+            width: 50
+            height: 60
             opacity: 0
             visible: true
             text: qsTr("Button")
@@ -105,10 +105,10 @@ Rectangle {
         }
         Button {
             id: tenDollarPlusButton
-            x: 534
+            x: 542
             y: 461
-            width: 35
-            height: 51
+            width: 50
+            height: 53
             opacity: 0
             visible: true
             text: qsTr("Button")
@@ -130,7 +130,7 @@ Rectangle {
         x: 585
         y: 410
         width: 46
-        height: 82
+        height: 60
         color: "#000000"
         text: qsTr("+")
         font.pixelSize: 50
@@ -146,7 +146,7 @@ Rectangle {
         x: 585
         y: 530
         width: 46
-        height: 82
+        height: 66
         color: "#000000"
         text: qsTr("+")
         font.pixelSize: 50
