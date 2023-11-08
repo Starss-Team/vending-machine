@@ -44,8 +44,8 @@ Rectangle {
 
     Image {
         id: please_push_the_door_below_to_grab_your_item_s_
-        x: 199
-        y: 1212
+        x: 220
+        y: 1202
         source: "assets/please_push_the_door_below_to_grab_your_item_s_.png"
     }
 
@@ -58,8 +58,8 @@ Rectangle {
 
     Item {
         id: group
-        x: 152
-        y: 163
+        x: 159
+        y: 169
         width: 642
         height: 144
         Text {
@@ -541,12 +541,12 @@ Rectangle {
 
     Text {
         id: total_
-        x: 198
-        y: 955
+        x: 199
+        y: 972
         width: 497
         height: 83
         color: "#000000"
-        text: qsTr("Total:                                      $ ")
+        text: qsTr("Total:")
         font.pixelSize: 45
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
@@ -558,12 +558,12 @@ Rectangle {
 
     Text {
         id: change_
-        x: 200
-        y: 1038
+        x: 199
+        y: 1040
         width: 497
         height: 83
         color: "#000000"
-        text: qsTr("Change:                              $ ")
+        text: qsTr("Change:")
         font.pixelSize: 45
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
@@ -575,10 +575,10 @@ Rectangle {
 
     Text {
         id: element7
-        x: 704
-        y: 956
+        x: 705
+        y: 969
         width: 35
-        height: 83
+        height: 59
         color: "#000000"
         text: qsTr("0")
         font.pixelSize: 45
@@ -591,10 +591,10 @@ Rectangle {
 
     Text {
         id: element8
-        x: 704
-        y: 1037
+        x: 705
+        y: 1048
         width: 35
-        height: 83
+        height: 59
         color: "#000000"
         text: qsTr("0")
         font.pixelSize: 45
@@ -623,7 +623,7 @@ Rectangle {
     Text {
         id: receipt
         x: 418
-        y: 307
+        y: 319
         width: 124
         height: 65
         color: "#000000"
@@ -638,13 +638,13 @@ Rectangle {
 
     Text {
         id: name_Quantity_Price
-        x: 194
-        y: 372
-        width: 548
+        x: 165
+        y: 384
+        width: 615
         height: 46
         color: "#000000"
-        text: qsTr("Name                                               Quantity                     Price")
-        font.pixelSize: 25
+        text: qsTr("Name                             Quantity          Price")
+        font.pixelSize: 27
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.NoWrap
@@ -654,7 +654,7 @@ Rectangle {
 
     SvgPathItem {
         id: waves
-        x: 341
+        x: 338
         y: 364
         width: 284
         height: 8
@@ -666,12 +666,52 @@ Rectangle {
         fillColor: "transparent"
         antialiasing: true
     }
+
+    Text {
+        id: dollarsign
+        x: 575
+        y: 966
+        width: 30
+        height: 59
+        text: qsTr("$")
+        font.pixelSize: 45
+    }
+
+    Text {
+        id: dollarsign2
+        x: 575
+        y: 1045
+        width: 30
+        height: 54
+        text: qsTr("$")
+        font.pixelSize: 45
+    }
+
+    EllipseItem {
+        id: circle
+        x: 837
+        y: 8
+        width: 115
+        height: 114
+        fillColor: "#ffff00"
+        strokeColor: "#ffff00"
+    }
+
+    Image {
+        id: feedbackIcon
+        x: 845
+        y: 15
+        width: 100
+        height: 100
+        source: "../../../../../../Downloads/feedback icon.png"
+        fillMode: Image.PreserveAspectFit
+    }
 }
 
 /*##^##
 Designer {
     D{i:0;uuid:"49cda717-1b95-53a2-9c51-0feb0d0e644f"}D{i:1;uuid:"9b59dfdd-c999-54a1-a0ba-8e7f7207d51f"}
-D{i:2;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}D{i:3;uuid:"1416a9c0-eeb9-5702-88b9-e45bdf8988d4"}
+D{i:2;locked:true;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}D{i:3;uuid:"1416a9c0-eeb9-5702-88b9-e45bdf8988d4"}
 D{i:4;uuid:"5f6de490-6cba-5c74-8ed9-690f94a70beb"}D{i:5;uuid:"8f8d54f1-4915-52ce-8c4a-02c73db63778"}
 D{i:6;uuid:"d2c7a66c-843a-50de-8eae-f931e46c2493"}D{i:7;uuid:"273486b2-be0e-5220-a34a-a5f739865526"}
 D{i:8;uuid:"2821ae6f-496d-5d3f-936d-1bee1a449f18"}D{i:9;uuid:"1cd86825-cb4c-51ff-a900-b7b518acbd7d"}
@@ -690,6 +730,7 @@ D{i:32;uuid:"eb8cd242-c4d4-527a-8e70-dc20c0658ceb"}D{i:33;uuid:"5875b8bf-4930-51
 D{i:34;uuid:"3f9052d0-5299-5810-bbf3-ee91f6c1df81"}D{i:35;uuid:"12738a33-413d-5997-956c-f900cf69964e"}
 D{i:36;uuid:"f4ac8a23-09ba-56e3-9c21-d45bf2215ca8"}D{i:37;uuid:"9eb75c62-328f-5dc4-a553-6940bd39c1ef"}
 D{i:38;uuid:"dc32a492-bf74-5763-b9a7-f6bea864036f"}D{i:39;uuid:"12b6f47d-747c-5819-8ec7-f4e5d8b16c46"}
+D{i:41}
 }
 ##^##*/
 
