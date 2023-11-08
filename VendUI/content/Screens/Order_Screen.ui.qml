@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import VendUI
 
 Rectangle {
     id: order_Screen
@@ -7,8 +8,8 @@ Rectangle {
     y: 0
     width: 960
     height: 1440
-    color: "#ffffff"
-    scale: 0.5
+    color: "#ffffdd"
+    scale: 1
     property real price: 0
     property alias element1Text: element1.text
     property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
@@ -28,56 +29,56 @@ Rectangle {
         id: coca_cola_image
         x: 407
         y: 69
-        source: "assets/image_2.png"
+        source: "../assets/image_2.png"
     }
 
     Image {
         id: pepsi_image
         x: 714
         y: 69
-        source: "assets/image_3.png"
+        source: "../assets/image_3.png"
     }
 
     Image {
         id: chips_image
         x: 714
         y: 380
-        source: "assets/image_4.png"
+        source: "../assets/image_4.png"
     }
 
     Image {
         id: water_image
         x: 407
         y: 380
-        source: "assets/image_5.png"
+        source: "../assets/image_5.png"
     }
 
     Image {
         id: sprite_image
         x: 110
         y: 380
-        source: "assets/image_6.png"
+        source: "../assets/image_6.png"
     }
 
     Image {
         id: doritos_image
         x: 110
         y: 717
-        source: "assets/image_7.png"
+        source: "../assets/image_7.png"
     }
 
     Image {
         id: oreo_image
         x: 399
         y: 717
-        source: "assets/image_8.png"
+        source: "../assets/image_8.png"
     }
 
     Image {
         id: chocolate_milk_image
         x: 714
         y: 717
-        source: "assets/image_9.png"
+        source: "../assets/image_9.png"
     }
 
     Item {
@@ -90,7 +91,7 @@ Rectangle {
             id: hershey_image
             x: 0
             y: 0
-            source: "assets/image_1.png"
+            source: "../assets/image_1.png"
         }
 
         Text {
@@ -315,7 +316,7 @@ Rectangle {
         id: can_up
         x: 795
         y: 1067
-        source: "assets/can_up.png"
+        source: "../assets/can_up.png"
     }
 
     Image {
@@ -323,7 +324,7 @@ Rectangle {
         x: 795
         y: 1067
         visible: false
-        source: "assets/cannot_up.png"
+        source: "../assets/cannot_up.png"
     }
 
     Rectangle {
@@ -339,7 +340,7 @@ Rectangle {
         id: cannot_down
         x: 796
         y: 1160
-        source: "assets/cannot_down.png"
+        source: "../assets/cannot_down.png"
         rotation: -60
     }
 
@@ -348,7 +349,7 @@ Rectangle {
         x: 796
         y: 1160
         visible: false
-        source: "assets/can_down.png"
+        source: "../assets/can_down.png"
         rotation: -60
     }
 
@@ -553,6 +554,8 @@ Rectangle {
                 element1.text = price
 
                 element.text = 0
+                stackView.pop()
+                welcomeArea.enabled = true
             }
         }
     }
@@ -563,6 +566,39 @@ Rectangle {
         y: 1355
         text: qsTr("Confirm")
         scale: 2.3
+        Connections {
+            target: confirm_button
+            onClicked: {
+                stackView.push("Cart_Page.ui.qml")
+            }
+        }
+    }
+
+    Button {
+        id: cancel_button1
+        x: 255
+        y: 232
+        text: qsTr("Cancel")
+        scale: 2.3
+        Connections {
+            target: cancel_button1
+            onClicked: {
+                    price = 0
+                    element1.text = price
+
+                    element.text = 0
+                    stackView.pop()
+                welcomeMouse.enabled = true
+            }
+        }
+    }
+
+    Text {
+        id: text1
+        x: 582
+        y: 245
+        text: qsTr("Text")
+        font.pixelSize: 70
     }
 }
 
