@@ -476,7 +476,7 @@ Rectangle {
     }
 
     Text {
-        id: cashInputtedText
+        id: cashInputtedTextDisplay
         x: 198
         y: 875
         width: 406
