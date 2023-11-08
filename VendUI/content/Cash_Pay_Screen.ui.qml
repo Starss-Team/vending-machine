@@ -59,7 +59,7 @@ Rectangle {
                 onClicked: {
                     twentyDollarQty.text++
                     cashInputtedAmt = cashInputtedAmt + 20
-                    cashInputtedAmtNum = cashInputtedAmt
+                    cashInputtedAmtNum.text = cashInputtedAmt
                 }
             }
         }
@@ -99,7 +99,7 @@ Rectangle {
                 onClicked: {
                     fiveDollarQty.text++
                     cashInputtedAmt = cashInputtedAmt + 5
-                    cashInputtedAmtNum = cashInputtedAmt
+                    cashInputtedAmtNum.text = cashInputtedAmt
                 }
             }
         }
@@ -119,7 +119,7 @@ Rectangle {
                 onClicked: {
                     tenDollarQty.text++
                     cashInputtedAmt = cashInputtedAmt + 10
-                    cashInputtedAmtNum = cashInputtedAmt
+                    cashInputtedAmtNum.text = cashInputtedAmt
                 }
             }
         }
