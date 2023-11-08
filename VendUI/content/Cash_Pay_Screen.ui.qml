@@ -48,8 +48,10 @@ Rectangle {
             y: 579
             width: 35
             height: 51
-            visible: false
+            opacity: 0
+            visible: true
             text: qsTr("Button")
+            flat: false
             checkable: true
 
             Connections {
@@ -67,7 +69,8 @@ Rectangle {
             y: 219
             width: 35
             height: 51
-            visible: false
+            opacity: 0
+            visible: true
             text: qsTr("Button")
             checkable: true
 
@@ -86,7 +89,8 @@ Rectangle {
             y: 341
             width: 35
             height: 51
-            visible: false
+            opacity: 0
+            visible: true
             text: qsTr("Button")
             checkable: true
 
@@ -105,7 +109,8 @@ Rectangle {
             y: 461
             width: 35
             height: 51
-            visible: false
+            opacity: 0
+            visible: true
             text: qsTr("Button")
             checkable: true
 
@@ -549,8 +554,7 @@ D{i:22;uuid:"5f9812e2-37dd-5ddb-a8dc-48a9e6588aaf"}D{i:23;uuid:"466254d4-cd67-5d
 D{i:24;uuid:"8a5b45b0-f3a1-5c86-8c72-2c3a628c88ab"}D{i:25;uuid:"a7c4a619-4c7f-5bcc-bdec-ce62533db562"}
 D{i:26;uuid:"97a08b44-c956-556c-bad2-a9e1ed2eb6ab"}D{i:27;uuid:"5294dbed-e9cf-5438-a8f6-8fda526b3808"}
 D{i:28;uuid:"b3e123a4-552d-5e0a-95fe-9680e333a88d"}D{i:29;uuid:"6e9ff6bf-3c8f-5bb2-accf-4a3c51fbc8c2"}
-D{i:30;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}D{i:31;uuid:"413793c8-8805-5944-838e-88dd0c273038"}
-D{i:32;uuid:"36e0cbee-c612-5ecf-b0bb-240dbfe2c571"}
+D{i:30;uuid:"a5848337-1a5e-5839-8d1d-84a44d78bf6c"}
 }
 ##^##*/
 
