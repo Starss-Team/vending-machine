@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
+import QtQuick.Controls 2.0
 
 Rectangle {
     id: feedback_Screen
@@ -48,6 +49,16 @@ Rectangle {
         height: 824
         source: "../../../../../../Downloads/frame.png"
         fillMode: Image.PreserveAspectFit
+    }
+
+    Button {
+        id: button
+        x: 52
+        y: 1300
+        width: 231
+        height: 88
+        text: qsTr("Go Back")
+        font.pointSize: 30
     }
 }
 
