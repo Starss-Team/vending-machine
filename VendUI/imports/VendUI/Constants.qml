@@ -3,9 +3,8 @@ import QtQuick 6.5
 import QtQuick.Studio.Application
 
 QtObject {
-    readonly property int width: 1920
-    readonly property int height: 1080
-
+    readonly property int width: 480
+    readonly property int height: 720
     property string relativeFontDirectory: "fonts"
 
     /* Edit this comment to add your custom font */
@@ -23,5 +22,35 @@ QtObject {
 
     property StudioApplication application: StudioApplication {
         fontPath: Qt.resolvedUrl("../../content/" + relativeFontDirectory)
+    }
+
+    // Price Declarations
+    property int hersheyPrice: 2
+    property real cokePrice: 1.50
+    property real pepsiPrice: 1.50
+    property real spritePrice:1.50
+    property int waterPrice: 1
+    property int chipPrice: 3
+    property int doritoPrice: 4
+    property int oreoPrice: 3
+    property int chocoMilkPrice: 5
+
+    // Item Quantities
+    property int hersheyQty: 0
+    property int cokeQty: 0
+    property int pepsiQty: 0
+    property int spriteQty: 0
+    property int waterQty: 0
+    property int chipQty: 0
+    property int doritoQty: 0
+    property int oreoQty: 0
+    property int chocoMilkQty: 0
+
+    // Totals
+    property int totalQty: {
+        hersheyQty + cokeQty + pepsiQty + spriteQty + waterQty + chipQty + doritoQty + oreoQty + chocoMilkQty
+    }
+    property real totalPrice: {
+        (hersheyPrice * hersheyQty) + (cokePrice * cokeQty) + (pepsiPrice * pepsiQty) + (spritePrice * spriteQty) + (waterPrice * waterQty) + (chipPrice * chipQty) + (doritoPrice * doritoQty) + (oreoPrice * oreoQty) + (chocoMilkPrice * chocoMilkQty)
     }
 }

@@ -1,16 +1,15 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import VendUI
 
 Rectangle {
     id: order_Screen
-    x: 0
-    y: 0
     width: 960
     height: 1440
     color: "#ffffdd"
     scale: 1
-    property real price: 0
+ /*   property real price: 0
     property alias element1Text: element1.text
     property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
     property alias chips_Price_3_Text: chips_Price_3_.text
@@ -24,20 +23,11 @@ Rectangle {
     property alias doritos_Price_4_Text: doritos_Price_4_.text
     property alias chocolate_Milk_Price_5_Text: chocolate_Milk_Price_5_.text
     property alias pepsi_Price_1_5_Text: pepsi_Price_1_5_.text
+*/
 
-    Image {
-        id: coca_cola_image
-        x: 407
-        y: 69
-        source: "../assets/image_2.png"
-    }
 
-    Image {
-        id: pepsi_image
-        x: 714
-        y: 69
-        source: "../assets/image_3.png"
-    }
+
+
 
     Image {
         id: chips_image
@@ -87,6 +77,8 @@ Rectangle {
         y: 69
         width: 161
         height: 318
+
+
         Image {
             id: hershey_image
             x: 0
@@ -94,13 +86,14 @@ Rectangle {
             source: "../assets/image_1.png"
         }
 
+
         Text {
             id: hershey_Bar_Price_2_
             y: 246
             width: 117
             height: 72
             color: "#000000"
-            text: qsTr("Hershey Bar\nPrice: 2$\n")
+            text: qsTr("Hershey Bar\n") + "Price: $" + Constants.hersheyPrice
             anchors.right: parent.right
             font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
@@ -112,21 +105,59 @@ Rectangle {
         }
     }
 
-    Text {
-        id: coca_Cola_Price_1_5_
-        y: 315
-        width: 102
-        height: 48
-        color: "#000000"
-        text: qsTr("Coca-Cola\nPrice: 1.5$")
-        anchors.right: parent.right
-        font.pixelSize: 20
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Inter"
-        anchors.rightMargin: 417
+    Item {
+        id: cokeEntry
+        x:407
+        y:69
+        Image {
+            id: coca_cola_image
+            source: "../assets/image_2.png"
+        }
+
+        Text {
+            id: coca_Cola_Price_1_5_
+            x: 30
+            y: 247
+            width: 102
+            height: 48
+            color: "#000000"
+            text: qsTr("Coca-Cola\n") + "Price: $" + Constants.hersheyPrice
+            anchors.right: parent.right
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.NoWrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+            anchors.rightMargin: -132
+        }
+    }
+
+    Item {
+        id: pepsiEntry
+        x: 714
+        y: 69
+        Image {
+            id: pepsi_image
+            source: "../assets/image_3.png"
+        }
+        Text {
+            id: pepsi_Price_1_5_
+            x: 31
+            y: 247
+            width: 99
+            height: 48
+            color: "#000000"
+            text: qsTr("Pepsi\n") + "Price: $" + Constants.pepsiPrice
+            anchors.right: parent.right
+            font.pixelSize: 20
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.NoWrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+            anchors.rightMargin: -130
+        }
     }
 
     Text {
@@ -135,7 +166,7 @@ Rectangle {
         width: 82
         height: 48
         color: "#000000"
-        text: qsTr("Water\nPrice: 1$")
+        text: qsTr("Water\n") + "Price: $" + Constants.waterPrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -152,7 +183,7 @@ Rectangle {
         width: 86
         height: 48
         color: "#000000"
-        text: qsTr("Doritos\nPrice: 4$")
+        text: qsTr("Doritos\n") + "Price: $" + Constants.doritoPrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -169,7 +200,7 @@ Rectangle {
         width: 86
         height: 48
         color: "#000000"
-        text: qsTr("Oreo\nPrice: 3$")
+        text: qsTr("Oreo\n") + "Price: $" + Constants.oreoPrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -186,7 +217,7 @@ Rectangle {
         width: 86
         height: 48
         color: "#000000"
-        text: qsTr("Chips\nPrice: 3$")
+        text: qsTr("Chips\n") + "Price: $" + Constants.chipPrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -203,7 +234,7 @@ Rectangle {
         width: 99
         height: 48
         color: "#000000"
-        text: qsTr("Sprite\nPrice: 1.5$")
+        text: qsTr("Sprite\n") + "Price: $" + Constants.spritePrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -220,7 +251,7 @@ Rectangle {
         width: 147
         height: 48
         color: "#000000"
-        text: qsTr("Chocolate Milk \nPrice: 5$")
+        text: qsTr("Chocolate Milk \n") + "Price: $" + Constants.chocoMilkPrice
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -231,31 +262,16 @@ Rectangle {
         anchors.rightMargin: 86
     }
 
-    Text {
-        id: pepsi_Price_1_5_
-        y: 315
-        width: 99
-        height: 48
-        color: "#000000"
-        text: qsTr("Pepsi\nPrice: 1.5$")
-        anchors.right: parent.right
-        font.pixelSize: 20
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Inter"
-        anchors.rightMargin: 112
-    }
+
 
     Text {
         id: total_Items_
-        x: 68
-        y: 1067
+        x: 61
+        y: 1074
         width: 352
         height: 77
         color: "#000000"
-        text: qsTr("Total Items:")
+        text: qsTr("Total Items: ") + Constants.totalQty
         font.pixelSize: 64
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -264,21 +280,7 @@ Rectangle {
         font.family: "Inter"
     }
 
-    Text {
-        id: element
-        x: 450
-        y: 1067
-        width: 41
-        height: 77
-        color: "#000000"
-        text: qsTr("0")
-        font.pixelSize: 64
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Inter"
-    }
+
 
     Text {
         id: total_Cost_
@@ -287,7 +289,7 @@ Rectangle {
         width: 358
         height: 119
         color: "#000000"
-        text: qsTr("Total Cost: $ ")
+        text: qsTr("Total Cost: $ ") + Constants.totalPrice
         font.pixelSize: 64
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -298,8 +300,8 @@ Rectangle {
 
     Text {
         id: element1
-        x: 446
-        y: 1140
+        x: 682
+        y: 1156
         width: 49
         height: 119
         color: "#000000"
@@ -367,10 +369,14 @@ Rectangle {
         Connections {
             target: sprint_button
             onClicked: {
-                element.text++
-                price = price + (1.5)
-                element1.text = price
+                Constants.spriteQty += 1
+
             }
+        }
+
+        Connections {
+            target: sprint_button
+            onClicked: order_Screen.visible = true
         }
     }
 
@@ -392,9 +398,7 @@ Rectangle {
         Connections {
             target: hershey_button
             onClicked: {
-                element.text++
-                price = price + 2
-                element1.text = price
+                Constants.hersheyQty += 1
             }
         }
     }
@@ -412,9 +416,7 @@ Rectangle {
         Connections {
             target: cola_button
             onClicked: {
-                element.text++
-                price = price + 1.5
-                element1.text = price
+                Constants.cokeQty += 1
             }
         }
     }
@@ -432,9 +434,7 @@ Rectangle {
         Connections {
             target: pepsi_button
             onClicked: {
-                element.text++
-                price = price + 1.5
-                element1.text = price
+                Constants.pepsiQty += 1
             }
         }
     }
@@ -452,9 +452,7 @@ Rectangle {
         Connections {
             target: water_button
             onClicked: {
-                element.text++
-                price = price + 1
-                element1.text = price
+                Constants.waterQty += 1
             }
         }
     }
@@ -472,9 +470,7 @@ Rectangle {
         Connections {
             target: chip_button
             onClicked: {
-                element.text++
-                price = price + 3
-                element1.text = price
+                Constants.chipQty += 1
             }
         }
     }
@@ -493,9 +489,7 @@ Rectangle {
         Connections {
             target: chocolate_milk_button
             onClicked: {
-                element.text++
-                price = price + 5
-                element1.text = price
+                Constants.chocoMilkQty += 1
             }
         }
     }
@@ -513,9 +507,7 @@ Rectangle {
         Connections {
             target: oreo_button
             onClicked: {
-                element.text++
-                price = price + 3
-                element1.text = price
+                Constants.oreoQty += 1
             }
         }
     }
@@ -533,9 +525,7 @@ Rectangle {
         Connections {
             target: doritos_button
             onClicked: {
-                element.text++
-                price = price + 4
-                element1.text = price
+                Constants.doritoQty += 1
             }
         }
     }
@@ -550,12 +540,17 @@ Rectangle {
         Connections {
             target: cancel_button
             onClicked: {
-                price = 0
-                element1.text = price
-
-                element.text = 0
+                Constants.hersheyQty = 0
+                Constants.cokeQty = 0
+                Constants.pepsiQty = 0
+                Constants.spriteQty = 0
+                Constants.waterQty = 0
+                Constants.chipQty = 0
+                Constants.doritoQty = 0
+                Constants.oreoQty = 0
+                Constants.chocoMilkQty = 0
                 stackView.pop()
-                welcomeArea.enabled = true
+                welcomeMouse.enabled = true
             }
         }
     }
@@ -569,43 +564,16 @@ Rectangle {
         Connections {
             target: confirm_button
             onClicked: {
-                stackView.push("Cart_Page.ui.qml")
+                stackView.push("Cart_Page.qml")
             }
         }
-    }
-
-    Button {
-        id: cancel_button1
-        x: 255
-        y: 232
-        text: qsTr("Cancel")
-        scale: 2.3
-        Connections {
-            target: cancel_button1
-            onClicked: {
-                    price = 0
-                    element1.text = price
-
-                    element.text = 0
-                    stackView.pop()
-                welcomeMouse.enabled = true
-            }
-        }
-    }
-
-    Text {
-        id: text1
-        x: 582
-        y: 245
-        text: qsTr("Text")
-        font.pixelSize: 70
     }
 }
 
 /*##^##
 Designer {
     D{i:0;uuid:"eb1efc2c-6d6d-56e5-b8d9-7de19c799aa7"}D{i:6;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}
-D{i:7;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}
+D{i:24;invisible:true}
 }
 ##^##*/
 

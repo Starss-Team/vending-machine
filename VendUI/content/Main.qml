@@ -2,38 +2,68 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 import VendUI
+import "Screens"
 
 Window {
     id: root
-    minimumWidth: 480
-    minimumHeight: 720
+    width: Constants.width
+    height: Constants.height
     maximumWidth: 960
     maximumHeight: 1440
-    title: "Stars Project"
+    visibility: Window.AutomaticVisibility
+    modality: Qt.ApplicationModal
+    flags: Qt.Window
     contentOrientation: Qt.PortraitOrientation
-
+    title: "Stars Project"
 
     StackView {
         id: stackView
-        initialItem: "Screens/Idle_Screen.ui.qml"
         anchors.fill: parent
-
+        initialItem: idle
+        focusPolicy: Qt.ClickFocus
         pushEnter: Transition {
             PropertyAnimation {
-                property: "scale"
-                from: 1
-                to: 0
-                duration: 2000
+                property: "opacity"
+                from: 0
+                to: 1
+                duration: 500
             }
         }
         pushExit: Transition {
             PropertyAnimation {
                 property: "opacity"
-                easing.type: Easing.InSine
+                from: 1
+                to: 0
+                duration: 500
+            }
+        }
+        popEnter: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                running: false
+                from: 0
+                to: 1
+                duration: 2000
+            }
+        }
+        popExit: Transition {
+            PropertyAnimation {
+                property: "opacity"
                 from: 1
                 to: 0
                 duration: 2000
             }
+        }
+
+        Idle_Screen {
+            id: idle
+            anchors.fill: parent
+        }
+
+        Order_Screen {
+            id: order
+
+            visible: false
         }
     }
 
@@ -43,12 +73,27 @@ Window {
         height: root.height
         anchors.fill: parent
         onPressed: {
-            stackView.push("Screens/Order_Screen.ui.qml")
+            stackView.push(order)
             welcomeMouse.enabled = false
         }
 
     }
 
+    StateGroup {
+        id: stateGroup
+        states: [
+            State {
+                name: "OrderScreen"
+            }
+        ]
+    }
+
 
 
 }
+
+/*##^##
+Designer {
+    D{i:0}D{i:11;invisible:true}
+}
+##^##*/
