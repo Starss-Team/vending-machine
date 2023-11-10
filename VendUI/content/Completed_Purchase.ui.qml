@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
+import QtQuick.Controls 2.0
 
 Rectangle {
     id: receipt_Screen
@@ -686,6 +687,44 @@ Rectangle {
         text: qsTr("$")
         font.pixelSize: 45
     }
+
+    EllipseItem {
+        id: circle
+        x: 837
+        y: 8
+        width: 115
+        height: 114
+        fillColor: "#ffff00"
+        strokeColor: "#ffff00"
+    }
+
+    Image {
+        id: feedbackIcon
+        x: 845
+        y: 15
+        width: 100
+        height: 100
+        source: "../../../../../../Downloads/feedback icon.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Loader { id: pageLoader }
+
+    RoundButton {
+        id: roundButton
+        x: 837
+        y: 8
+        width: 115
+        height: 114
+        opacity: 0
+        visible: true
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
+        }
+    }
+
 }
 
 /*##^##
@@ -710,7 +749,6 @@ D{i:32;uuid:"eb8cd242-c4d4-527a-8e70-dc20c0658ceb"}D{i:33;uuid:"5875b8bf-4930-51
 D{i:34;uuid:"3f9052d0-5299-5810-bbf3-ee91f6c1df81"}D{i:35;uuid:"12738a33-413d-5997-956c-f900cf69964e"}
 D{i:36;uuid:"f4ac8a23-09ba-56e3-9c21-d45bf2215ca8"}D{i:37;uuid:"9eb75c62-328f-5dc4-a553-6940bd39c1ef"}
 D{i:38;uuid:"dc32a492-bf74-5763-b9a7-f6bea864036f"}D{i:39;uuid:"12b6f47d-747c-5819-8ec7-f4e5d8b16c46"}
-D{i:41}
 }
 ##^##*/
 
