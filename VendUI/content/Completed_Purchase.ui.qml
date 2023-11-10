@@ -56,7 +56,6 @@ Rectangle {
         y: 286
         source: "assets/rectangle_4.png"
     }
-
     Item {
         id: group
         x: 159
@@ -696,19 +695,21 @@ Rectangle {
         height: 114
         fillColor: "#ffff00"
         strokeColor: "#ffff00"
+
+        Image {
+            id: feedbackicon
+            x: 6
+            y: -4
+            width: 103
+            height: 121
+            source: "assets/feedback icon.png"
+            fillMode: Image.PreserveAspectFit
+        }
     }
 
-    Image {
-        id: feedbackIcon
-        x: 845
-        y: 15
-        width: 100
-        height: 100
-        source: "../../../../../../Downloads/feedback icon.png"
-        fillMode: Image.PreserveAspectFit
+    Loader {
+        id: pageLoader
     }
-
-    Loader { id: pageLoader }
 
     RoundButton {
         id: roundButton
@@ -724,7 +725,6 @@ Rectangle {
             onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
         }
     }
-
 }
 
 /*##^##
