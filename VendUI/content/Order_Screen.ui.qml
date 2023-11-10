@@ -10,91 +10,91 @@ Rectangle {
     color: "#ffffff"
     scale: 0.5
     property real price: 0
-    property alias element1Text: element1.text
-    property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
-    property alias chips_Price_3_Text: chips_Price_3_.text
-    property alias water_Price_1_Text: water_Price_1_.text
-    property alias elementText: element.text
-    property alias sprite_Price_1_5_Text: sprite_Price_1_5_.text
+    property alias element1Text: totalCost.text
+    property alias coca_Cola_Price_1_5_Text: cocaColaPrice.text
+    property alias chips_Price_3_Text: chipsPrice.text
+    property alias water_Price_1_Text: waterPrice.text
+    property alias elementText: totalItem.text
+    property alias sprite_Price_1_5_Text: spritePrice.text
     property alias total_Items_Text: total_Items_.text
-    property alias hershey_Bar_Price_2_Text: hershey_Bar_Price_2_.text
-    property alias oreo_Price_3_Text: oreo_Price_3_.text
+    property alias hershey_Bar_Price_2_Text: hersheyBarPrice.text
+    property alias oreo_Price_3_Text: oreoPrice.text
     property alias total_Cost_Text: total_Cost_.text
-    property alias doritos_Price_4_Text: doritos_Price_4_.text
-    property alias chocolate_Milk_Price_5_Text: chocolate_Milk_Price_5_.text
-    property alias pepsi_Price_1_5_Text: pepsi_Price_1_5_.text
+    property alias doritos_Price_4_Text: doritosPrice.text
+    property alias chocolate_Milk_Price_5_Text: chocolateMilkPrice.text
+    property alias pepsi_Price_1_5_Text: pepsiPrice.text
 
     Image {
-        id: coca_cola_image
+        id: cocaColaImage
         x: 407
         y: 69
         source: "assets/image_2.png"
     }
 
     Image {
-        id: pepsi_image
+        id: pepsiImage
         x: 714
         y: 69
         source: "assets/image_3.png"
     }
 
     Image {
-        id: chips_image
+        id: chipsImage
         x: 714
         y: 380
         source: "assets/image_4.png"
     }
 
     Image {
-        id: water_image
+        id: waterImage
         x: 407
         y: 380
         source: "assets/image_5.png"
     }
 
     Image {
-        id: sprite_image
+        id: spriteImage
         x: 110
         y: 380
         source: "assets/image_6.png"
     }
 
     Image {
-        id: doritos_image
+        id: doritosImage
         x: 110
         y: 717
         source: "assets/image_7.png"
     }
 
     Image {
-        id: oreo_image
+        id: oreoImage
         x: 399
         y: 717
         source: "assets/image_8.png"
     }
 
     Image {
-        id: chocolate_milk_image
+        id: chocolateMilkImage
         x: 714
         y: 717
         source: "assets/image_9.png"
     }
 
     Item {
-        id: hershey_Entry
+        id: hersheyEntry
         x: 110
         y: 69
         width: 161
         height: 318
         Image {
-            id: hershey_image
+            id: hersheyImage
             x: 0
             y: 0
             source: "assets/image_1.png"
         }
 
         Text {
-            id: hershey_Bar_Price_2_
+            id: hersheyBarPrice
             y: 246
             width: 117
             height: 72
@@ -112,7 +112,7 @@ Rectangle {
     }
 
     Text {
-        id: coca_Cola_Price_1_5_
+        id: cocaColaPrice
         y: 315
         width: 102
         height: 48
@@ -129,7 +129,7 @@ Rectangle {
     }
 
     Text {
-        id: water_Price_1_
+        id: waterPrice
         y: 630
         width: 82
         height: 48
@@ -146,7 +146,7 @@ Rectangle {
     }
 
     Text {
-        id: doritos_Price_4_
+        id: doritosPrice
         y: 963
         width: 86
         height: 48
@@ -163,7 +163,7 @@ Rectangle {
     }
 
     Text {
-        id: oreo_Price_3_
+        id: oreoPrice
         y: 958
         width: 86
         height: 48
@@ -180,7 +180,7 @@ Rectangle {
     }
 
     Text {
-        id: chips_Price_3_
+        id: chipsPrice
         y: 630
         width: 86
         height: 48
@@ -197,7 +197,7 @@ Rectangle {
     }
 
     Text {
-        id: sprite_Price_1_5_
+        id: spritePrice
         y: 630
         width: 99
         height: 48
@@ -214,7 +214,7 @@ Rectangle {
     }
 
     Text {
-        id: chocolate_Milk_Price_5_
+        id: chocolateMilkPrice
         y: 963
         width: 147
         height: 48
@@ -231,7 +231,7 @@ Rectangle {
     }
 
     Text {
-        id: pepsi_Price_1_5_
+        id: pepsiPrice
         y: 315
         width: 99
         height: 48
@@ -264,7 +264,7 @@ Rectangle {
     }
 
     Text {
-        id: element
+        id: totalItem
         x: 450
         y: 1067
         width: 41
@@ -296,7 +296,7 @@ Rectangle {
     }
 
     Text {
-        id: element1
+        id: totalCost
         x: 446
         y: 1140
         width: 49
@@ -311,49 +311,8 @@ Rectangle {
         font.family: "Corben"
     }
 
-    Image {
-        id: can_up
-        x: 795
-        y: 1067
-        source: "assets/can_up.png"
-    }
-
-    Image {
-        id: cannot_up
-        x: 795
-        y: 1067
-        visible: false
-        source: "assets/cannot_up.png"
-    }
-
-    Rectangle {
-        id: image_11
-        x: 795
-        y: 1177
-        width: 65
-        height: 67
-        color: "transparent"
-    }
-
-    Image {
-        id: cannot_down
-        x: 796
-        y: 1160
-        source: "assets/cannot_down.png"
-        rotation: -60
-    }
-
-    Image {
-        id: can_down
-        x: 796
-        y: 1160
-        visible: false
-        source: "assets/can_down.png"
-        rotation: -60
-    }
-
     Button {
-        id: sprint_button
+        id: sprintButton
         x: 120
         y: 417
         width: 142
@@ -364,17 +323,17 @@ Rectangle {
         display: AbstractButton.IconOnly
 
         Connections {
-            target: sprint_button
+            target: sprintButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + (1.5)
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: hershey_button
+        id: hersheyButton
         x: 120
         y: 86
         width: 142
@@ -389,17 +348,17 @@ Rectangle {
         highlighted: false
         flat: false
         Connections {
-            target: hershey_button
+            target: hersheyButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 2
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: cola_button
+        id: colaButton
         x: 418
         y: 99
         width: 142
@@ -409,17 +368,17 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: cola_button
+            target: colaButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 1.5
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: pepsi_button
+        id: pepsiButton
         x: 724
         y: 99
         width: 142
@@ -429,17 +388,17 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: pepsi_button
+            target: pepsiButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 1.5
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: water_button
+        id: waterButton
         x: 418
         y: 417
         width: 142
@@ -449,17 +408,17 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: water_button
+            target: waterButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 1
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: chip_button
+        id: chipButton
         x: 714
         y: 403
         width: 142
@@ -469,17 +428,17 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: chip_button
+            target: chipButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 3
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: chocolate_milk_button
+        id: chocolateMilkButton
         x: 733
         y: 747
         width: 142
@@ -490,17 +449,17 @@ Rectangle {
         clip: false
         display: AbstractButton.IconOnly
         Connections {
-            target: chocolate_milk_button
+            target: chocolateMilkButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 5
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: oreo_button
+        id: oreoButton
         x: 399
         y: 739
         width: 142
@@ -510,17 +469,17 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: oreo_button
+            target: oreoButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 3
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: doritos_button
+        id: doritosButton
         x: 120
         y: 753
         width: 142
@@ -530,35 +489,35 @@ Rectangle {
         text: qsTr("Button")
         display: AbstractButton.IconOnly
         Connections {
-            target: doritos_button
+            target: doritosButton
             onClicked: {
-                element.text++
+                totalItem.text++
                 price = price + 4
-                element1.text = price
+                totalCost.text = price
             }
         }
     }
 
     Button {
-        id: cancel_button
+        id: cancelButton
         x: 106
         y: 1347
         text: qsTr("Cancel")
         scale: 2.3
 
         Connections {
-            target: cancel_button
+            target: cancelButton
             onClicked: {
                 price = 0
-                element1.text = price
+                totalCost.text = price
 
-                element.text = 0
+                totalItem.text = 0
             }
         }
     }
 
     Button {
-        id: confirm_button
+        id: confirmButton
         x: 767
         y: 1355
         text: qsTr("Confirm")
