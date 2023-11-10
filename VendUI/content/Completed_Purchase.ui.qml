@@ -725,6 +725,26 @@ Rectangle {
             onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
         }
     }
+
+    Loader {
+        id: startLoader
+    }
+
+    Button {
+        id: button
+        x: 0
+        y: 0
+        width: 831
+        height: 1440
+        opacity: 0
+        visible: true
+        text: qsTr("")
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: startLoader.source = "Idle_Screen.ui.qml"
+        }
+    }
 }
 
 /*##^##
