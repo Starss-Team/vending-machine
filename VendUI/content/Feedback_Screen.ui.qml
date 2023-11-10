@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
+import QtQuick.Controls 2.0
 
 Rectangle {
     id: feedback_Screen
@@ -34,7 +35,7 @@ Rectangle {
     Text {
         id: text1
         x: 24
-        y: 188
+        y: 209
         text: qsTr(
                   "We would like your feedback to improve our vending machine.")
         font.pixelSize: 33
@@ -43,11 +44,53 @@ Rectangle {
     Image {
         id: feedbackQRcode
         x: 163
-        y: 308
+        y: 332
         width: 634
         height: 824
-        source: "../../../../../../Downloads/frame.png"
+        source: "assets/feedbackQR.png"
         fillMode: Image.PreserveAspectFit
+    }
+
+    RectangleItem {
+        id: rectangle
+        x: 52
+        y: 1300
+        width: 231
+        height: 88
+        opacity: 1
+        fillColor: "#c0c0c0"
+        strokeColor: "#c0c0c0"
+        adjustBorderRadius: true
+    }
+
+    Text {
+        id: text2
+        x: 87
+        y: 1314
+        text: qsTr("Go Back")
+        font.pixelSize: 45
+        font.italic: false
+        font.bold: false
+    }
+
+    Loader {
+        id: myLoader
+    }
+
+    Button {
+        id: button
+        x: 52
+        y: 1300
+        width: 231
+        height: 88
+        opacity: 0
+        text: qsTr("")
+        font.pointSize: 30
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: myLoader.source = "Checkout_Screen.ui.qml"
+        }
     }
 }
 
