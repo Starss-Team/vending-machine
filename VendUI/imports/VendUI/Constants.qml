@@ -53,7 +53,6 @@ QtObject {
 
 
 
-
     // Totals
     property int totalQty: {
         hersheyQty + cokeQty + pepsiQty + spriteQty + waterQty + chipQty + doritoQty + oreoQty + chocoMilkQty
@@ -71,7 +70,7 @@ QtObject {
     }
 
     property real hersheyQtyTotal: {
-        hersheyQty * hersheyPrice
+            hersheyQty * hersheyPrice
     }
 
     property real cokeQtyTotal: {
