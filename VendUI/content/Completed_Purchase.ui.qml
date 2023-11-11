@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
-import QtQuick.Controls 2.0
 
 Rectangle {
     id: receipt_Screen
@@ -707,10 +706,6 @@ Rectangle {
         }
     }
 
-    Loader {
-        id: pageLoader
-    }
-
     RoundButton {
         id: roundButton
         x: 837
@@ -722,12 +717,7 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
         }
-    }
-
-    Loader {
-        id: startLoader
     }
 
     Button {
@@ -742,7 +732,6 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: startLoader.source = "Idle_Screen.ui.qml"
         }
     }
 }
