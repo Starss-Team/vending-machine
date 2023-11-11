@@ -5,12 +5,12 @@ import QtQuick.Shapes 1.0
 
 Rectangle {
     id: idle_Screen
-    width: 960 / 2
-    height: 1440 / 2
     //color: "#ff0000"
     border.width: 12
     property alias intro_button: intro_button
     property alias welcome_to_Starss_Vending_MachineText: welcome_to_Starss_Vending_Machine.text
+    width: 960
+    height: 1440
 
     Rectangle {
         id: rectangle_1
@@ -26,22 +26,22 @@ Rectangle {
         color: "#000000"
         text: qsTr("Welcome to Starss\nVending Machine")
         anchors.top: parent.top
-        font.pixelSize: 45
+        font.pixelSize: 60
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
-        anchors.topMargin: 20
+        anchors.topMargin: 206
         font.weight: Font.Normal
         font.italic: true
         font.family: "Recursive"
-        anchors.horizontalCenterOffset: -12
+        anchors.horizontalCenterOffset: -4
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     Item {
         id: decoration
-        x: 0
-        y: 416
+        x: 8
+        y: 1140
         width: 421 / 2
         height: 305 / 2
         ArcItem {
@@ -199,14 +199,14 @@ Rectangle {
     Button {
         id: intro_button
         y: 571
-        width: 508 / 2
+        width: 256
         height: 434 / 2
         visible: true
         text: qsTr("Please Tap To Begin")
         anchors.top: welcome_to_Starss_Vending_Machine.bottom
-        anchors.horizontalCenterOffset: -13
+        anchors.horizontalCenterOffset: 0
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 80
+        anchors.topMargin: 549
         font.pointSize: 15
         background: Rectangle {
             color: "#5067B8"

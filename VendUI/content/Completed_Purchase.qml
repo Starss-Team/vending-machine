@@ -1,69 +1,67 @@
+import VendUI
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import QtQuick.Studio.Components 1.0
-import QtQuick.Controls 2.0
 
 Rectangle {
-    id: receipt_Screen
+    id: receiptScreen
     width: 960
     height: 1440
     color: "#c2d5f2"
-    property alias u1Text: u1.text
-    property alias element4Text: element4.text
-    property alias tText: t.text
-    property alias element2Text: element2.text
-    property alias cText: c.text
-    property alias element1Text: element1.text
-    property alias name_Quantity_PriceText: name_Quantity_Price.text
-    property alias oText: o.text
-    property alias eText: e.text
-    property alias element3Text: element3.text
-    property alias a1Text: a1.text
-    property alias elementText: element.text
-    property alias fText: f.text
-    property alias r1Text: r1.text
-    property alias r2Text: r2.text
-    property alias u2Text: u2.text
-    property alias o1Text: o1.text
-    property alias receiptText: receipt.text
-    property alias element7Text: element7.text
-    property alias hText: h.text
-    property alias element5Text: element5.text
-    property alias element8Text: element8.text
-    property alias uText: u.text
-    property alias total_Text: total_.text
-    property alias kText: k.text
-    property alias element6Text: element6.text
-    property alias o2Text: o2.text
-    property alias aText: a.text
-    property alias h1Text: h1.text
-    property alias change_Text: change_.text
-    property alias sText: s.text
-    property alias pText: p.text
-    property alias nText: n.text
-    property alias rText: r.text
+    property alias groupLetter1: groupLetter1.text
+    property alias groupLetter2: groupLetter2.text
+    property alias groupLetter3: groupLetter3.text
+    property alias groupLetter4: groupLetter4.text
+    property alias groupLetter5: groupLetter5.text
+    property alias groupLetter6: groupLetter6.text
+    property alias groupLetter7: groupLetter7.text
+    property alias groupLetter8: groupLetter8.text
+    property alias groupLetter9: groupLetter9.text
+    property alias groupLetter10: groupLetter10.text
+    property alias groupLetter11: groupLetter11.text
+    property alias groupLetter12: groupLetter12.text
+    property alias groupLetter13: groupLetter13.text
+    property alias groupLetter14: groupLetter14.text
+    property alias groupLetter15: groupLetter15.text
+    property alias groupLetter16: groupLetter16.text
+    property alias groupLetter17: groupLetter17.text
+    property alias groupLetter18: groupLetter18.text
+    property alias groupLetter19: groupLetter19.text
+    property alias groupLetter20: groupLetter20.text
+    property alias groupLetter21: groupLetter21.text
+    property alias groupLetter22: groupLetter22.text
+    property alias groupLetter23: groupLetter23.text
+    property alias groupLetter24: groupLetter24.text
+    property alias groupLetter25: groupLetter25.text
+    property alias groupLetter26: groupLetter26.text
+    property alias groupLetter27: groupLetter27.text
+    property alias groupLetter28: groupLetter28.text
+    property alias totalText: totalText.text
+    property alias changeText: changeText.text
+    property alias totalAmt: totalAmt.text
+    property alias changeAmt: changeAmt.text
+    property alias receiptText: receiptText.text
+    property alias nameQuantPriceText: nameQuantPriceText.text
+    property alias dollarSign1: dollarSign1.text
+    property alias dollarSign2: dollarSign2.text
+
 
     Image {
-        id: please_push_the_door_below_to_grab_your_item_s_
+        id: grabItemsText
         x: 220
         y: 1202
         source: "assets/please_push_the_door_below_to_grab_your_item_s_.png"
     }
 
-    Image {
-        id: rectangle_4
-        x: -124
-        y: 286
-        source: "assets/rectangle_4.png"
-    }
     Item {
-        id: group
+        id: groupLetter
         x: 159
         y: 169
         width: 642
         height: 144
         Text {
-            id: t
+            id: groupLetter1
             x: 11
             y: 97
             width: 25
@@ -80,7 +78,7 @@ Rectangle {
         }
 
         Text {
-            id: h
+            id: groupLetter2
             x: 35
             y: 81
             width: 23
@@ -97,7 +95,7 @@ Rectangle {
         }
 
         Text {
-            id: a
+            id: groupLetter3
             x: 59
             y: 67
             width: 22
@@ -114,7 +112,7 @@ Rectangle {
         }
 
         Text {
-            id: n
+            id: groupLetter4
             x: 82
             y: 54
             width: 23
@@ -131,7 +129,7 @@ Rectangle {
         }
 
         Text {
-            id: k
+            id: groupLetter5
             x: 107
             y: 43
             width: 21
@@ -148,7 +146,7 @@ Rectangle {
         }
 
         Text {
-            id: element
+            id: groupLetter6
             x: 131
             y: 35
             width: 12
@@ -165,7 +163,7 @@ Rectangle {
         }
 
         Text {
-            id: element1
+            id: groupLetter7
             x: 146
             y: 28
             width: 22
@@ -182,7 +180,7 @@ Rectangle {
         }
 
         Text {
-            id: o
+            id: groupLetter8
             x: 171
             y: 20
             width: 23
@@ -199,7 +197,7 @@ Rectangle {
         }
 
         Text {
-            id: u
+            id: groupLetter9
             x: 197
             y: 13
             width: 22
@@ -216,7 +214,7 @@ Rectangle {
         }
 
         Text {
-            id: element2
+            id: groupLetter10
             x: 223
             y: 9
             width: 12
@@ -233,7 +231,7 @@ Rectangle {
         }
 
         Text {
-            id: f
+            id: groupLetter11
             x: 239
             y: 6
             width: 14
@@ -250,7 +248,7 @@ Rectangle {
         }
 
         Text {
-            id: o1
+            id: groupLetter12
             x: 258
             y: 3
             width: 23
@@ -267,7 +265,7 @@ Rectangle {
         }
 
         Text {
-            id: r
+            id: groupLetter13
             x: 285
             y: 1
             width: 15
@@ -284,7 +282,7 @@ Rectangle {
         }
 
         Text {
-            id: element3
+            id: groupLetter14
             x: 304
             y: 0
             width: 12
@@ -301,7 +299,7 @@ Rectangle {
         }
 
         Text {
-            id: element4
+            id: groupLetter15
             x: 321
             y: 0
             width: 22
@@ -318,7 +316,7 @@ Rectangle {
         }
 
         Text {
-            id: o2
+            id: groupLetter16
             x: 347
             y: 1
             width: 23
@@ -335,7 +333,7 @@ Rectangle {
         }
 
         Text {
-            id: u1
+            id: groupLetter17
             x: 374
             y: 4
             width: 22
@@ -352,7 +350,7 @@ Rectangle {
         }
 
         Text {
-            id: r1
+            id: groupLetter18
             x: 401
             y: 8
             width: 15
@@ -369,7 +367,7 @@ Rectangle {
         }
 
         Text {
-            id: element5
+            id: groupLetter19
             x: 420
             y: 11
             width: 12
@@ -386,7 +384,7 @@ Rectangle {
         }
 
         Text {
-            id: p
+            id: groupLetter20
             x: 435
             y: 16
             width: 23
@@ -403,7 +401,7 @@ Rectangle {
         }
 
         Text {
-            id: u2
+            id: groupLetter21
             x: 462
             y: 23
             width: 22
@@ -420,7 +418,7 @@ Rectangle {
         }
 
         Text {
-            id: r2
+            id: groupLetter22
             x: 487
             y: 31
             width: 15
@@ -437,7 +435,7 @@ Rectangle {
         }
 
         Text {
-            id: c
+            id: groupLetter23
             x: 505
             y: 39
             width: 22
@@ -454,7 +452,7 @@ Rectangle {
         }
 
         Text {
-            id: h1
+            id: groupLetter24
             x: 529
             y: 50
             width: 23
@@ -471,7 +469,7 @@ Rectangle {
         }
 
         Text {
-            id: a1
+            id: groupLetter25
             x: 553
             y: 62
             width: 22
@@ -488,7 +486,7 @@ Rectangle {
         }
 
         Text {
-            id: s
+            id: groupLetter26
             x: 576
             y: 75
             width: 20
@@ -505,7 +503,7 @@ Rectangle {
         }
 
         Text {
-            id: e
+            id: groupLetter27
             x: 597
             y: 89
             width: 22
@@ -522,7 +520,7 @@ Rectangle {
         }
 
         Text {
-            id: element6
+            id: groupLetter28
             x: 619
             y: 101
             width: 12
@@ -539,8 +537,142 @@ Rectangle {
         }
     }
 
+    RectangleItem {
+        id: rectangle1
+        x: 176
+        y: 316
+        width: 582
+        height: 808
+        strokeWidth: 5
+        strokeColor: "#060606"
+        adjustBorderRadius: true
+
+        ListView {
+            id: listView
+
+
+            readonly property var modelElements: [
+                {
+                    item: qsTr("Hershey Bar"),
+                    qty: Constants.hersheyQty,
+                    price: Constants.hersheyQtyTotal,
+                },
+                {
+                    item: qsTr("Coca-Cola"),
+                    qty: Constants.cokeQty,
+                    price: Constants.cokeQtyTotal,
+                },
+                {
+                    item: qsTr("Pepsi"),
+                    qty: Constants.pepsiQty,
+                    price: Constants.pepsiQtyTotal,
+                },
+                {
+                    item: qsTr("Sprite"),
+                    qty: Constants.spriteQty,
+                    price: Constants.spriteQtyTotal,
+                },
+                {
+                    item: qsTr("Water"),
+                    qty: Constants.waterQty,
+                    price: Constants.waterQtyTotal,
+                },
+                {
+                    item: qsTr("Chips"),
+                    qty: Constants.chipQty,
+                    price: Constants.chipQtyTotal,
+                },
+                {
+                    item: qsTr("Doritos"),
+                    qty: Constants.doritoQty,
+                    price: Constants.doritoQtyTotal,
+                },
+                {
+                    item: qsTr("Oreo"),
+                    qty: Constants.oreoQty,
+                    price: Constants.oreoQtyTotal,
+                },
+                {
+                    item: qsTr("Chocolate Milk"),
+                    qty: Constants.chocoMilkQty,
+                    price: Constants.chocoMilkQtyTotal,
+                }
+
+            ]
+            x: 0
+            y: 110
+
+            Component.onCompleted: {
+                modelElements.forEach(function(element) {
+                    model.append(element)
+                })
+            }
+
+            anchors.fill: parent
+            anchors.rightMargin: 8
+            anchors.bottomMargin: 168
+            anchors.leftMargin: 8
+            anchors.topMargin: 106
+            model: ListModel {}
+            delegate: Item {
+                width: 100
+                height: 60
+                GridLayout {
+                    id: gridLayout
+                    width: parent.width
+                    columns: 5
+                    columnSpacing: 0
+                    Rectangle{
+                        width: 0
+                        height: 0
+                    }
+                    Rectangle {
+                        id: rectangle
+                        width: 315
+                        height: 70
+                        color: "#ffffff"
+                        Text {
+                            x: 20
+                            text: qsTr(item)
+                            anchors.top: parent.top
+                            anchors.topMargin: 0
+                            font.pointSize: 15
+                            font.bold: true
+                        }
+                    }
+                    Rectangle {
+                        width: 180
+                        height: 70
+                        color: "#ffffff"
+                        Text {
+                            text: qty
+                            font.pointSize: 20
+                            font.bold: true
+                            anchors.top: parent.top
+                            anchors.topMargin: 0
+                        }
+                    }
+                    Rectangle {
+                        width: 71
+                        height: 70
+                        color: "#ffffff"
+                        Text {
+                            text: qsTr("$") + price
+                            font.pointSize: 20
+                            font.bold: true
+                            anchors.top: parent.top
+                            anchors.topMargin: 0
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
     Text {
-        id: total_
+        id: totalText
         x: 199
         y: 972
         width: 497
@@ -557,7 +689,7 @@ Rectangle {
     }
 
     Text {
-        id: change_
+        id: changeText
         x: 199
         y: 1040
         width: 497
@@ -574,13 +706,13 @@ Rectangle {
     }
 
     Text {
-        id: element7
+        id: totalAmt
         x: 705
         y: 969
         width: 35
         height: 59
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.totalPrice
         font.pixelSize: 45
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -590,13 +722,13 @@ Rectangle {
     }
 
     Text {
-        id: element8
+        id: changeAmt
         x: 705
         y: 1048
         width: 35
         height: 59
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.changeAmount
         font.pixelSize: 45
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -606,7 +738,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_1_Stroke_
+        id: lineStroke
         x: 205
         y: 955
         width: 535
@@ -621,7 +753,7 @@ Rectangle {
     }
 
     Text {
-        id: receipt
+        id: receiptText
         x: 418
         y: 319
         width: 124
@@ -636,14 +768,15 @@ Rectangle {
         font.family: "Corben"
     }
 
+
     Text {
-        id: name_Quantity_Price
-        x: 165
-        y: 384
+        id: nameQuantPriceText
+        x: 160
+        y: 378
         width: 615
         height: 46
         color: "#000000"
-        text: qsTr("Name                             Quantity          Price")
+        text: qsTr("Name                      Quantity             Price")
         font.pixelSize: 27
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -653,7 +786,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: waves
+        id: wavesText
         x: 338
         y: 364
         width: 284
@@ -668,7 +801,7 @@ Rectangle {
     }
 
     Text {
-        id: dollarsign
+        id: dollarSign1
         x: 575
         y: 966
         width: 30
@@ -678,7 +811,7 @@ Rectangle {
     }
 
     Text {
-        id: dollarsign2
+        id: dollarSign2
         x: 575
         y: 1045
         width: 30
@@ -688,7 +821,7 @@ Rectangle {
     }
 
     EllipseItem {
-        id: circle
+        id: circleShape
         x: 837
         y: 8
         width: 115
@@ -697,7 +830,7 @@ Rectangle {
         strokeColor: "#ffff00"
 
         Image {
-            id: feedbackicon
+            id: feedbackIcon
             x: 6
             y: -4
             width: 103
@@ -705,10 +838,6 @@ Rectangle {
             source: "assets/feedback icon.png"
             fillMode: Image.PreserveAspectFit
         }
-    }
-
-    Loader {
-        id: pageLoader
     }
 
     RoundButton {
@@ -722,33 +851,31 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
         }
     }
+
+    Button {
+        id: button
+        x: 0
+        y: 0
+        width: 831
+        height: 1440
+        opacity: 0
+        visible: true
+        text: qsTr("")
+
+        MouseArea {
+            anchors.fill: parent
+        }
+    }
+
 }
 
 /*##^##
 Designer {
-    D{i:0;uuid:"49cda717-1b95-53a2-9c51-0feb0d0e644f"}D{i:1;uuid:"9b59dfdd-c999-54a1-a0ba-8e7f7207d51f"}
-D{i:2;locked:true;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}D{i:3;uuid:"1416a9c0-eeb9-5702-88b9-e45bdf8988d4"}
-D{i:4;uuid:"5f6de490-6cba-5c74-8ed9-690f94a70beb"}D{i:5;uuid:"8f8d54f1-4915-52ce-8c4a-02c73db63778"}
-D{i:6;uuid:"d2c7a66c-843a-50de-8eae-f931e46c2493"}D{i:7;uuid:"273486b2-be0e-5220-a34a-a5f739865526"}
-D{i:8;uuid:"2821ae6f-496d-5d3f-936d-1bee1a449f18"}D{i:9;uuid:"1cd86825-cb4c-51ff-a900-b7b518acbd7d"}
-D{i:10;uuid:"38b5b1d4-2786-5c31-b30d-ed2205891b54"}D{i:11;uuid:"c04e54db-27fc-53e2-85a7-7ea467dbdd01"}
-D{i:12;uuid:"f06809bc-42ad-5833-8e48-6fa276ca3974"}D{i:13;uuid:"06e88a72-c13d-5875-89c7-8d26dbe3a265"}
-D{i:14;uuid:"a3a4e6ad-da8e-5918-87f2-58538d0f0869"}D{i:15;uuid:"3432e4df-9047-508f-abcd-e56d350fd98f"}
-D{i:16;uuid:"26355a2e-95b8-5b94-9c4c-072f5eeba25a"}D{i:17;uuid:"032f87e6-53f3-54b9-bfee-fdca533b08dc"}
-D{i:18;uuid:"644e86d7-789d-54c2-83bb-b06e32069127"}D{i:19;uuid:"29324caf-ded1-5d84-94c9-fedc56553194"}
-D{i:20;uuid:"50a930e2-4012-56e9-b29a-4de10529d26b"}D{i:21;uuid:"9e6b04e1-f7d6-59c2-af05-83a927b7ea9d"}
-D{i:22;uuid:"29a60a73-5559-5208-b390-8ab799a79e1d"}D{i:23;uuid:"20183b1a-1024-5ac0-acd8-df1b01bc487d"}
-D{i:24;uuid:"badef522-69bd-51b4-afbd-b07c519fb692"}D{i:25;uuid:"8be32e4f-4509-528e-9afa-24d7f1cbd680"}
-D{i:26;uuid:"f47625bf-2860-53d0-9618-e7287d4f132b"}D{i:27;uuid:"d91fb862-03f4-516e-ba39-ab06267c606b"}
-D{i:28;uuid:"bf2175df-9b7d-53d9-a8a8-174d3c5e8a1e"}D{i:29;uuid:"4c796bf5-4a08-51a4-88d7-58bb33e9f9a0"}
-D{i:30;uuid:"be871a52-299d-5459-a70f-416c111ae130"}D{i:31;uuid:"0262c835-1f49-5260-ab32-3611f7dd80f8"}
-D{i:32;uuid:"eb8cd242-c4d4-527a-8e70-dc20c0658ceb"}D{i:33;uuid:"5875b8bf-4930-5128-a66a-6813fea595f7"}
-D{i:34;uuid:"3f9052d0-5299-5810-bbf3-ee91f6c1df81"}D{i:35;uuid:"12738a33-413d-5997-956c-f900cf69964e"}
-D{i:36;uuid:"f4ac8a23-09ba-56e3-9c21-d45bf2215ca8"}D{i:37;uuid:"9eb75c62-328f-5dc4-a553-6940bd39c1ef"}
-D{i:38;uuid:"dc32a492-bf74-5763-b9a7-f6bea864036f"}D{i:39;uuid:"12b6f47d-747c-5819-8ec7-f4e5d8b16c46"}
+    D{i:0;uuid:"49cda717-1b95-53a2-9c51-0feb0d0e644f"}D{i:1;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}
+D{i:43;uuid:"5875b8bf-4930-5128-a66a-6813fea595f7"}D{i:44;uuid:"3f9052d0-5299-5810-bbf3-ee91f6c1df81"}
+D{i:45;uuid:"12738a33-413d-5997-956c-f900cf69964e"}D{i:48;uuid:"dc32a492-bf74-5763-b9a7-f6bea864036f"}
 }
 ##^##*/
 
