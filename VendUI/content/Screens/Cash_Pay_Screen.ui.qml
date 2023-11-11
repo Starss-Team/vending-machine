@@ -500,10 +500,12 @@ Rectangle {
         Connections {
             target: cancelButton
             onClicked: {
-                price = 0
-                element1.text = price
+//                price = 0
+//                element1.text = price
 
-                element.text = 0
+//                element.text = 0
+
+                  stackView.pop()
             }
         }
 
