@@ -10,6 +10,8 @@ Window {
     height: Constants.height
     maximumWidth: 960
     maximumHeight: 1440
+    minimumWidth: 480
+    minimumHeight: 720
     visibility: Window.AutomaticVisibility
     modality: Qt.ApplicationModal
     flags: Qt.Window
@@ -26,7 +28,7 @@ Window {
                 property: "opacity"
                 from: 0
                 to: 1
-                duration: 500
+                duration: 1000
             }
         }
         pushExit: Transition {
@@ -34,7 +36,7 @@ Window {
                 property: "opacity"
                 from: 1
                 to: 0
-                duration: 500
+                duration: 1000
             }
         }
         popEnter: Transition {
@@ -43,7 +45,7 @@ Window {
                 running: false
                 from: 0
                 to: 1
-                duration: 2000
+                duration: 1000
             }
         }
         popExit: Transition {
@@ -51,7 +53,7 @@ Window {
                 property: "opacity"
                 from: 1
                 to: 0
-                duration: 2000
+                duration: 1000
             }
         }
 

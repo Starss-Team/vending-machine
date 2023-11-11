@@ -8,7 +8,8 @@ Rectangle {
     width: 960
     height: 1440
     color: "#ffffdd"
-    scale: 1
+    transformOrigin: Item.TopLeft
+    scale: .5
  /*   property real price: 0
     property alias element1Text: element1.text
     property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text

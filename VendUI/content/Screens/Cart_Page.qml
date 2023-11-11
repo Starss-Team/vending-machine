@@ -8,12 +8,14 @@ Rectangle {
     width: 960
     height: 1440
     color: "#c2d5f2"
-    scale: 1
+    transformOrigin: Item.TopLeft
+    scale: .5
 
     ListView {
         id: listView
-
-
+        clip: true
+        
+        property int rowHeight: 115
         readonly property var modelElements: [
             {
                 item: qsTr("Hershey Bar"),
@@ -88,106 +90,164 @@ Rectangle {
         }
 
         anchors.fill: parent
-        anchors.rightMargin: 10
-        anchors.bottomMargin: 120
-        anchors.leftMargin: 0
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 220
+        anchors.leftMargin: 30
         anchors.topMargin: 120
         model: ListModel {}
-        delegate: Item {
-            width: 100
-            height: 120
-            GridLayout {
-                id: gridLayout
-                width: parent.width
-                columns: 5
-                columnSpacing: 0
-                Rectangle{
-                    width: 150
-                    height: 115
-                    Image {
-                        anchors.topMargin: -65
-                        anchors.top: parent.top
-                        verticalAlignment: Image.AlignBottom
-                        scale: 0.4
-                        source: imgURL
-                        fillMode: Image.PreserveAspectFit
-                    }
-                }
-                Rectangle {
-                    id: rectangle
-                    width: 400
-                    height: 115
-                    color: "#b7cdee"
-                    Text {
-                        x: 20
-                        text: qsTr(item)
-                        anchors.top: parent.top
-                        anchors.topMargin: 25
-                        font.pointSize: 36
-                        font.bold: true
-                    }
-                }
-                Rectangle {
-                    width: 100
-                    height: 115
-                    color: "#b7cdee"
-                    Text {
-                        text: qty + " @"
-                        font.pointSize: 36
-                        font.bold: true
-                        anchors.top: parent.top
-                        anchors.topMargin: 25
-                    }
-                }
-                Rectangle {
-                    width: 160
-                    height: 115
-                    color: "#b7cdee"
-                    Text {
-                        text: qsTr("$") + price
-                        font.pointSize: 36
-                        font.bold: true
-                        anchors.top: parent.top
-                        anchors.topMargin: 25
-                    }
-                }
-                Rectangle {
-                    width: 100
-                    height: 115
-                    color: "#b7cdee"
-                    Text {
-                        text: qsTr("$") + itemTotal
-                        font.pointSize: 36
-                        font.bold: true
-                        anchors.top: parent.top
-                        anchors.topMargin: 25
+        delegate: Component {
+            Item {
+                implicitWidth: 100
+                implicitHeight: 120
 
+                GridLayout {
+                    id: gridLayout
+                    implicitWidth: parent.width
+                    columns: 6
+                    columnSpacing: 0
+                    Rectangle{
+                        implicitWidth: 100
+                        implicitHeight: listView.rowHeight
+                        Image {
+                            anchors.topMargin: -65
+                            anchors.top: parent.top
+                            anchors.left: parent.left
+                            anchors.leftMargin: -30
+                            verticalAlignment: Image.AlignBottom
+                            horizontalAlignment: Image.AlignHCenter
+                            scale: 0.4
+                            source: imgURL
+                            fillMode: Image.PreserveAspectFit
+                        }
+                    }
+                    Rectangle {
+                        id: rectangle
+                        implicitWidth: 400
+                        implicitHeight: listView.rowHeight
+                        color: "#b7cdee"
+                        Text {
+                            x: 20
+                            text: qsTr(item)
+                            anchors.top: parent.top
+                            anchors.topMargin: 25
+                            font.pointSize: 36
+                            font.bold: true
+                        }
+                    }
+                    Rectangle {
+                        implicitWidth: 100
+                        implicitHeight: listView.rowHeight
+                        color: "#b7cdee"
+                        Text {
+                            text: qty + " @"
+                            font.pointSize: 36
+                            font.bold: true
+                            anchors.top: parent.top
+                            anchors.topMargin: 25
+                        }
+                    }
+                    Rectangle {
+                        implicitWidth: 160
+                        implicitHeight: listView.rowHeight
+                        color: "#b7cdee"
+                        Text {
+                            text: qsTr("$") + price
+                            font.pointSize: 36
+                            font.bold: true
+                            anchors.top: parent.top
+                            anchors.topMargin: 25
+                        }
+                    }
+                    Rectangle {
+                        id: itemTotalRect
+                        implicitWidth: 100
+                        implicitHeight: listView.rowHeight
+                        color: "#b7cdee"
+                        radius: 30
+                        Rectangle {
+                            implicitWidth: itemTotalRect.radius
+                            implicitHeight: parent.height
+                            color: "#b7cdee"
+                        }
+                        Text {
+                            text: qsTr("$") + itemTotal
+                            font.pointSize: 36
+                            font.bold: true
+                            anchors.top: parent.top
+                            anchors.topMargin: 25
+
+                        }
+                    }
+                    Rectangle {
+                        id: editButton
+                        implicitWidth: 60
+                        implicitHeight: listView.rowHeight
+                        color: "#c2d5f2"
+                        IconImage{
+                            anchors.fill: parent
+                            source: "../../asset_imports/pencil-box.svg"
+                            color: "crimson"
+                            scale: 1.8
+                        }
+                        MouseArea{
+                            anchors.fill: parent
+                            onClicked: {
+                                console.info(model.index)
+                            }
+                        }
                     }
                 }
             }
+        }
+    }
+
+    Rectangle {
+        id: bottomBorder
+        implicitWidth: cart_Page.width
+        implicitHeight: 226
+        anchors.bottom: cart_Page.bottom
+        gradient: Gradient {
+            GradientStop {
+                position: 0
+                color: "#d5e3f0"
+            }
+
+            GradientStop {
+                position: 0.30137
+                color: "#c2d5f2"
+            }
+            orientation: Gradient.Vertical
+        }
+    }
+
+    Rectangle {
+        id: topBorder
+        width: cart_Page.width
+        height: 120
+        radius: 1
+        border.color: "#768aa9"
+        border.width: 0
+        anchors.top: cart_Page.top
+        gradient: Gradient {
+            GradientStop {
+                position: 0.69863
+                color: "#c2d5f2"
+            }
+
+            GradientStop {
+                position: 1
+                color: "#d5e3f0"
+            }
+
+            orientation: Gradient.Vertical
 
         }
-
     }
-
-    Text {
-        id: cartTitle
-        text: qsTr("Shopping Cart")
-        anchors.left: listView.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        font.pixelSize: 60
-        horizontalAlignment: Text.AlignHCenter
-        anchors.topMargin: 30
-        anchors.leftMargin: 0
-    }
-
 
     Item {
         id: controls
         anchors.top: listView.bottom
-        anchors.topMargin: -120
+        anchors.topMargin: -6
         anchors.bottom: cart_Page.bottom
         anchors.left: cart_Page.left
         anchors.right: cart_Page.right
@@ -196,10 +256,9 @@ Rectangle {
             text: qsTr("Total: $") + Constants.totalPrice
             font.pixelSize: 60
             anchors.top: parent.top
-            anchors.topMargin: 20
+            anchors.topMargin: 0
             anchors.right: parent.right
-            anchors.left: parent.left
-            anchors.leftMargin: 620
+            anchors.rightMargin: 115
             font.bold: true
 
         }
@@ -220,7 +279,11 @@ Rectangle {
         }
         Button {
             id: backButtonCart
-            text: qsTr("Confirm")
+            text: qsTr("Back")
+            anchors.top: parent.top
+            anchors.topMargin: 125
+            anchors.right: parent.right
+            anchors.rightMargin: 665
             anchors.left: parent.left
             anchors.leftMargin: 200
             anchors.bottom: parent.bottom
@@ -234,8 +297,18 @@ Rectangle {
             }
         }
     }
-
-
+    Text {
+        id: cartTitle
+        text: qsTr("Shopping Cart")
+        anchors.left: listView.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        font.pixelSize: 60
+        horizontalAlignment: Text.AlignHCenter
+        anchors.topMargin: 15
+        anchors.leftMargin: 0
+    }
 }
 
 /*##^##
