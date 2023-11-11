@@ -49,14 +49,15 @@ Rectangle {
         y: 1202
         source: "assets/please_push_the_door_below_to_grab_your_item_s_.png"
     }
-
+    
     Image {
         id: rectangle_4
         x: -124
         y: 286
         source: "assets/rectangle_4.png"
+        
+        
     }
-
     Item {
         id: group
         x: 159
@@ -724,7 +725,7 @@ Rectangle {
             onClicked: pageLoader.source = "Feedback_Screen.ui.qml"
         }
     }
-
+    
 }
 
 /*##^##

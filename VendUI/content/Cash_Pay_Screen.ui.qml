@@ -1,3 +1,4 @@
+import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
@@ -57,9 +58,9 @@ Rectangle {
             Connections {
                 target: twentyDollarPlusButton
                 onClicked: {
+                    Constants.twentyDollarQty++
                     twentyDollarQty.text++
-                    cashInputtedAmt = cashInputtedAmt + 20
-                    cashInputtedAmtNum.text = cashInputtedAmt
+                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -77,9 +78,9 @@ Rectangle {
             Connections {
                 target: oneDollarPlusButton
                 onClicked: {
+                    Constants.oneDollarQty++
                     oneDollarQty.text++
-                    cashInputtedAmt++
-                    cashInputtedAmtNum.text = cashInputtedAmt
+                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -97,9 +98,9 @@ Rectangle {
             Connections {
                 target: fiveDollarPlusButton
                 onClicked: {
+                    Constants.fiveDollarQty++
                     fiveDollarQty.text++
-                    cashInputtedAmt = cashInputtedAmt + 5
-                    cashInputtedAmtNum.text = cashInputtedAmt
+                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -117,9 +118,9 @@ Rectangle {
             Connections {
                 target: tenDollarPlusButton
                 onClicked: {
+                    Constants.tenDollarQty++
                     tenDollarQty.text++
-                    cashInputtedAmt = cashInputtedAmt + 10
-                    cashInputtedAmtNum.text = cashInputtedAmt
+                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -340,7 +341,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.changeAmount
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
@@ -356,7 +357,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.totalPrice
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
