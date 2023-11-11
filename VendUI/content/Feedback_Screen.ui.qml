@@ -3,13 +3,13 @@ import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: feedback_Screen
+    id: feedbackScreen
     width: 960
     height: 1440
     color: "#c2d5f2"
 
     Text {
-        id: yourFeedback
+        id: yourFeedbackText
         x: 255
         y: 26
         text: qsTr("Your Feedback")
@@ -17,7 +17,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_1_Stroke_
+        id: lineStroke
         x: 212
         y: 144
         width: 536
@@ -32,7 +32,7 @@ Rectangle {
     }
 
     Text {
-        id: text1
+        id: moreFeedbackText
         x: 24
         y: 209
         text: qsTr(
@@ -50,36 +50,14 @@ Rectangle {
         fillMode: Image.PreserveAspectFit
     }
 
-    RectangleItem {
-        id: rectangle
+    Button {
+        id: goBackButton
         x: 52
         y: 1300
         width: 231
         height: 88
         opacity: 1
-        fillColor: "#c0c0c0"
-        strokeColor: "#c0c0c0"
-        adjustBorderRadius: true
-    }
-
-    Text {
-        id: text2
-        x: 87
-        y: 1314
         text: qsTr("Go Back")
-        font.pixelSize: 45
-        font.italic: false
-        font.bold: false
-    }
-
-    Button {
-        id: button
-        x: 52
-        y: 1300
-        width: 231
-        height: 88
-        opacity: 0
-        text: qsTr("")
         font.pointSize: 30
 
         MouseArea {
