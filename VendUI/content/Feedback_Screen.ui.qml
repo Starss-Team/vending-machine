@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
-import QtQuick.Controls 2.0
 
 Rectangle {
     id: feedback_Screen
@@ -73,10 +72,6 @@ Rectangle {
         font.bold: false
     }
 
-    Loader {
-        id: myLoader
-    }
-
     Button {
         id: button
         x: 52
@@ -89,7 +84,6 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: myLoader.source = "Checkout_Screen.ui.qml"
         }
     }
 }
