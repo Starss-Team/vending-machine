@@ -59,8 +59,6 @@ Rectangle {
                 target: twentyDollarPlusButton
                 onClicked: {
                     Constants.twentyDollarQty++
-                    twentyDollarQty.text++
-                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -79,8 +77,6 @@ Rectangle {
                 target: oneDollarPlusButton
                 onClicked: {
                     Constants.oneDollarQty++
-                    oneDollarQty.text++
-                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -99,8 +95,6 @@ Rectangle {
                 target: fiveDollarPlusButton
                 onClicked: {
                     Constants.fiveDollarQty++
-                    fiveDollarQty.text++
-                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -119,8 +113,6 @@ Rectangle {
                 target: tenDollarPlusButton
                 onClicked: {
                     Constants.tenDollarQty++
-                    tenDollarQty.text++
-                    cashInputtedAmtNum.text = Constants.cashInputtedAmt
                 }
             }
         }
@@ -197,7 +189,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.twentyDollarQty
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
@@ -213,7 +205,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.tenDollarQty
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
@@ -229,7 +221,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.fiveDollarQty
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
@@ -245,7 +237,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.oneDollarQty
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
@@ -472,7 +464,7 @@ Rectangle {
         width: 125
         height: 82
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.cashInputtedAmt
         font.pixelSize: 50
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignTop
