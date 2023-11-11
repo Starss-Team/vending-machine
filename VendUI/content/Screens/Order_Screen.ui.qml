@@ -122,7 +122,7 @@ Rectangle {
             width: 102
             height: 48
             color: "#000000"
-            text: qsTr("Coca-Cola\n") + "Price: $" + Constants.hersheyPrice
+            text: qsTr("Coca-Cola\n") + "Price: $" + Constants.cokePrice
             anchors.right: parent.right
             font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
