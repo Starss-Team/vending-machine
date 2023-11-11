@@ -1,9 +1,10 @@
+import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
-    id: receipt_Screen
+    id: receiptScreen
     width: 960
     height: 1440
     color: "#c2d5f2"
@@ -43,26 +44,26 @@ Rectangle {
     property alias rText: r.text
 
     Image {
-        id: please_push_the_door_below_to_grab_your_item_s_
+        id: grabItemsText
         x: 220
         y: 1202
         source: "assets/please_push_the_door_below_to_grab_your_item_s_.png"
     }
 
     Image {
-        id: rectangle_4
+        id: receiptRetangle
         x: -124
         y: 286
         source: "assets/rectangle_4.png"
     }
     Item {
-        id: group
+        id: groupLetter
         x: 159
         y: 169
         width: 642
         height: 144
         Text {
-            id: t
+            id: groupLetter1
             x: 11
             y: 97
             width: 25
@@ -79,7 +80,7 @@ Rectangle {
         }
 
         Text {
-            id: h
+            id: groupLetter2
             x: 35
             y: 81
             width: 23
@@ -96,7 +97,7 @@ Rectangle {
         }
 
         Text {
-            id: a
+            id: groupLetter3
             x: 59
             y: 67
             width: 22
@@ -113,7 +114,7 @@ Rectangle {
         }
 
         Text {
-            id: n
+            id: groupLetter4
             x: 82
             y: 54
             width: 23
@@ -130,7 +131,7 @@ Rectangle {
         }
 
         Text {
-            id: k
+            id: groupLetter5
             x: 107
             y: 43
             width: 21
@@ -147,7 +148,7 @@ Rectangle {
         }
 
         Text {
-            id: element
+            id: groupLetter6
             x: 131
             y: 35
             width: 12
@@ -164,7 +165,7 @@ Rectangle {
         }
 
         Text {
-            id: element1
+            id: groupLetter7
             x: 146
             y: 28
             width: 22
@@ -181,7 +182,7 @@ Rectangle {
         }
 
         Text {
-            id: o
+            id: groupLetter8
             x: 171
             y: 20
             width: 23
@@ -198,7 +199,7 @@ Rectangle {
         }
 
         Text {
-            id: u
+            id: groupLetter9
             x: 197
             y: 13
             width: 22
@@ -215,7 +216,7 @@ Rectangle {
         }
 
         Text {
-            id: element2
+            id: groupLetter10
             x: 223
             y: 9
             width: 12
@@ -232,7 +233,7 @@ Rectangle {
         }
 
         Text {
-            id: f
+            id: groupLetter11
             x: 239
             y: 6
             width: 14
@@ -249,7 +250,7 @@ Rectangle {
         }
 
         Text {
-            id: o1
+            id: groupLetter12
             x: 258
             y: 3
             width: 23
@@ -266,7 +267,7 @@ Rectangle {
         }
 
         Text {
-            id: r
+            id: groupLetter13
             x: 285
             y: 1
             width: 15
@@ -283,7 +284,7 @@ Rectangle {
         }
 
         Text {
-            id: element3
+            id: groupLetter14
             x: 304
             y: 0
             width: 12
@@ -300,7 +301,7 @@ Rectangle {
         }
 
         Text {
-            id: element4
+            id: groupLetter15
             x: 321
             y: 0
             width: 22
@@ -317,7 +318,7 @@ Rectangle {
         }
 
         Text {
-            id: o2
+            id: groupLetter16
             x: 347
             y: 1
             width: 23
@@ -334,7 +335,7 @@ Rectangle {
         }
 
         Text {
-            id: u1
+            id: groupLetter17
             x: 374
             y: 4
             width: 22
@@ -351,7 +352,7 @@ Rectangle {
         }
 
         Text {
-            id: r1
+            id: groupLetter18
             x: 401
             y: 8
             width: 15
@@ -368,7 +369,7 @@ Rectangle {
         }
 
         Text {
-            id: element5
+            id: groupLetter19
             x: 420
             y: 11
             width: 12
@@ -385,7 +386,7 @@ Rectangle {
         }
 
         Text {
-            id: p
+            id: groupLetter20
             x: 435
             y: 16
             width: 23
@@ -402,7 +403,7 @@ Rectangle {
         }
 
         Text {
-            id: u2
+            id: groupLetter21
             x: 462
             y: 23
             width: 22
@@ -419,7 +420,7 @@ Rectangle {
         }
 
         Text {
-            id: r2
+            id: groupLetter22
             x: 487
             y: 31
             width: 15
@@ -436,7 +437,7 @@ Rectangle {
         }
 
         Text {
-            id: c
+            id: groupLetter23
             x: 505
             y: 39
             width: 22
@@ -453,7 +454,7 @@ Rectangle {
         }
 
         Text {
-            id: h1
+            id: groupLetter24
             x: 529
             y: 50
             width: 23
@@ -470,7 +471,7 @@ Rectangle {
         }
 
         Text {
-            id: a1
+            id: groupLetter25
             x: 553
             y: 62
             width: 22
@@ -487,7 +488,7 @@ Rectangle {
         }
 
         Text {
-            id: s
+            id: groupLetter26
             x: 576
             y: 75
             width: 20
@@ -504,7 +505,7 @@ Rectangle {
         }
 
         Text {
-            id: e
+            id: groupLetter27
             x: 597
             y: 89
             width: 22
@@ -521,7 +522,7 @@ Rectangle {
         }
 
         Text {
-            id: element6
+            id: groupLetter28
             x: 619
             y: 101
             width: 12
@@ -539,7 +540,7 @@ Rectangle {
     }
 
     Text {
-        id: total_
+        id: totalText
         x: 199
         y: 972
         width: 497
@@ -556,7 +557,7 @@ Rectangle {
     }
 
     Text {
-        id: change_
+        id: changeText
         x: 199
         y: 1040
         width: 497
@@ -573,13 +574,13 @@ Rectangle {
     }
 
     Text {
-        id: element7
+        id: totalAmt
         x: 705
         y: 969
         width: 35
         height: 59
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.totalPrice
         font.pixelSize: 45
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -589,13 +590,13 @@ Rectangle {
     }
 
     Text {
-        id: element8
+        id: changeAmt
         x: 705
         y: 1048
         width: 35
         height: 59
         color: "#000000"
-        text: qsTr("0")
+        text: Constants.changeAmount
         font.pixelSize: 45
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -605,7 +606,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_1_Stroke_
+        id: lineStroke
         x: 205
         y: 955
         width: 535
@@ -620,7 +621,7 @@ Rectangle {
     }
 
     Text {
-        id: receipt
+        id: receiptText
         x: 418
         y: 319
         width: 124
@@ -636,7 +637,7 @@ Rectangle {
     }
 
     Text {
-        id: name_Quantity_Price
+        id: nameQuantPriceText
         x: 165
         y: 384
         width: 615
@@ -652,7 +653,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: waves
+        id: wavesText
         x: 338
         y: 364
         width: 284
@@ -667,7 +668,7 @@ Rectangle {
     }
 
     Text {
-        id: dollarsign
+        id: dollarSign1
         x: 575
         y: 966
         width: 30
@@ -677,7 +678,7 @@ Rectangle {
     }
 
     Text {
-        id: dollarsign2
+        id: dollarSign2
         x: 575
         y: 1045
         width: 30
@@ -687,7 +688,7 @@ Rectangle {
     }
 
     EllipseItem {
-        id: circle
+        id: circleShape
         x: 837
         y: 8
         width: 115
@@ -696,7 +697,7 @@ Rectangle {
         strokeColor: "#ffff00"
 
         Image {
-            id: feedbackicon
+            id: feedbackIcon
             x: 6
             y: -4
             width: 103
@@ -739,7 +740,7 @@ Rectangle {
 /*##^##
 Designer {
     D{i:0;uuid:"49cda717-1b95-53a2-9c51-0feb0d0e644f"}D{i:1;uuid:"9b59dfdd-c999-54a1-a0ba-8e7f7207d51f"}
-D{i:2;locked:true;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}D{i:3;uuid:"1416a9c0-eeb9-5702-88b9-e45bdf8988d4"}
+D{i:2;uuid:"e4f7eca2-3471-58bf-a6df-e6cf95c7bbce"}D{i:3;uuid:"1416a9c0-eeb9-5702-88b9-e45bdf8988d4"}
 D{i:4;uuid:"5f6de490-6cba-5c74-8ed9-690f94a70beb"}D{i:5;uuid:"8f8d54f1-4915-52ce-8c4a-02c73db63778"}
 D{i:6;uuid:"d2c7a66c-843a-50de-8eae-f931e46c2493"}D{i:7;uuid:"273486b2-be0e-5220-a34a-a5f739865526"}
 D{i:8;uuid:"2821ae6f-496d-5d3f-936d-1bee1a449f18"}D{i:9;uuid:"1cd86825-cb4c-51ff-a900-b7b518acbd7d"}
