@@ -107,8 +107,11 @@ QtObject {
 
     // username & password
     property var validCombinations: {
-        "DesHernandez": "Des123",
-        "ErikaDickson": "Cats123",
-        "Sean": "Janda123"
+        "Desire": "Des123",
+        "Erika": "Cats123",
+        "Sean": "Janda123",
+        "Edward": "Pineapple123",
+        "Janda": "Scrum123",
+        "Ngoc": "Development123"
     }
 }

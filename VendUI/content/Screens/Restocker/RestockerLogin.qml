@@ -10,14 +10,14 @@ Rectangle {
     height: 1366
     visible: true
     color: "#ffffff"
-    property alias lOGINText: lOGIN.text
-    property alias pASSWORDText: pASSWORD.text
-    property alias uSERNAMEText: uSERNAME.text
-    property alias rESTOCKER_LOGINText: rESTOCKER_LOGIN.text
+    property alias lOGINText: loginText.text
+    property alias pASSWORDText: passwordText.text
+    property alias uSERNAMEText: usernameText.text
+    property alias rESTOCKER_LOGINText: restockerLoginText.text
 
 
     Rectangle {
-        id: rectangle_1
+        id: entryBlock
         x: 114
         y: 507
         width: 796
@@ -26,7 +26,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_2
+        id: titleBlock
         x: 114
         y: 366
         width: 796
@@ -35,7 +35,7 @@ Rectangle {
     }
 
     Text {
-        id: rESTOCKER_LOGIN
+        id: restockerLoginText
         x: 279
         y: 406
         width: 462
@@ -51,7 +51,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_3
+        id: usernameOutline
         x: 206
         y: 606
         width: 626
@@ -72,7 +72,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_4
+        id: passwordOutline
         x: 206
         y: 735
         width: 626
@@ -93,7 +93,7 @@ Rectangle {
     }
 
     Text {
-        id: uSERNAME
+        id: usernameText
         x: 181
         y: 571
         width: 217
@@ -109,7 +109,7 @@ Rectangle {
     }
 
     Text {
-        id: pASSWORD
+        id: passwordText
         x: 181
         y: 700
         width: 217
@@ -125,7 +125,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_5
+        id: loginBlock
         x: 353
         y: 861
         width: 333
@@ -134,7 +134,7 @@ Rectangle {
     }
 
     Text {
-        id: lOGIN
+        id: loginText
         x: 411
         y: 872
         width: 217
@@ -151,7 +151,7 @@ Rectangle {
     }
 
     Button {
-        id: button
+        id: loginButton
         x: 353
         y: 861
         width: 333
@@ -161,7 +161,7 @@ Rectangle {
         flat: false
 
         Connections {
-            target: button
+            target: loginButton
             onClicked: {
                 var username = usernameInput.text
                 var password = passwordInput.text
