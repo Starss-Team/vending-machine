@@ -1,3 +1,4 @@
+import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -159,26 +160,14 @@ Rectangle {
         text: qsTr("")
         flat: false
 
-        var validCombinations = {
-            "DesHernandez": "Des123",
-            "ErikaDickson": "Cats123",
-            "Sean": "Janda123"
-        }
-
         Connections {
             target: button
             onClicked: {
                 var username = usernameInput.text
                 var password = passwordInput.text
-//                var validCombinations = {
-//                    "DesHernandez": "Des123",
-//                    "ErikaDickson": "Cats123",
-//                    "Sean": "Janda123"
-//                }
-                console.log( "Users:", Object.keys( validCombinations))
 
-                if( isValidLogin( username, password, validCombinations ) ) {
-                    console.log( "Login successful" );
+                if( isValidLogin( username, password, Constants.validCombinations ) ) {
+                    console.log( "Login successful : WELCOME BACK, " + username );
                     loginSuccess.push("Restocker_POV.ui.qml")
                 } else {
                     console.log("Login failed");
@@ -187,16 +176,12 @@ Rectangle {
         }
     }
 
-    function isValidLogin( username, password, validCombinations ) {
+    function isValidLogin( username, password ) {
+        var storedPassword = Constants.validCombinations[ username ]
 
-        return username in validCombinations && password in validCombinations[ username ]
+        return username in Constants.validCombinations && password === storedPassword;
     }
 
-//    var validCombinations = {
-//        "DesHernandez": "Des123",
-//        "ErikaDickson": "Cats123",
-//        "Sean": "Janda123"
-//    }
 
     StackView {
         id: loginSuccess

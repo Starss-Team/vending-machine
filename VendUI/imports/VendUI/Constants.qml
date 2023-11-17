@@ -104,4 +104,11 @@ QtObject {
     property real chocoMilkQtyTotal: {
         chocoMilkQty * chocoMilkPrice
     }
+
+    // username & password
+    property var validCombinations: {
+        "DesHernandez": "Des123",
+        "ErikaDickson": "Cats123",
+        "Sean": "Janda123"
+    }
 }
