@@ -67,6 +67,7 @@ Window {
 
             visible: false
         }
+
     }
 
     MouseArea {
