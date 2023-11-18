@@ -124,6 +124,16 @@ Rectangle {
         font.family: "Inter"
     }
 
+    Text {
+        id: incorrectText
+        x: 150
+        y: 803
+        visible: false
+        color: "#97aeff"
+        text: qsTr("Incorrect Username or/and Password. Please Try Again.")
+        font.pixelSize: 30
+    }
+
     Rectangle {
         id: loginBlock
         x: 353
@@ -171,6 +181,9 @@ Rectangle {
                     loginSuccess.push("Restocker_POV.ui.qml")
                 } else {
                     console.log("Login failed");
+                    incorrectText.visible = true;
+                    usernameInput.clear();
+                    passwordInput.clear();
                 }
             }
         }
@@ -187,6 +200,7 @@ Rectangle {
         id: loginSuccess
         initialItem: RestockerLogin
     }
+
 
 }
 
