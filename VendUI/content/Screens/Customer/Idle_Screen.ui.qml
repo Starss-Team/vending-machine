@@ -48,7 +48,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            source: "../images/Untitled.png"
+            source: "../../images/Untitled.png"
             anchors.bottomMargin: -130
             transformOrigin: Item.BottomLeft
             scale: 0.7
@@ -59,7 +59,7 @@ Rectangle {
         Image {
             id: ellipse_1
             anchors.fill: parent
-            source: "../assets/ellipse_1.png"
+            source: "../../assets/ellipse_1.png"
             scale: 0.7
             fillMode: Image.PreserveAspectFit
 
@@ -68,7 +68,7 @@ Rectangle {
                 anchors.fill: parent
                 x: 303
                 y: 490
-                source: "../assets/please_tap_to_begin.png"
+                source: "../../assets/please_tap_to_begin.png"
                 scale: 0.8
                 fillMode: Image.PreserveAspectFit
             }
