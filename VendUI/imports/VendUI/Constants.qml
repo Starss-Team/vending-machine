@@ -155,6 +155,43 @@ QtObject {
     property int coreoQty: 1
     property int cchocoMilkQty: 13
 
+
+    // management analytics
+    property string viewing_range: "Past Year"
+
+    // week
+    property int whersheyQty: 14
+    property int wcokeQty: 15
+    property int wpepsiQty: 18
+    property int wspriteQty: 13
+    property int wwaterQty: 13
+    property int wchipQty: 18
+    property int wdoritoQty: 20
+    property int woreoQty: 23
+    property int wchocoMilkQty: 24
+
+    // month
+    property int mhersheyQty: 34
+    property int mcokeQty: 45
+    property int mpepsiQty: 35
+    property int mspriteQty: 26
+    property int mwaterQty: 44
+    property int mchipQty: 36
+    property int mdoritoQty: 45
+    property int moreoQty: 37
+    property int mchocoMilkQty: 24
+
+    // year
+    property int yhersheyQty: 40
+    property int ycokeQty: 45
+    property int ypepsiQty: 65
+    property int yspriteQty: 43
+    property int ywaterQty: 56
+    property int ychipQty: 75
+    property int ydoritoQty: 54
+    property int yoreoQty: 67
+    property int ychocoMilkQty: 45
+
     // username & password
     property var validCombinations: {
         "Desire": "Des123",
