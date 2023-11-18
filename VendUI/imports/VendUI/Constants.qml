@@ -52,7 +52,6 @@ QtObject {
        property int twentyDollarQty: 0
 
 
-
     // Totals
     property int totalQty: {
         hersheyQty + cokeQty + pepsiQty + spriteQty + waterQty + chipQty + doritoQty + oreoQty + chocoMilkQty
@@ -104,6 +103,57 @@ QtObject {
     property real chocoMilkQtyTotal: {
         chocoMilkQty * chocoMilkPrice
     }
+
+
+
+    // inventory managment
+    property string vendingMachine: "All"
+
+    // inventory for all
+    property int allhersheyQty: 79
+    property int allcokeQty: 99
+    property int allpepsiQty: 102
+    property int allspriteQty: 99
+    property int allwaterQty: 56
+    property int allchipQty: 67
+    property int alldoritoQty: 89
+    property int alloreoQty: 94
+    property int allchocoMilkQty: 103
+
+    // inventory for A
+    property int ahersheyQty: 30
+    property int acokeQty: 20
+    property int apepsiQty: 14
+    property int aspriteQty: 20
+    property int awaterQty: 32
+    property int achipQty: 24
+    property int adoritoQty: 16
+    property int aoreoQty: 17
+    property int achocoMilkQty: 13
+
+
+    // inventory for B
+    property int bhersheyQty: 9
+    property int bcokeQty: 11
+    property int bpepsiQty: 12
+    property int bspriteQty: 19
+    property int bwaterQty: 10
+    property int bchipQty: 9
+    property int bdoritoQty: 10
+    property int boreoQty: 2
+    property int bchocoMilkQty: 13
+
+
+    // inventory for C
+    property int chersheyQty: 9
+    property int ccokeQty: 2
+    property int cpepsiQty: 0
+    property int cspriteQty: 12
+    property int cwaterQty: 20
+    property int cchipQty: 21
+    property int cdoritoQty: 10
+    property int coreoQty: 1
+    property int cchocoMilkQty: 13
 
     // username & password
     property var validCombinations: {
