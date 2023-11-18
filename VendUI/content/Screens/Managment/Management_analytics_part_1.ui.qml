@@ -61,6 +61,7 @@ Rectangle {
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
+        font.underline: true
         font.weight: Font.Normal
         font.family: "Inter"
     }

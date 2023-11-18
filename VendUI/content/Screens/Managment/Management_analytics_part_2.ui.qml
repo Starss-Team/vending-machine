@@ -27,6 +27,7 @@ Rectangle {
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
         wrapMode: Text.NoWrap
+        font.underline: true
         font.weight: Font.Normal
         font.family: "Inter"
     }
@@ -129,8 +130,8 @@ Rectangle {
 
     Text {
         id: back
-        x: 314
-        y: 1035
+        x: 144
+        y: 941
         width: 113
         height: 58
         color: "#000000"
