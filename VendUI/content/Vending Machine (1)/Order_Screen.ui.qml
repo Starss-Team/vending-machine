@@ -7,71 +7,71 @@ Rectangle {
     height: 1440
     color: "#ffffff"
     property real price: 0
-    property alias element1Text: element1.text
-    property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
-    property alias chips_Price_3_Text: chips_Price_3_.text
-    property alias water_Price_1_Text: water_Price_1_.text
-    property alias elementText: element.text
-    property alias sprite_Price_1_5_Text: sprite_Price_1_5_.text
-    property alias total_Items_Text: total_Items_.text
     property alias hershey_Bar_Price_2_Text: hershey_Bar_Price_2_.text
-    property alias oreo_Price_3_Text: oreo_Price_3_.text
-    property alias total_Cost_Text: total_Cost_.text
-    property alias doritos_Price_4_Text: doritos_Price_4_.text
-    property alias chocolate_Milk_Price_5_Text: chocolate_Milk_Price_5_.text
+    property alias elementText: element.text
     property alias pepsi_Price_1_5_Text: pepsi_Price_1_5_.text
+    property alias chocolate_Milk_Price_5_Text: chocolate_Milk_Price_5_.text
+    property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
+    property alias oreo_Price_3_Text: oreo_Price_3_.text
+    property alias doritos_Price_4_Text: doritos_Price_4_.text
+    property alias sprite_Price_1_5_Text: sprite_Price_1_5_.text
+    property alias water_Price_1_Text: water_Price_1_.text
+    property alias element1Text: element1.text
+    property alias total_Items_Text: total_Items_.text
+    property alias total_Cost_Text: total_Cost_.text
+    property alias chips_Price_3_Text: chips_Price_3_.text
 
     Image {
-        id: coca_cola_image
+        id: image_2
         x: 407
         y: 69
         source: "assets/image_2.png"
     }
 
     Image {
-        id: pepsi_image
+        id: image_3
         x: 714
         y: 69
         source: "assets/image_3.png"
     }
 
     Image {
-        id: chips_image
+        id: image_4
         x: 714
         y: 380
         source: "assets/image_4.png"
     }
 
     Image {
-        id: water_image
+        id: image_5
         x: 407
         y: 380
         source: "assets/image_5.png"
     }
 
     Image {
-        id: sprite_image
+        id: image_6
         x: 110
         y: 380
         source: "assets/image_6.png"
     }
 
     Image {
-        id: doritos_image
+        id: image_7
         x: 110
         y: 717
         source: "assets/image_7.png"
     }
 
     Image {
-        id: oreo_image
+        id: image_8
         x: 399
         y: 717
         source: "assets/image_8.png"
     }
 
     Image {
-        id: chocolate_milk_image
+        id: image_9
         x: 714
         y: 717
         source: "assets/image_9.png"
@@ -84,7 +84,7 @@ Rectangle {
         width: 161
         height: 318
         Image {
-            id: hershey_image
+            id: image_1
             x: 0
             y: 0
             source: "assets/image_1.png"
@@ -244,10 +244,27 @@ Rectangle {
         anchors.rightMargin: 112
     }
 
+    Cancel_Button {
+        id: cancel_Button_instance
+        x: 39
+        y: 1366
+        width: 232
+        height: 74
+    }
+
+    Cancel_Button {
+        id: confirmButton
+        x: 701
+        y: 1366
+        width: 232
+        height: 74
+        cancelText: "Confirm"
+    }
+
     Text {
         id: total_Items_
-        x: 68
-        y: 1067
+        x: 89
+        y: 1100
         width: 352
         height: 77
         color: "#000000"
@@ -262,8 +279,8 @@ Rectangle {
 
     Text {
         id: element
-        x: 450
-        y: 1067
+        x: 496
+        y: 1104
         width: 41
         height: 77
         color: "#000000"
@@ -279,7 +296,7 @@ Rectangle {
     Text {
         id: total_Cost_
         x: 68
-        y: 1140
+        y: 1136
         width: 358
         height: 119
         color: "#000000"
@@ -294,8 +311,8 @@ Rectangle {
 
     Text {
         id: element1
-        x: 446
-        y: 1140
+        x: 492
+        y: 1136
         width: 49
         height: 119
         color: "#000000"
@@ -359,14 +376,12 @@ Rectangle {
         visible: true
         text: qsTr("Button")
         display: AbstractButton.IconOnly
-
         Connections {
             target: sprint_button
             onClicked: {
-    element.text ++
-    price = price + (1.5)
+                element.text++
+                price = price + (1.5)
                 element1.text = price
-
             }
         }
     }
@@ -380,21 +395,20 @@ Rectangle {
         opacity: 0
         visible: true
         text: qsTr("Button")
-        clip: false
-        display: AbstractButton.IconOnly
-        focusPolicy: Qt.StrongFocus
         hoverEnabled: true
         highlighted: false
+        focusPolicy: Qt.StrongFocus
         flat: false
+        display: AbstractButton.IconOnly
         Connections {
             target: hershey_button
             onClicked: {
-    element.text ++
-    price = price + 2
-    element1.text = price
-
+                element.text++
+                price = price + 2
+                element1.text = price
             }
         }
+        clip: false
     }
 
     Button {
@@ -410,10 +424,9 @@ Rectangle {
         Connections {
             target: cola_button
             onClicked: {
-                element.text ++
+                element.text++
                 price = price + 1.5
                 element1.text = price
-
             }
         }
     }
@@ -431,10 +444,9 @@ Rectangle {
         Connections {
             target: pepsi_button
             onClicked: {
-                element.text ++
+                element.text++
                 price = price + 1.5
                 element1.text = price
-
             }
         }
     }
@@ -452,10 +464,9 @@ Rectangle {
         Connections {
             target: water_button
             onClicked: {
-    element.text ++
-    price = price + 1
-    element1.text = price
-
+                element.text++
+                price = price + 1
+                element1.text = price
             }
         }
     }
@@ -473,10 +484,9 @@ Rectangle {
         Connections {
             target: chip_button
             onClicked: {
-    element.text ++
-    price = price + 3
-    element1.text = price
-
+                element.text++
+                price = price + 3
+                element1.text = price
             }
         }
     }
@@ -490,17 +500,16 @@ Rectangle {
         opacity: 0
         visible: true
         text: qsTr("Button")
-        clip: false
         display: AbstractButton.IconOnly
         Connections {
             target: chocolate_milk_button
             onClicked: {
-    element.text ++
-    price = price + 5
-    element1.text = price
-
+                element.text++
+                price = price + 5
+                element1.text = price
             }
         }
+        clip: false
     }
 
     Button {
@@ -516,10 +525,9 @@ Rectangle {
         Connections {
             target: oreo_button
             onClicked: {
-    element.text ++
-    price = price + 3
-    element1.text = price
-
+                element.text++
+                price = price + 3
+                element1.text = price
             }
         }
     }
@@ -537,10 +545,9 @@ Rectangle {
         Connections {
             target: doritos_button
             onClicked: {
-                element.text ++
+                element.text++
                 price = price + 4
                 element1.text = price
-
             }
         }
     }
@@ -551,7 +558,6 @@ Rectangle {
         y: 1347
         text: qsTr("Cancel")
         scale: 2.3
-
         Connections {
             target: cancel_button
             onClicked: {
@@ -584,11 +590,12 @@ D{i:12;uuid:"1ec782d0-0a7b-5db6-bbc2-5098a53ea361"}D{i:13;uuid:"9a266f8c-5013-54
 D{i:14;uuid:"7245244e-8d2c-5f94-a27e-5c9b6cb9c870"}D{i:15;uuid:"c9d65188-0b01-5a74-add7-2d03be92876e"}
 D{i:16;uuid:"91c0fd12-ef76-591b-bb62-a76edf771d33"}D{i:17;uuid:"7d6bc92a-8aa1-56fd-8e09-9f0f4486b677"}
 D{i:18;uuid:"adba0de8-76fc-57c3-87dc-24a40e4a4ecd"}D{i:19;uuid:"0c20ecb2-1a82-5cb9-bbd9-c48800cb5436"}
-D{i:20;uuid:"c61843dd-843e-5dad-befd-667f66c307f7"}D{i:21;uuid:"4e149b1c-fac5-5ade-89c0-a77a3bd88e3b"}
-D{i:22;uuid:"00dac698-3909-5ed4-b38f-0fe64ac5b7cb"}D{i:23;uuid:"a2e4f285-35d1-5084-ab91-e34d8398993b"}
-D{i:24;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}D{i:25;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}
-D{i:26;uuid:"aff44feb-35d3-5572-87b2-25fea31f5c09"}D{i:27;uuid:"56c71497-61b1-53b7-ab07-870ebda04e86"}
-D{i:28;uuid:"1e9f3ec4-96c4-55fa-8dba-d1e77cb95807"}D{i:49}
+D{i:20;uuid:"40a90771-0310-5a38-b549-d85ac5ce3389_instance"}D{i:21;uuid:"a6ffd766-bb39-59d2-8349-0812122f1146"}
+D{i:22;uuid:"c61843dd-843e-5dad-befd-667f66c307f7"}D{i:23;uuid:"4e149b1c-fac5-5ade-89c0-a77a3bd88e3b"}
+D{i:24;uuid:"00dac698-3909-5ed4-b38f-0fe64ac5b7cb"}D{i:25;uuid:"a2e4f285-35d1-5084-ab91-e34d8398993b"}
+D{i:26;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}D{i:27;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}
+D{i:28;uuid:"aff44feb-35d3-5572-87b2-25fea31f5c09"}D{i:29;uuid:"56c71497-61b1-53b7-ab07-870ebda04e86"}
+D{i:30;uuid:"1e9f3ec4-96c4-55fa-8dba-d1e77cb95807"}
 }
 ##^##*/
 
