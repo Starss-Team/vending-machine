@@ -6,13 +6,13 @@ Rectangle {
     width: 1440
     height: 1024
     color: "#c2d5f2"
-    property alias uSERNAMEText: uSERNAME.text
+    property alias uSERNAMEText: employUsernameText.text
     property alias lOGINText: lOGIN.text
-    property alias eMPLOYEE_LOGINText: eMPLOYEE_LOGIN.text
+    property alias eMPLOYEE_LOGINText: employeeLoginText.text
     property alias pASSWORDText: pASSWORD.text
 
     Rectangle {
-        id: rectangle_1
+        id: inputBlock
         x: 322
         y: 336
         width: 796
@@ -21,7 +21,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_2
+        id: employeeBlock
         x: 322
         y: 195
         width: 796
@@ -30,7 +30,7 @@ Rectangle {
     }
 
     Text {
-        id: eMPLOYEE_LOGIN
+        id: employeeLoginText
         x: 505
         y: 235
         width: 431
@@ -47,7 +47,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_3
+        id: employUsernameBlock
         x: 414
         y: 435
         width: 626
@@ -58,7 +58,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: rectangle_4
+        id: employPasswordBlock
         x: 414
         y: 564
         width: 626
@@ -69,7 +69,7 @@ Rectangle {
     }
 
     Text {
-        id: uSERNAME
+        id: employUsernameText
         x: 389
         y: 400
         width: 217
