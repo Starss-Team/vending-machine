@@ -107,52 +107,52 @@ QtObject {
 
 
     // inventory managment
-    property string vendingMachine: All
+    property string vendingMachine: "All"
 
     // inventory for all
-    property int AllhersheyQty: 79
-    property int AllcokeQty: 99
-    property int AllpepsiQty: 102
-    property int AllspriteQty: 99
-    property int AllwaterQty: 56
-    property int AllchipQty: 67
-    property int AlldoritoQty: 89
-    property int AlloreoQty: 94
-    property int AllchocoMilkQty: 103
+    property int allhersheyQty: 79
+    property int allcokeQty: 99
+    property int allpepsiQty: 102
+    property int allspriteQty: 99
+    property int allwaterQty: 56
+    property int allchipQty: 67
+    property int alldoritoQty: 89
+    property int alloreoQty: 94
+    property int allchocoMilkQty: 103
 
     // inventory for A
-    property int AhersheyQty: 30
-    property int AcokeQty: 20
-    property int ApepsiQty: 14
-    property int AspriteQty: 20
-    property int AwaterQty: 32
-    property int AchipQty: 24
-    property int AdoritoQty: 16
-    property int AoreoQty: 17
-    property int AchocoMilkQty: 13
+    property int ahersheyQty: 30
+    property int acokeQty: 20
+    property int apepsiQty: 14
+    property int aspriteQty: 20
+    property int awaterQty: 32
+    property int achipQty: 24
+    property int adoritoQty: 16
+    property int aoreoQty: 17
+    property int achocoMilkQty: 13
 
 
     // inventory for B
-    property int BhersheyQty: 9
-    property int BcokeQty: 11
-    property int BpepsiQty: 12
-    property int BspriteQty: 19
-    property int BwaterQty: 10
-    property int BchipQty: 9
-    property int BdoritoQty: 10
-    property int BoreoQty: 2
-    property int BchocoMilkQty: 13
+    property int bhersheyQty: 9
+    property int bcokeQty: 11
+    property int bpepsiQty: 12
+    property int bspriteQty: 19
+    property int bwaterQty: 10
+    property int bchipQty: 9
+    property int bdoritoQty: 10
+    property int boreoQty: 2
+    property int bchocoMilkQty: 13
 
 
     // inventory for C
-    property int ChersheyQty: 9
-    property int CcokeQty: 2
-    property int CpepsiQty: 0
-    property int CspriteQty: 12
-    property int CwaterQty: 20
-    property int CchipQty: 21
-    property int CdoritoQty: 10
-    property int CoreoQty: 1
-    property int CchocoMilkQty: 13
+    property int chersheyQty: 9
+    property int ccokeQty: 2
+    property int cpepsiQty: 0
+    property int cspriteQty: 12
+    property int cwaterQty: 20
+    property int cchipQty: 21
+    property int cdoritoQty: 10
+    property int coreoQty: 1
+    property int cchocoMilkQty: 13
 
 }

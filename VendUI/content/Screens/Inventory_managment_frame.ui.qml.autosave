@@ -30,6 +30,7 @@ Rectangle {
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
             wrapMode: Text.NoWrap
+            font.underline: true
             font.weight: Font.Normal
             font.family: "Inter"
         }
@@ -76,7 +77,7 @@ Rectangle {
 
         TextEdit {
             id: textEdit
-            x: 325
+            x: 331
             y: 174
             width: 810
             height: 53
