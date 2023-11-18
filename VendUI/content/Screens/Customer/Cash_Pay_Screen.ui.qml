@@ -12,6 +12,8 @@ Rectangle {
     border.width: 1
     transformOrigin: Item.TopLeft
     scale: 0.5
+
+
     /*property real cashInputtedAmt: 0
     property alias changeDollarAmtText: changeDollarAmt.text
     property alias oneDollarQtyText: oneDollarQty.text
@@ -32,7 +34,6 @@ Rectangle {
     property alias checkoutText: checkout.text
     property alias change_display15Text: totalDollarAmt.text
     property alias change_display2Text: fiveDollarPlus.text*/
-
     Image {
         id: transactionTextFrame
         property int property: 0
@@ -500,12 +501,12 @@ Rectangle {
         Connections {
             target: cancelButton
             onClicked: {
-//                price = 0
-//                element1.text = price
 
-//                element.text = 0
+                //                price = 0
+                //                element1.text = price
 
-                  stackView.pop()
+                //                element.text = 0
+                stackView.pop()
             }
         }
 
@@ -525,28 +526,23 @@ Rectangle {
             target: confirmationButton
             onClicked: {
 
-                if(Constants.changeAmount >= 0){
+                if (Constants.changeAmount >= 0) {
                     stackView.push("/Completed_Purchase.qml")
-                }
-                else{
+                } else {
 
-
-                    noMoney.visible = true;
-                    confirmationButton.enabled = false;
-                    cancelButton.enabled = false;
-                    twentyDollarPlusButton.enabled = false;
-                    oneDollarPlusButton.enabled = false;
-                    fiveDollarPlusButton.enabled = false;
-                    tenDollarPlusButton.enabled = false;
-
+                    noMoney.visible = true
+                    confirmationButton.enabled = false
+                    cancelButton.enabled = false
+                    twentyDollarPlusButton.enabled = false
+                    oneDollarPlusButton.enabled = false
+                    fiveDollarPlusButton.enabled = false
+                    tenDollarPlusButton.enabled = false
                 }
             }
         }
     }
 
-
-
-    Rectangle{
+    Rectangle {
         id: noMoney
         visible: false
         anchors.fill: parent
@@ -577,10 +573,10 @@ Rectangle {
             id: apology
             x: 260
             y: 465
-            width: 241
+            width: 300
             height: 94
             text: qsTr("Okay, I'm sorry...")
-            font.pointSize: 20
+            font.pointSize: 15
             Connections {
                 target: apology
                 onClicked: {
