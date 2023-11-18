@@ -47,7 +47,7 @@ Rectangle {
         y: 332
         width: 634
         height: 824
-        source: "../assets/feedbackQR.png"
+        source: "../../assets/feedbackQR.png"
         fillMode: Image.PreserveAspectFit
     }
 
