@@ -10,7 +10,9 @@ Rectangle {
     color: "#ffffdd"
     transformOrigin: Item.TopLeft
     scale: .5
- /*   property real price: 0
+
+
+    /*   property real price: 0
     property alias element1Text: element1.text
     property alias coca_Cola_Price_1_5_Text: coca_Cola_Price_1_5_.text
     property alias chips_Price_3_Text: chips_Price_3_.text
@@ -25,51 +27,46 @@ Rectangle {
     property alias chocolate_Milk_Price_5_Text: chocolate_Milk_Price_5_.text
     property alias pepsi_Price_1_5_Text: pepsi_Price_1_5_.text
 */
-
-
-
-
-
     Image {
         id: chips_image
         x: 714
         y: 380
-        source: "../assets/image_4.png"
+        source: "../../assets/image_4.png"
     }
 
     Image {
         id: water_image
         x: 407
         y: 380
-        source: "../assets/image_5.png"
+        source: "../../assets/image_5.png"
     }
 
     Image {
         id: sprite_image
         x: 110
         y: 380
-        source: "../assets/image_6.png"
+        source: "../../assets/image_6.png"
     }
 
     Image {
         id: doritos_image
         x: 110
         y: 717
-        source: "../assets/image_7.png"
+        source: "../../assets/image_7.png"
     }
 
     Image {
         id: oreo_image
         x: 399
         y: 717
-        source: "../assets/image_8.png"
+        source: "../../assets/image_8.png"
     }
 
     Image {
         id: chocolate_milk_image
         x: 714
         y: 717
-        source: "../assets/image_9.png"
+        source: "../../assets/image_9.png"
     }
 
     Item {
@@ -79,14 +76,12 @@ Rectangle {
         width: 161
         height: 318
 
-
         Image {
             id: hershey_image
             x: 0
             y: 0
-            source: "../assets/image_1.png"
+            source: "../../assets/image_1.png"
         }
-
 
         Text {
             id: hershey_Bar_Price_2_
@@ -108,11 +103,11 @@ Rectangle {
 
     Item {
         id: cokeEntry
-        x:407
-        y:69
+        x: 407
+        y: 69
         Image {
             id: coca_cola_image
-            source: "../assets/image_2.png"
+            source: "../../assets/image_2.png"
         }
 
         Text {
@@ -140,7 +135,7 @@ Rectangle {
         y: 69
         Image {
             id: pepsi_image
-            source: "../assets/image_3.png"
+            source: "../../assets/image_3.png"
         }
         Text {
             id: pepsi_Price_1_5_
@@ -263,8 +258,6 @@ Rectangle {
         anchors.rightMargin: 86
     }
 
-
-
     Text {
         id: total_Items_
         x: 61
@@ -280,8 +273,6 @@ Rectangle {
         font.weight: Font.Normal
         font.family: "Inter"
     }
-
-
 
     Text {
         id: total_Cost_
@@ -299,63 +290,6 @@ Rectangle {
         font.family: "Corben"
     }
 
-    Text {
-        id: element1
-        x: 682
-        y: 1156
-        width: 49
-        height: 119
-        color: "#000000"
-        text: qsTr("0")
-        font.pixelSize: 64
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Corben"
-    }
-
-    Image {
-        id: can_up
-        x: 795
-        y: 1067
-        source: "../assets/can_up.png"
-    }
-
-    Image {
-        id: cannot_up
-        x: 795
-        y: 1067
-        visible: false
-        source: "../assets/cannot_up.png"
-    }
-
-    Rectangle {
-        id: image_11
-        x: 795
-        y: 1177
-        width: 65
-        height: 67
-        color: "transparent"
-    }
-
-    Image {
-        id: cannot_down
-        x: 796
-        y: 1160
-        source: "../assets/cannot_down.png"
-        rotation: -60
-    }
-
-    Image {
-        id: can_down
-        x: 796
-        y: 1160
-        visible: false
-        source: "../assets/can_down.png"
-        rotation: -60
-    }
-
     Button {
         id: sprint_button
         x: 120
@@ -371,7 +305,6 @@ Rectangle {
             target: sprint_button
             onClicked: {
                 Constants.spriteQty += 1
-
             }
         }
 
@@ -574,7 +507,6 @@ Rectangle {
 /*##^##
 Designer {
     D{i:0;uuid:"eb1efc2c-6d6d-56e5-b8d9-7de19c799aa7"}D{i:6;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}
-D{i:24;invisible:true}
 }
 ##^##*/
 

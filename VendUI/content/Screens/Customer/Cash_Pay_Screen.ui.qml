@@ -41,7 +41,7 @@ Rectangle {
         width: 872
         height: 1062
         visible: true
-        source: "../assets/transaction_text_frame.png"
+        source: "../../assets/transaction_text_frame.png"
         sourceSize.height: 110
         sourceSize.width: 900
 

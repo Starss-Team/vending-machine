@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 import VendUI
-import "Screens"
+import "Screens/Customer"
 
 Window {
     id: root
@@ -57,6 +57,7 @@ Window {
             }
         }
 
+
         Idle_Screen {
             id: idle
             anchors.fill: parent
@@ -67,6 +68,7 @@ Window {
 
             visible: false
         }
+
     }
 
     MouseArea {
@@ -94,8 +96,4 @@ Window {
 
 }
 
-/*##^##
-Designer {
-    D{i:0}D{i:11;invisible:true}
-}
-##^##*/
+

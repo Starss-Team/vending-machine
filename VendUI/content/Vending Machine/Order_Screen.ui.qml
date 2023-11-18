@@ -308,47 +308,6 @@ Rectangle {
         font.family: "Corben"
     }
 
-    Image {
-        id: can_up
-        x: 795
-        y: 1067
-        source: "assets/can_up.png"
-    }
-
-    Image {
-        id: cannot_up
-        x: 795
-        y: 1067
-        visible: false
-        source: "assets/cannot_up.png"
-    }
-
-    Rectangle {
-        id: image_11
-        x: 795
-        y: 1177
-        width: 65
-        height: 67
-        color: "transparent"
-    }
-
-    Image {
-        id: cannot_down
-        x: 796
-        y: 1160
-        source: "assets/cannot_down.png"
-        rotation: -60
-    }
-
-    Image {
-        id: can_down
-        x: 796
-        y: 1160
-        visible: false
-        source: "assets/can_down.png"
-        rotation: -60
-    }
-
     Button {
         id: sprint_button
         x: 120
@@ -586,9 +545,6 @@ D{i:16;uuid:"91c0fd12-ef76-591b-bb62-a76edf771d33"}D{i:17;uuid:"7d6bc92a-8aa1-56
 D{i:18;uuid:"adba0de8-76fc-57c3-87dc-24a40e4a4ecd"}D{i:19;uuid:"0c20ecb2-1a82-5cb9-bbd9-c48800cb5436"}
 D{i:20;uuid:"c61843dd-843e-5dad-befd-667f66c307f7"}D{i:21;uuid:"4e149b1c-fac5-5ade-89c0-a77a3bd88e3b"}
 D{i:22;uuid:"00dac698-3909-5ed4-b38f-0fe64ac5b7cb"}D{i:23;uuid:"a2e4f285-35d1-5084-ab91-e34d8398993b"}
-D{i:24;uuid:"cbb4ac30-8dae-5778-a5ce-20e1f111995c"}D{i:25;uuid:"687688a5-b2f5-599b-9687-1ffbd77d8039"}
-D{i:26;uuid:"aff44feb-35d3-5572-87b2-25fea31f5c09"}D{i:27;uuid:"56c71497-61b1-53b7-ab07-870ebda04e86"}
-D{i:28;uuid:"1e9f3ec4-96c4-55fa-8dba-d1e77cb95807"}D{i:49}
 }
 ##^##*/
 
