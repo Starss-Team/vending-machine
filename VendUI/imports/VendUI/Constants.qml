@@ -106,6 +106,8 @@ QtObject {
     }
 
     // username & password
+    property string username: ""
+    property string password: ""
     property var validCombinations: {
         "Desire": "Des123",
         "Erika": "Cats123",
