@@ -1,4 +1,4 @@
-import VendUI as RestockerState
+import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
@@ -427,7 +427,8 @@ Rectangle {
             width: 280
             height: 73
             color: "#ffffff"
-            text: RestockerState.Constants.username
+            visible: true
+            text: Constants.username
             font.pixelSize: 40
         }
     }
@@ -435,8 +436,7 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}D{i:4}D{i:5}D{i:7}D{i:8}D{i:10}
-D{i:11}D{i:13}D{i:14}D{i:16}D{i:17}
+    D{i:0;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}
 }
 ##^##*/
 

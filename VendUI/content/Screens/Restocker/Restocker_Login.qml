@@ -176,7 +176,7 @@ Rectangle {
             onClicked: {
                 var username = usernameInput.text
                 var password = passwordInput.text
-
+                Constants.username = username
                 if( isValidLogin( username, password, Constants.validCombinations ) ) {
                     console.log( "Login successful : WELCOME BACK, " + username );
                     loginSuccess.push("Restocker_POV.ui.qml")
