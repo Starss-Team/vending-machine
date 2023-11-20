@@ -19,6 +19,7 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
+        font.underline: true
         font.weight: Font.Normal
         font.family: "Inter"
         anchors.horizontalCenterOffset: 1
