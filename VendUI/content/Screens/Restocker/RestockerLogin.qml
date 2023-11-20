@@ -1,4 +1,4 @@
-import VendUI as RestockerState
+import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -14,7 +14,6 @@ Rectangle {
     property alias pASSWORDText: passwordText.text
     property alias uSERNAMEText: usernameText.text
     property alias rESTOCKER_LOGINText: restockerLoginText.text
-
 
 
     Rectangle {
@@ -70,9 +69,7 @@ Rectangle {
             text: qsTr("")
             font.pixelSize: 40
         }
-
     }
-
 
     Rectangle {
         id: passwordOutline
@@ -95,7 +92,6 @@ Rectangle {
         }
     }
 
-
     Text {
         id: usernameText
         x: 181
@@ -111,7 +107,6 @@ Rectangle {
         font.weight: Font.Normal
         font.family: "Inter"
     }
-
 
     Text {
         id: passwordText
@@ -165,8 +160,6 @@ Rectangle {
         font.family: "Inter"
     }
 
-
-
     Button {
         id: loginButton
         x: 353
@@ -180,11 +173,11 @@ Rectangle {
         Connections {
             target: loginButton
             onClicked: {
-                RestockerState.Constants.username = usernameInput.text
-                RestockerState.Constants.password = passwordInput.text
+                var username = usernameInput.text
+                var password = passwordInput.text
 
-                if( isValidLogin( RestockerState.Constants.username, RestockerState.password, RestockerState.validCombinations ) ) {
-                    console.log( "Login successful : WELCOME BACK, " + RestockerState.Constants.username );
+                if( isValidLogin( username, password, Constants.validCombinations ) ) {
+                    console.log( "Login successful : WELCOME BACK, " + username );
                     loginSuccess.push("Restocker_POV.ui.qml")
                 } else {
                     console.log("Login failed");
@@ -197,9 +190,9 @@ Rectangle {
     }
 
     function isValidLogin( username, password ) {
-        var storedPassword = RestockerState.Constants.validCombinations[ RestockerState.Constants.username ]
+        var storedPassword = Constants.validCombinations[ username ]
 
-        return RestockerState.Constants.username in RestockerState.Constants.validCombinations && RestockerState.Constants.password === storedPassword;
+        return username in Constants.validCombinations && password === storedPassword;
     }
 
 
@@ -214,7 +207,7 @@ Rectangle {
 /*##^##
 Designer {
     D{i:0;uuid:"163eb15d-bc9a-5ced-9781-39798938f258"}D{i:1;uuid:"84cd58c4-16e5-5f91-a88e-9196e2e0d1ec"}
-D{i:4;uuid:"23a76174-730b-5562-bbf8-b4123935409c"}
+D{i:4;uuid:"23a76174-730b-5562-bbf8-b4123935409c"}D{i:8;uuid:"db85e049-8051-5973-a604-fbee740f557a"}
 }
 ##^##*/
 
