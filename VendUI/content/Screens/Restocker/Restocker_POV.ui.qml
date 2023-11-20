@@ -30,6 +30,156 @@ Rectangle {
             color: "#ffffff"
             anchors.horizontalCenterOffset: 1
             anchors.horizontalCenter: parent.horizontalCenter
+
+            CheckBox {
+                id: checkBoxOne
+                x: 798
+                y: 240
+                width: 50
+                text: qsTr("")
+                scale: 2
+            }
+
+            CheckBox {
+                id: checkBoxTwo
+                x: 798
+                y: 340
+                width: 50
+                text: qsTr("")
+                scale: 2
+            }
+
+            CheckBox {
+                id: checkBoxThree
+                x: 798
+                y: 440
+                width: 50
+                text: qsTr("")
+                scale: 2
+            }
+
+            Text {
+                id: removeAddTextOne
+                x: 20
+                y: 230
+                width: 65
+                height: 60
+                text: qsTr("A")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: removeAddTextTwo
+                x: 20
+                y: 330
+                width: 65
+                height: 60
+                text: qsTr("A")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: removeAddTextThree
+                x: 20
+                y: 430
+                width: 65
+                height: 60
+                text: qsTr("R")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: itemNameOne
+                x: 124
+                y: 230
+                width: 343
+                height: 60
+                text: qsTr("Hershey Bar")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: itemNameTwo
+                x: 124
+                y: 330
+                width: 343
+                height: 60
+                text: qsTr("Pepsi")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: itemNameThree
+                x: 124
+                y: 430
+                width: 343
+                height: 60
+                text: qsTr("Chocolate Milk")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: slotOne
+                x: 559
+                y: 230
+                height: 60
+                text: qsTr("1")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: slotTwo
+                x: 559
+                y: 330
+                height: 60
+                text: qsTr("3")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: slotThree
+                x: 559
+                y: 430
+                height: 60
+                text: qsTr("9")
+                font.pixelSize: 45
+            }
+
+            TextInput {
+                id: qtyInputOne
+                x: 677
+                y: 230
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            TextInput {
+                id: qtyInputTwo
+                x: 677
+                y: 330
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            TextInput {
+                id: qtyInputThree
+                x: 677
+                y: 430
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
         }
 
         SvgPathItem {
@@ -276,7 +426,8 @@ Rectangle {
             width: 280
             height: 73
             color: "#ffffff"
-            text: qsTr("User")
+            text: qsTr("user")
+            //text: RestockerLogin.username
             font.pixelSize: 40
         }
     }
@@ -284,7 +435,8 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}D{i:17}
+    D{i:0;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}D{i:4}D{i:5}D{i:7}D{i:8}D{i:10}
+D{i:11}D{i:13}D{i:14}D{i:16}D{i:17}
 }
 ##^##*/
 
