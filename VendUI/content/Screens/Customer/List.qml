@@ -14,13 +14,13 @@ Item {
                 item: qsTr("Hershey Bar"),
                 qty: Constants.hersheyQty,
                 price: Constants.hersheyPrice,
-                imgURL: "../assets/image_1.png"
+                imgURL: "../../assets/image_1.png"
             },
             {
                 item: qsTr("Coca-Cola"),
                 qty: Constants.cokeQty,
                 price: Constants.cokePrice,
-                imgURL: "../assets/image_2.png"
+                imgURL: "../../assets/image_2.png"
             },
             {
                 item: qsTr("Pepsi"),
@@ -32,7 +32,7 @@ Item {
                 item: qsTr("Sprite"),
                 qty: Constants.spriteQty,
                 price: Constants.spritePrice,
-                imgURL: "../assets/image_4.png"
+                imgURL: "../../assets/image_4.png"
             },
             {
                 item: qsTr("Water"),
@@ -44,19 +44,19 @@ Item {
                 item: qsTr("Chips"),
                 qty: Constants.chipQty,
                 price: Constants.chipPrice,
-                imgURL: "../assets/image_6.png"
+                imgURL: "../../assets/image_6.png"
             },
             {
                 item: qsTr("Doritos"),
                 qty: Constants.doritoQty,
                 price: Constants.doritoPrice,
-                imgURL: "../assets/image_7.png"
+                imgURL: "../../assets/image_7.png"
             },
             {
                 item: qsTr("Oreo"),
                 qty: Constants.oreoQty,
                 price: Constants.oreoPrice,
-                imgURL: "../assets/image_8.png"
+                imgURL: "../../assets/image_8.png"
             },
             {
                 item: qsTr("Chocolate Milk"),

@@ -53,7 +53,7 @@ Rectangle {
         id: grabItemsText
         x: 220
         y: 1202
-        source: "../assets/please_push_the_door_below_to_grab_your_item_s_.png"
+        source: "../../assets/please_push_the_door_below_to_grab_your_item_s_.png"
     }
 
     Item {
@@ -837,7 +837,7 @@ Rectangle {
             y: -4
             width: 103
             height: 121
-            source: "../assets/feedback icon.png"
+            source: "../../assets/feedback icon.png"
             fillMode: Image.PreserveAspectFit
         }
         MouseArea {
@@ -868,7 +868,7 @@ Rectangle {
         visible: false
         Image {
             id: qrCode
-            source: "../assets/feedbackQR.png"
+            source: "../../assets/feedbackQR.png"
             anchors.fill: parent
             anchors.margins: 100
         }
@@ -876,7 +876,7 @@ Rectangle {
             id: closeIcon
             anchors.fill: parent
             anchors.margins: 700
-            source: "../images/close_x.png"
+            source: "../../images/close_x.png"
             scale: 1
             anchors.rightMargin: 0
             anchors.leftMargin: 650

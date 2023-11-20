@@ -21,63 +21,63 @@ Rectangle {
                 item: qsTr("Hershey Bar"),
                 qty: Constants.hersheyQty,
                 price: Constants.hersheyPrice,
-                imgURL: "../assets/image_1.png",
+                imgURL: "../../assets/image_1.png",
                 itemTotal: Constants.hersheyPrice * Constants.hersheyQty
             },
             {
                 item: qsTr("Coca-Cola"),
                 qty: Constants.cokeQty,
                 price: Constants.cokePrice,
-                imgURL: "../assets/image_2.png",
+                imgURL: "../../assets/image_2.png",
                 itemTotal: Constants.cokePrice * Constants.cokeQty
             },
             {
                 item: qsTr("Pepsi"),
                 qty: Constants.pepsiQty,
                 price: Constants.pepsiPrice,
-                imgURL: "../assets/image_3.png",
+                imgURL: "../../assets/image_3.png",
                 itemTotal: Constants.pepsiPrice * Constants.pepsiQty
             },
             {
                 item: qsTr("Sprite"),
                 qty: Constants.spriteQty,
                 price: Constants.spritePrice,
-                imgURL: "../assets/image_4.png",
+                imgURL: "../../assets/image_4.png",
                 itemTotal: Constants.spritePrice * Constants.spriteQty
             },
             {
                 item: qsTr("Water"),
                 qty: Constants.waterQty,
                 price: Constants.waterPrice,
-                imgURL: "../assets/image_5.png",
+                imgURL: "../../assets/image_5.png",
                 itemTotal: Constants.waterPrice * Constants.waterQty
             },
             {
                 item: qsTr("Chips"),
                 qty: Constants.chipQty,
                 price: Constants.chipPrice,
-                imgURL: "../assets/image_6.png",
+                imgURL: "../../assets/image_6.png",
                 itemTotal: Constants.chipPrice * Constants.chipQty
             },
             {
                 item: qsTr("Doritos"),
                 qty: Constants.doritoQty,
                 price: Constants.doritoPrice,
-                imgURL: "../assets/image_7.png",
+                imgURL: "../../assets/image_7.png",
                 itemTotal: Constants.doritoPrice * Constants.doritoQty
             },
             {
                 item: qsTr("Oreo"),
                 qty: Constants.oreoQty,
                 price: Constants.oreoPrice,
-                imgURL: "../assets/image_8.png",
+                imgURL: "../../assets/image_8.png",
                 itemTotal: Constants.oreoPrice * Constants.oreoQty
             },
             {
                 item: qsTr("Chocolate Milk"),
                 qty: Constants.chocoMilkQty,
                 price: Constants.chocoMilkPrice,
-                imgURL: "../assets/image_9.png",
+                imgURL: "../../assets/image_9.png",
                 itemTotal: Constants.chocoMilkPrice * Constants.chocoMilkQty
             }
 
