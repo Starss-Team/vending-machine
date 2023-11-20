@@ -1,3 +1,4 @@
+import VendUI as RestockerState
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
@@ -426,8 +427,7 @@ Rectangle {
             width: 280
             height: 73
             color: "#ffffff"
-            text: qsTr("user")
-            //text: RestockerLogin.username
+            text: RestockerState.Constants.username
             font.pixelSize: 40
         }
     }
