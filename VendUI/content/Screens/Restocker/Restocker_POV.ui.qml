@@ -1,6 +1,7 @@
 import VendUI
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
@@ -8,7 +9,6 @@ Rectangle {
     width: 1024
     height: 1366
     color: "transparent"
-    property alias rEPORT_ISSUEText: reportIssueText.text
     property alias iTEMText: itemText.text
     property alias qTYText: qtyText.text
     property alias r_REMOVE_A_ADDText: removeAddKey.text
@@ -302,6 +302,36 @@ Rectangle {
             width: 545
             height: 125
             color: "#97aeff"
+
+            Text {
+                id: reportIssueText
+                x: 0
+                y: 0
+                width: 545
+                height: 125
+                text: qsTr("REPORT ISSUE")
+                font.pixelSize: 55
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+
+            Button {
+                id: reportIssueButton
+                x: 0
+                y: 2
+                width: 545
+                height: 123
+                opacity: 0
+                text: qsTr("REPORT ISSUE")
+                font.pointSize: 40
+
+                Connections {
+                    target: reportIssueButton
+                    onClicked: reportIssue.push("Restocker_POV_Report_Issue.ui.qml")
+
+                }
+            }
+
         }
 
         SvgPathItem {
@@ -319,21 +349,6 @@ Rectangle {
             antialiasing: true
         }
 
-        Text {
-            id: reportIssueText
-            x: 244
-            y: 1187
-            width: 541
-            height: 125
-            color: "#000000"
-            text: qsTr("REPORT ISSUE")
-            font.pixelSize: 50
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            wrapMode: Text.Wrap
-            font.weight: Font.Normal
-            font.family: "Inter"
-        }
 
         Rectangle {
             id: topBar
@@ -575,11 +590,13 @@ Rectangle {
             font.family: "Inter"
         }
     }
+    StackView {
+        id: reportIssue
+        initialItem: Restocker_POV
+    }
 }
 
-/*##^##
-Designer {
-    D{i:0;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}
-}
-##^##*/
+
+
+
 
