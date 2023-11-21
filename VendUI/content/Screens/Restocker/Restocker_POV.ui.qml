@@ -38,6 +38,7 @@ Rectangle {
                 y: 240
                 width: 50
                 text: qsTr("")
+                checkable: false
                 scale: 2
             }
 
@@ -47,6 +48,7 @@ Rectangle {
                 y: 340
                 width: 50
                 text: qsTr("")
+                checkable: false
                 scale: 2
             }
 
@@ -56,12 +58,13 @@ Rectangle {
                 y: 440
                 width: 50
                 text: qsTr("")
+                checkable: false
                 scale: 2
             }
 
             Text {
                 id: removeAddTextOne
-                x: 20
+                x: 14
                 y: 230
                 width: 65
                 height: 60
@@ -72,7 +75,7 @@ Rectangle {
 
             Text {
                 id: removeAddTextTwo
-                x: 20
+                x: 14
                 y: 330
                 width: 65
                 height: 60
@@ -83,7 +86,7 @@ Rectangle {
 
             Text {
                 id: removeAddTextThree
-                x: 20
+                x: 14
                 y: 430
                 width: 65
                 height: 60
@@ -94,37 +97,40 @@ Rectangle {
 
             Text {
                 id: itemNameOne
-                x: 124
+                x: 106
                 y: 230
-                width: 343
+                width: 332
                 height: 60
                 text: qsTr("Hershey Bar")
                 font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
             }
 
             Text {
                 id: itemNameTwo
-                x: 124
+                x: 106
                 y: 330
-                width: 343
+                width: 332
                 height: 60
                 text: qsTr("Pepsi")
                 font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
             }
 
             Text {
                 id: itemNameThree
-                x: 124
+                x: 106
                 y: 430
-                width: 343
+                width: 332
                 height: 60
                 text: qsTr("Chocolate Milk")
                 font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
             }
 
             Text {
-                id: slotOne
-                x: 559
+                id: slotTextOne
+                x: 505
                 y: 230
                 height: 60
                 text: qsTr("1")
@@ -132,8 +138,8 @@ Rectangle {
             }
 
             Text {
-                id: slotTwo
-                x: 559
+                id: slotTextTwo
+                x: 505
                 y: 330
                 height: 60
                 text: qsTr("3")
@@ -141,8 +147,8 @@ Rectangle {
             }
 
             Text {
-                id: slotThree
-                x: 559
+                id: slotTextThree
+                x: 505
                 y: 430
                 height: 60
                 text: qsTr("9")
@@ -151,42 +157,100 @@ Rectangle {
 
             TextInput {
                 id: qtyInputOne
-                x: 677
+                x: 700
                 y: 230
                 width: 80
                 height: 60
                 text: qsTr("0")
                 font.pixelSize: 45
                 horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+
+                Connections {
+                    target: qtyInputOne
+                    onEditingFinished: if (qtyInputOne.text == qtyOne.text) {
+                                           checkBoxOne.checked = true
+                                       } else {
+                                           checkBoxOne.checked = false
+                                       }
+                }
             }
 
             TextInput {
                 id: qtyInputTwo
-                x: 677
+                x: 700
                 y: 330
                 width: 80
                 height: 60
                 text: qsTr("0")
                 font.pixelSize: 45
                 horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+
+                Connections {
+                    target: qtyInputTwo
+                    onEditingFinished: if (qtyInputTwo.text == qtyTwo.text) {
+                                           checkBoxTwo.checked = true
+                                       } else {
+                                           checkBoxTwo.checked = false
+                                       }
+                }
             }
 
             TextInput {
                 id: qtyInputThree
-                x: 677
+                x: 700
                 y: 430
                 width: 80
                 height: 60
                 text: qsTr("0")
                 font.pixelSize: 45
                 horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                autoScroll: false
+
+                Connections {
+                    target: qtyInputThree
+                    onEditingFinished: if (qtyInputThree.text == qtyThree.text) {
+                                           checkBoxThree.checked = true
+                                       } else {
+                                           checkBoxThree.checked = false
+                                       }
+                }
+            }
+
+            Text {
+                id: qtyOne
+                x: 630
+                y: 230
+                height: 60
+                text: qsTr("5")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: qtyTwo
+                x: 630
+                y: 330
+                height: 60
+                text: qsTr("5")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: qtyThree
+                x: 630
+                y: 430
+                height: 60
+                text: qsTr("8")
+                font.pixelSize: 45
             }
         }
 
         SvgPathItem {
             id: itemSlotDivider
-            x: 113
-            y: 697
+            x: 57
+            y: 699
             width: 917
             height: 1
             strokeWidth: 1
@@ -201,8 +265,8 @@ Rectangle {
 
         SvgPathItem {
             id: slotQtyDivider
-            x: 268
-            y: 697
+            x: 199
+            y: 693
             width: 917
             height: 1
             strokeWidth: 1
@@ -217,7 +281,7 @@ Rectangle {
 
         SvgPathItem {
             id: qtyCheckboxDivider
-            x: 389
+            x: 314
             y: 693
             width: 917
             height: 1
@@ -329,9 +393,9 @@ Rectangle {
 
         Text {
             id: qtyText
-            x: 726
+            x: 664
             y: 260
-            width: 122
+            width: 109
             height: 69
             color: "#000000"
             text: qsTr("QTY")
@@ -345,9 +409,9 @@ Rectangle {
 
         Text {
             id: slotText
-            x: 571
+            x: 515
             y: 260
-            width: 156
+            width: 143
             height: 69
             color: "#000000"
             text: qsTr("SLOT")
@@ -361,9 +425,9 @@ Rectangle {
 
         Text {
             id: itemText
-            x: 190
+            x: 181
             y: 260
-            width: 382
+            width: 335
             height: 69
             color: "#000000"
             text: qsTr("ITEM")
@@ -377,13 +441,12 @@ Rectangle {
 
         Text {
             id: removeAddKey
-            x: 836
+            x: 749
             y: 0
-            width: 188
-            height: 76
+            width: 182
+            height: 31
             color: "#000000"
-            text: qsTr("R = REMOVE\nA = ADD")
-            font.pixelSize: 30
+            font.pixelSize: 25
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
             wrapMode: Text.Wrap
@@ -421,7 +484,7 @@ Rectangle {
         }
 
         Text {
-            id: userText
+            id: usernameText
             x: 355
             y: 42
             width: 280
@@ -430,6 +493,86 @@ Rectangle {
             visible: true
             text: Constants.username
             font.pixelSize: 40
+        }
+
+        Text {
+            id: addKey
+            x: 765
+            y: 42
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("A = ADD")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        Text {
+            id: confirmInputKey
+            x: 765
+            y: 78
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("C = CONFIRM")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        Text {
+            id: confirmInputText
+            x: 772
+            y: 260
+            width: 84
+            height: 69
+            color: "#000000"
+            text: qsTr("C")
+            font.pixelSize: 50
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        SvgPathItem {
+            id: confirmationCheckboxDivider
+            x: 397
+            y: 693
+            width: 917
+            height: 1
+            strokeWidth: 1
+            strokeStyle: 1
+            strokeColor: "#00000000"
+            rotation: 90
+            path: "M 917.0784912109375 1 L 0 1 L 0 0 L 917.0784912109375 0 L 917.0784912109375 1 Z"
+            joinStyle: 0
+            fillColor: "#000000"
+            antialiasing: true
+        }
+
+        Text {
+            id: removeKey
+            x: 765
+            y: 8
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("R = REMOVE\n")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
         }
     }
 }
