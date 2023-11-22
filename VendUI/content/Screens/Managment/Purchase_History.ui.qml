@@ -6,93 +6,113 @@ Rectangle {
     width: 1440
     height: 1024
     color: "#c2d5f2"
-    property alias water_80Text: water_80.text
-    property alias doritos_100Text: doritos_100.text
     property alias pepsi_10Text: pepsi_10.text
-    property alias coca_Cola_50Text: coca_Cola_50.text
-    property alias sprite_70Text: sprite_70.text
-    property alias purchase_HistoryText: purchase_History.text
-    property alias chips_40Text: chips_40.text
     property alias chocolate_Milk_80Text: chocolate_Milk_80.text
+    property alias doritos_100Text: doritos_100.text
+    property alias water_80Text: water_80.text
+    property alias sprite_70Text: sprite_70.text
     property alias oreo_150Text: oreo_150.text
     property alias hershey_Bar_100Text: hershey_Bar_100.text
+    property alias coca_Cola_50Text: coca_Cola_50.text
+    property alias purchase_HistoryText: purchase_History.text
+    property alias chips_40Text: chips_40.text
 
     Image {
         id: image_2
-        x: 626
-        y: 131
-        source: "../assets/image_2_1.png"
+        x: 654
+        y: 119
+        width: 115
+        height: 185
+        source: "../../assets/image_2.png"
     }
 
     Image {
         id: image_3
-        x: 933
-        y: 131
-        source: "../assets/image_3_1.png"
+        x: 956
+        y: 119
+        width: 115
+        height: 185
+        source: "../../assets/image_3.png"
     }
 
     Image {
         id: image_4
-        x: 933
+        x: 961
         y: 358
-        source: "../assets/image_4_1.png"
+        width: 115
+        height: 185
+        source: "../../assets/image_4.png"
     }
 
     Image {
         id: image_5
-        x: 626
+        x: 648
         y: 358
-        source: "assets/image_5_1.png"
+        width: 115
+        height: 185
+        source: "../../assets/image_5.png"
     }
 
     Image {
         id: image_6
-        x: 328
+        x: 350
         y: 358
-        source: "assets/image_6_1.png"
+        width: 115
+        height: 185
+        source: "../../assets/image_6.png"
     }
 
     Image {
         id: image_7
-        x: 328
-        y: 605
-        source: "assets/image_7_1.png"
+        x: 351
+        y: 593
+        width: 115
+        height: 185
+        source: "../../assets/image_7.png"
     }
 
     Image {
         id: image_8
-        x: 618
-        y: 605
-        source: "assets/image_8_1.png"
+        x: 654
+        y: 593
+        width: 115
+        height: 185
+        source: "../../assets/image_8.png"
     }
 
     Image {
         id: image_9
-        x: 933
-        y: 605
-        source: "assets/image_9_1.png"
+        x: 961
+        y: 593
+        width: 115
+        height: 185
+        source: "../../assets/image_9.png"
     }
 
     Item {
         id: hershey_Entry
         x: 328
         y: 131
-        width: 161
-        height: 233
+        width: 125
+        height: 195
+
         Image {
             id: image_1
-            x: 0
-            y: 0
-            source: "assets/image_1_1.png"
+            x: 24
+            y: -8
+            width: 115
+            height: 185
+            source: "../../assets/image_1.png"
         }
 
         Text {
             id: hershey_Bar_100
-            y: 180
+            x: 22
+            y: 183
             width: 117
-            height: 53
+            height: 22
             color: "#000000"
-            text: qsTr("Hershey Bar\n100\n")
+            text: qsTr("Hershey Bar\n")
             anchors.right: parent.right
             font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
@@ -100,17 +120,18 @@ Rectangle {
             wrapMode: Text.Wrap
             font.weight: Font.Normal
             font.family: "Inter"
-            anchors.rightMargin: 18
+            anchors.rightMargin: -14
         }
     }
 
     Text {
         id: coca_Cola_50
+        x: 660
         y: 310
         width: 102
-        height: 36
+        height: 23
         color: "#000000"
-        text: qsTr("Coca-Cola\n50")
+        text: qsTr("Coca-Cola")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -123,11 +144,12 @@ Rectangle {
 
     Text {
         id: water_80
+        x: 677
         y: 541
         width: 57
-        height: 35
+        height: 26
         color: "#000000"
-        text: qsTr("Water\n80")
+        text: qsTr("Water")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -140,11 +162,12 @@ Rectangle {
 
     Text {
         id: doritos_100
+        x: 374
         y: 784
         width: 70
-        height: 36
+        height: 22
         color: "#000000"
-        text: qsTr("Doritos\n100")
+        text: qsTr("Doritos")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -157,11 +180,12 @@ Rectangle {
 
     Text {
         id: oreo_150
-        y: 781
+        x: 688
+        y: 784
         width: 47
-        height: 35
+        height: 22
         color: "#000000"
-        text: qsTr("Oreo\n150")
+        text: qsTr("Oreo")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -169,16 +193,17 @@ Rectangle {
         wrapMode: Text.Wrap
         font.weight: Font.Normal
         font.family: "Inter"
-        anchors.rightMargin: 710
+        anchors.rightMargin: 705
     }
 
     Text {
         id: chips_40
+        x: 992
         y: 541
         width: 55
-        height: 35
+        height: 26
         color: "#000000"
-        text: qsTr("Chips\n40")
+        text: qsTr("Chips")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -191,11 +216,12 @@ Rectangle {
 
     Text {
         id: sprite_70
+        x: 379
         y: 541
         width: 57
-        height: 35
+        height: 26
         color: "#000000"
-        text: qsTr("Sprite\n70")
+        text: qsTr("Sprite")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -208,11 +234,12 @@ Rectangle {
 
     Text {
         id: chocolate_Milk_80
+        x: 947
         y: 784
         width: 147
-        height: 36
+        height: 22
         color: "#000000"
-        text: qsTr("Chocolate Milk \n80")
+        text: qsTr("Chocolate Milk ")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -225,11 +252,12 @@ Rectangle {
 
     Text {
         id: pepsi_10
+        x: 992
         y: 310
         width: 53
-        height: 36
+        height: 23
         color: "#000000"
-        text: qsTr("Pepsi\n10")
+        text: qsTr("Pepsi")
         anchors.right: parent.right
         font.pixelSize: 20
         horizontalAlignment: Text.AlignHCenter
@@ -240,30 +268,9 @@ Rectangle {
         anchors.rightMargin: 395
     }
 
-    Cancel_Button {
-        id: cancel_Button
-        x: 291
-        y: 936
-        width: 233
-        height: 74
-        cancelText: "Back"
-    }
-
-    Cancel_Button {
-        id: confirmButton
-        width: 315
-        height: 67
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.right: parent.right
-        clip: true
-        cancelText: "Send report"
-        anchors.verticalCenterOffset: 458
-        anchors.rightMargin: 291
-    }
-
     Text {
         id: purchase_History
-        y: 34
+        y: 25
         width: 723
         height: 125
         color: "#000000"
@@ -272,11 +279,192 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
-        font.underline: true
         font.weight: Font.Bold
         font.family: "Inter"
         anchors.horizontalCenterOffset: -8
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    Text {
+        id: hershey_Bar_amt
+        x: 350
+        y: 334
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 973
+    }
+
+    Text {
+        id: coca_cola_amt
+        x: 648
+        y: 330
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 675
+    }
+
+    Text {
+        id: pepsi_amt
+        x: 962
+        y: 330
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 361
+    }
+
+    Text {
+        id: sprite_amt
+        x: 350
+        y: 562
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 973
+    }
+
+    Text {
+        id: water_amt
+        x: 648
+        y: 562
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 675
+    }
+
+    Text {
+        id: chips_amt
+        x: 962
+        y: 562
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 361
+    }
+
+    Text {
+        id: doritos_amt
+        x: 350
+        y: 806
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 973
+    }
+
+    Text {
+        id: oreo_amt
+        x: 653
+        y: 806
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 671
+    }
+
+    Text {
+        id: chocolate_milk_amt
+        x: 962
+        y: 806
+        width: 117
+        height: 22
+        color: "#000000"
+        text: qsTr("100\n")
+        anchors.right: parent.right
+        font.pixelSize: 20
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignTop
+        wrapMode: Text.Wrap
+        font.weight: Font.Normal
+        font.family: "Inter"
+        anchors.rightMargin: 361
+    }
+
+    Button {
+        id: button
+        x: 178
+        y: 894
+        width: 158
+        height: 70
+        text: qsTr("Cancel")
+        font.pointSize: 20
+    }
+
+    Button {
+        id: button1
+        x: 1054
+        y: 894
+        width: 158
+        height: 70
+        text: qsTr("Confirm")
+        font.pointSize: 20
     }
 }
 
@@ -292,8 +480,11 @@ D{i:12;uuid:"b3bfedd6-5276-519b-9694-32534f010d0e"}D{i:13;uuid:"0d7b0ede-edcf-5d
 D{i:14;uuid:"2bea097d-93a6-5e24-88ac-1118eea9824f"}D{i:15;uuid:"fd857ed9-20df-5f4a-9f42-9d8b4923168a"}
 D{i:16;uuid:"7176f343-60a5-562b-b456-bd5b2dcac61b"}D{i:17;uuid:"6f49c375-177d-5b3c-85a8-870d8c264f5e"}
 D{i:18;uuid:"0d79f072-26ec-56f8-9eca-41707229113d"}D{i:19;uuid:"31ca70b4-7a07-5f15-b048-831e3237899c"}
-D{i:20;uuid:"68a6682c-767b-5a25-88e6-7fceef9c1667"}D{i:21;uuid:"2d25f624-d054-5ee1-b91e-f10eda622246"}
-D{i:22;uuid:"5ae37516-88e0-53af-ac2c-68b02b818741"}
+D{i:22;uuid:"5ae37516-88e0-53af-ac2c-68b02b818741"}D{i:23;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
+D{i:24;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:25;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
+D{i:26;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:27;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
+D{i:28;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:29;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
+D{i:31}
 }
 ##^##*/
 
