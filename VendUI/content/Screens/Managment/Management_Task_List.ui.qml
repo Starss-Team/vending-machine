@@ -7,20 +7,20 @@ Rectangle {
     width: 1440
     height: 1024
     color: "#c2d5f2"
-    property alias location_A_Location_B_Location_CText: location_A_Location_B_Location_C.text
-    property alias machine_1_Machine_2_Machine_3Text: machine_1_Machine_2_Machine_3.text
-    property alias qUANTITYText: qUANTITY.text
-    property alias rEMOVE_ADDText: rEMOVE_ADD.text
-    property alias elementText: element.text
-    property alias task_List1Text: task_List1.text
-    property alias sLOTText: sLOT.text
-    property alias locationText: location.text
-    property alias iTEMText: iTEM.text
-    property alias nOTES_Text: nOTES_.text
-    property alias vending_MachineText: vending_Machine.text
+    property alias location_A_Location_B_Location_CText: multipleLocationsText.text
+    property alias machine_1_Machine_2_Machine_3Text: multipleMachinesText.text
+    property alias qUANTITYText: quantityText.text
+    property alias rEMOVE_ADDText: removeAddText.text
+    property alias elementText: straightLine1.text
+    property alias task_List1Text: taskListText.text
+    property alias sLOTText: slotText.text
+    property alias locationText: locationText.text
+    property alias iTEMText: itemText.text
+    property alias nOTES_Text: notesText.text
+    property alias vending_MachineText: vendingMachineText.text
 
     Text {
-        id: task_List1
+        id: taskListText
         y: 10
         width: 370
         height: 72
@@ -37,9 +37,9 @@ Rectangle {
     }
 
     Text {
-        id: vending_Machine
-        x: 372
-        y: 94
+        id: vendingMachineText
+        x: 15
+        y: 88
         width: 327
         height: 48
         color: "#000000"
@@ -53,9 +53,9 @@ Rectangle {
     }
 
     Text {
-        id: location_A_Location_B_Location_C
-        x: 802
-        y: 166
+        id: multipleLocationsText
+        x: 383
+        y: 181
         width: 204
         height: 144
         color: "#000000"
@@ -69,10 +69,10 @@ Rectangle {
     }
 
     Text {
-        id: element
-        x: 720
-        y: 94
-        width: 15
+        id: straightLine1
+        x: 357
+        y: 88
+        width: 19
         height: 48
         color: "#000000"
         text: qsTr("|")
@@ -85,9 +85,9 @@ Rectangle {
     }
 
     Text {
-        id: location
-        x: 822
-        y: 94
+        id: locationText
+        x: 403
+        y: 88
         width: 164
         height: 48
         color: "#000000"
@@ -101,9 +101,9 @@ Rectangle {
     }
 
     Text {
-        id: machine_1_Machine_2_Machine_3
-        x: 393
-        y: 166
+        id: multipleMachinesText
+        x: 30
+        y: 181
         width: 284
         height: 144
         color: "#000000"
@@ -117,7 +117,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_5_Stroke_
+        id: straightLine2
         x: 26
         y: 331
         width: 1380
@@ -132,7 +132,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_9_Stroke_
+        id: straightLine3
         x: 30
         y: 808
         width: 1380
@@ -147,7 +147,7 @@ Rectangle {
     }
 
     Text {
-        id: rEMOVE_ADD
+        id: removeAddText
         x: 40
         y: 333
         width: 265
@@ -163,7 +163,7 @@ Rectangle {
     }
 
     Text {
-        id: iTEM
+        id: itemText
         x: 498
         y: 336
         width: 97
@@ -179,7 +179,7 @@ Rectangle {
     }
 
     Text {
-        id: sLOT
+        id: slotText
         x: 915
         y: 332
         width: 103
@@ -195,7 +195,7 @@ Rectangle {
     }
 
     Text {
-        id: qUANTITY
+        id: quantityText
         x: 1172
         y: 333
         width: 207
@@ -211,7 +211,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_6_Stroke_
+        id: straightLine4
         x: 97
         y: 570
         width: 468
@@ -227,7 +227,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_8_Stroke_
+        id: straightLine5
         x: 897
         y: 570
         width: 468
@@ -243,7 +243,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_7_Stroke_
+        id: straightLine6
         x: 569
         y: 570
         width: 468
@@ -259,7 +259,7 @@ Rectangle {
     }
 
     Text {
-        id: nOTES_
+        id: notesText
         x: 26
         y: 809
         width: 147
@@ -275,7 +275,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_10_Stroke_
+        id: straightLine7
         x: 205
         y: 857
         width: 1201
@@ -291,7 +291,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_11_Stroke_
+        id: straightLine8
         x: 205
         y: 905
         width: 1201
@@ -307,7 +307,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_12_Stroke_
+        id: straightLine9
         x: 205
         y: 955
         width: 1201
@@ -323,7 +323,7 @@ Rectangle {
     }
 
     SvgPathItem {
-        id: line_13_Stroke_
+        id: straightLine10
         x: 205
         y: 1002
         width: 1201
@@ -336,6 +336,144 @@ Rectangle {
         joinStyle: 0
         fillColor: "#7a7a82"
         antialiasing: true
+    }
+
+    Text {
+        id: allText1
+        x: 30
+        y: 132
+        text: qsTr("ALL")
+        font.pixelSize: 40
+    }
+
+    Text {
+        id: allText2
+        x: 383
+        y: 132
+        text: qsTr("ALL")
+        font.pixelSize: 40
+    }
+
+    Text {
+        id: currentViewText
+        x: 690
+        y: 85
+        text: qsTr("You are currently viewing:")
+        font.pixelSize: 40
+    }
+
+    Text {
+        id: currentViewLocation
+        x: 1188
+        y: 88
+        text: qsTr("ALL")
+        font.pixelSize: 40
+    }
+
+    Button {
+        id: backButton
+        x: 15
+        y: 966
+        width: 154
+        height: 50
+        text: qsTr("BACK")
+        font.pointSize: 25
+    }
+
+    Button {
+        id: sendListButton
+        x: 1188
+        y: 230
+        text: qsTr("Send List")
+        font.pointSize: 30
+    }
+
+    Button {
+        id: allButton
+        x: 26
+        y: 139
+        width: 500
+        opacity: 0
+        text: qsTr("Button")
+
+        Connections {
+            target: allButton
+            onClicked:
+                currentViewLocation.text = "ALL"
+        }
+    }
+
+    Button {
+        id: locationAButton
+        x: 26
+        y: 185
+        width: 600
+        opacity: 0
+        text: qsTr("Button")
+
+        Connections {
+            target: locationAButton
+            onClicked:
+                currentViewLocation.text = "Location A"
+        }
+    }
+
+    Button {
+        id: locationBButton
+        x: 26
+        y: 233
+        width: 600
+        opacity: 0
+        text: qsTr("Button")
+        Connections {
+            target: locationBButton
+            onClicked:
+                currentViewLocation.text = "Location B"
+        }
+    }
+
+    Button {
+        id: locationCButton
+        x: 26
+        y: 283
+        width: 600
+        opacity: 0
+        text: qsTr("Button")
+        Connections {
+            target: locationCButton
+            onClicked:
+                currentViewLocation.text = "Location C"
+        }
+    }
+
+    SvgPathItem {
+        id: straightLine11
+        x: 26
+        y: 386
+        width: 1380
+        height: 1
+        strokeWidth: 1
+        strokeStyle: 1
+        strokeColor: "#00000000"
+        path: "M 1380 1 L 0 1 L 0 0 L 1380 0 L 1380 1 Z"
+        joinStyle: 0
+        fillColor: "#000000"
+        antialiasing: true
+    }
+
+    ComboBox {
+        id: comboBox
+        x: 102
+        y: 398
+        width: 140
+        height: 40
+        wheelEnabled: false
+        model: [ "Remove", "Add" ]
+        editable: false
+        flat: false
+        font.italic: false
+        font.pointSize: 15
+        textRole: ""
     }
 }
 
@@ -351,7 +489,8 @@ D{i:12;uuid:"0eac1a5a-4069-579a-8214-a669b42f73b1"}D{i:13;uuid:"4b92c77b-4e97-59
 D{i:14;uuid:"c8dda610-8c56-5c57-a352-5486144f1267"}D{i:15;uuid:"dfe1d0a5-6db6-5b29-8696-8cec1f9380ff"}
 D{i:16;uuid:"3b71da8b-abe0-52dd-bc9a-d21cb83aeae2"}D{i:17;uuid:"fd37e242-6290-5072-9752-1735df3ecfbf"}
 D{i:18;uuid:"7e921a14-b3c6-5cd3-bffe-49c7a63c9783"}D{i:19;uuid:"7c354151-605f-5260-a88e-958a9f49d375"}
-D{i:20;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}
+D{i:20;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}D{i:22}D{i:31}D{i:33}D{i:35;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:36}
 }
 ##^##*/
 
