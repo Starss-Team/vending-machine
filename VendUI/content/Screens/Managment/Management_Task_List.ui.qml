@@ -366,8 +366,7 @@ Rectangle {
 
         Connections {
             target: backButton
-            onClicked:
-                backToIdle.push("ManagementIdleScreen.ui.qml")
+            onClicked: backToIdle.push("ManagementIdleScreen.ui.qml")
         }
     }
 
@@ -517,7 +516,7 @@ Rectangle {
         y: 317
         width: 300
         font.pointSize: 15
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
     }
 
     ComboBox {
@@ -860,7 +859,7 @@ Rectangle {
         y: 379
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -904,7 +903,7 @@ Rectangle {
         y: 436
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -948,7 +947,7 @@ Rectangle {
         y: 492
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -992,7 +991,7 @@ Rectangle {
         y: 551
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -1036,7 +1035,7 @@ Rectangle {
         y: 609
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -1080,7 +1079,7 @@ Rectangle {
         y: 668
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -1124,7 +1123,7 @@ Rectangle {
         y: 725
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -1168,7 +1167,7 @@ Rectangle {
         y: 780
         width: 300
         visible: false
-        model: ["Hershey", "Coke", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
+        model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
         font.pointSize: 15
     }
 
@@ -1226,13 +1225,10 @@ D{i:14;uuid:"c8dda610-8c56-5c57-a352-5486144f1267"}D{i:15;uuid:"dfe1d0a5-6db6-5b
 D{i:16;uuid:"3b71da8b-abe0-52dd-bc9a-d21cb83aeae2"}D{i:17;uuid:"7e921a14-b3c6-5cd3-bffe-49c7a63c9783"}
 D{i:18;uuid:"7c354151-605f-5260-a88e-958a9f49d375"}D{i:19;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}
 D{i:36;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:41;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:44;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:45}D{i:47;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:48}D{i:50;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:51}D{i:53;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:54}D{i:56;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:57}D{i:59;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:60}D{i:62;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:63}D{i:65}D{i:66}D{i:67}
-D{i:68}D{i:69}D{i:70}D{i:71}D{i:72}D{i:73}D{i:74}D{i:75}D{i:76}D{i:77}D{i:78}D{i:79}
-D{i:80}D{i:81}D{i:82}D{i:83}D{i:84}D{i:85}D{i:86}D{i:87}D{i:88}D{i:89}D{i:90}D{i:91}
-D{i:92}D{i:93}D{i:94}D{i:95}D{i:96}
+D{i:44;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:47;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:50;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:53;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:56;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:59;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:62;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
 }
 ##^##*/
 
