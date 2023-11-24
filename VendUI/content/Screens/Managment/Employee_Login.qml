@@ -176,7 +176,8 @@ Rectangle {
 
                 if( isValidLogin( username, password, Constants.validCombinations ) ) {
                     console.log( "Login successful : WELCOME BACK, " + username );
-                    loginSuccess.push("Task_List.ui.qml")
+                    Constants.username = username;
+                    loginSuccess.push("ManagementIdleScreen.ui.qml");
                 } else {
                     console.log("Login failed");
                     employeeIncorrectText.visible = true;
