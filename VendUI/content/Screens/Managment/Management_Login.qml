@@ -1,18 +1,18 @@
-import VendUI
+import VendUI as ManagementState
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick 2.15
 
 Rectangle {
-    id: employee_login
+    id: management_login
     width: 1440
     height: 1024
     color: "#c2d5f2"
-    property alias uSERNAMEText: employUsernameText.text
+    property alias uSERNAMEText: managementUsernameText.text
     property alias lOGINText: loginTextButton.text
-    property alias eMPLOYEE_LOGINText: employeeLoginText.text
-    property alias pASSWORDText: employPasswordText.text
+    property alias eMPLOYEE_LOGINText: managementLoginText.text
+    property alias pASSWORDText: managementPasswordText.text
 
     Rectangle {
         id: inputBlock
@@ -24,7 +24,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: employeeBlock
+        id: managementBlock
         x: 322
         y: 195
         width: 796
@@ -33,13 +33,13 @@ Rectangle {
     }
 
     Text {
-        id: employeeLoginText
-        x: 505
+        id: managementLoginText
+        x: 432
         y: 235
-        width: 431
+        width: 577
         height: 61
         color: "#5067b8"
-        text: qsTr("EMPLOYEE LOGIN")
+        text: qsTr("MANAGEMENT LOGIN")
         font.pixelSize: 50
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
@@ -50,7 +50,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: employUsernameOutline
+        id: managementUserOutline
         x: 414
         y: 435
         width: 626
@@ -60,7 +60,7 @@ Rectangle {
         border.width: 4
 
         TextInput {
-            id: employeeUsernameInput
+            id: managementUserInput
             x: 8
             y: 0
             width: 610
@@ -71,7 +71,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: employPasswordOutline
+        id: managementPasswordOutline
         x: 414
         y: 564
         width: 626
@@ -81,7 +81,7 @@ Rectangle {
         border.width: 4
 
         TextInput {
-            id: employeePasswordInput
+            id: managementPasswordInput
             x: 8
             y: 0
             width: 610
@@ -92,7 +92,7 @@ Rectangle {
     }
 
     Text {
-        id: employUsernameText
+        id: managementUsernameText
         x: 389
         y: 400
         width: 217
@@ -108,7 +108,7 @@ Rectangle {
     }
 
     Text {
-        id: employPasswordText
+        id: managementPasswordText
         x: 389
         y: 529
         width: 217
@@ -124,7 +124,7 @@ Rectangle {
     }
 
     Rectangle {
-        id: employLoginBlock
+        id: managementLoginBlock
         x: 561
         y: 690
         width: 333
@@ -133,7 +133,7 @@ Rectangle {
     }
 
     Text {
-        id: employeeIncorrectText
+        id: managementIncorrectText
         x: 358
         y: 632
         visible: false
@@ -171,32 +171,32 @@ Rectangle {
         Connections {
             target: loginButton
             onClicked: {
-                var username = employeeUsernameInput.text
-                var password = employeePasswordInput.text
+                ManagementState.Constants.username = managementUserInput.text
+                ManagementState.Constants.password = managementPasswordInput.text
 
-                if( isValidLogin( username, password, Constants.validCombinations ) ) {
-                    console.log( "Login successful : WELCOME BACK, " + username );
-                    loginSuccess.push("Task_List.ui.qml")
+                if( isValidLogin( ManagementState.Constants.username, ManagementState.Constants.password, ManagementState.Constants.validCombinations ) ) {
+                    console.log( "Login successful : WELCOME BACK, " + ManagementState.Constants.username );
+                    loginSuccess.push("ManagementIdleScreen.ui.qml")
                 } else {
                     console.log("Login failed");
-                    employeeIncorrectText.visible = true;
-                    employeeUsernameInput.clear();
-                    employeePasswordInput.clear();
+                    managementIncorrectText.visible = true;
+                    managementUserInput.clear();
+                    managementPasswordInput.clear();
                 }
             }
         }
     }
 
     function isValidLogin( username, password ) {
-        var storedPassword = Constants.validCombinations[ username ]
+        var storedPassword = ManagementState.Constants.validCombinations[ ManagementState.Constants.username ]
 
-        return username in Constants.validCombinations && password === storedPassword;
+        return ManagementState.Constants.username in ManagementState.Constants.validCombinations && ManagementState.Constants.password === storedPassword;
     }
 
 
     StackView {
         id: loginSuccess
-        initialItem: RestockerLogin
+        initialItem: Management_login
     }
 }
 
