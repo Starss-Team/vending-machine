@@ -176,6 +176,7 @@ Rectangle {
 
                 if( isValidLogin( ManagementState.Constants.username, ManagementState.Constants.password, ManagementState.Constants.validCombinations ) ) {
                     console.log( "Login successful : WELCOME BACK, " + ManagementState.Constants.username );
+                    Constants.username = username;
                     loginSuccess.push("ManagementIdleScreen.ui.qml")
                 } else {
                     console.log("Login failed");
