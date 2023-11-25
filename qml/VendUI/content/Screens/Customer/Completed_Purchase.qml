@@ -3,6 +3,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Studio.Components 1.0
+import QtQml
+import "../../../imports/database.js" as DataBase
 
 Rectangle {
     id: receiptScreen
@@ -921,6 +923,19 @@ Rectangle {
                 duration: 1000
             }
         }
+    Component.onCompleted: {
+        DataBase.recordTransaction(Constants.hersheyQty,Constants.cokeQty,Constants.pepsiQty,Constants.spriteQty,Constants.waterQty,Constants.chipQty,Constants.doritoQty,Constants.oreoQty,Constants.chocoMilkQty,"CASH",Constants.totalPrice)
+        endTimer.start()
+    }
+    Timer{
+        id: endTimer
+        interval: 10000
+        onTriggered: {
+            stackView.pop(null)
+            welcomeMouse.enabled = true
+
+        }
+    }
 }
 
 /*##^##

@@ -6,6 +6,21 @@
 #include <QDir>
 #include <QQmlContext>
 
+class myView : public QQuickView{
+protected:
+    void keyPressEvent(QKeyEvent *e){
+        if(e->key() == Qt::Key_F5){
+            QUrl temp = source();
+
+            engine()->clearComponentCache();
+            engine()->trimComponentCache();
+            setSource(QUrl());
+            setSource(temp);
+            //this->show();
+        }
+    }
+};
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
@@ -24,7 +39,9 @@ int main(int argc, char *argv[])
     qWarning() << "Storage at: " << engine.offlineStoragePath();
 
     // Establishes a view using the QML Quick Engine to view Qt Design Studio .qml files
-    QQuickView view;
+    myView view;
+
+
     //Sets the storage path that it should use for databases
     view.engine()->setOfflineStoragePath(dir.path());
     // Sets a location it should look for imports
@@ -36,8 +53,9 @@ int main(int argc, char *argv[])
     view.setTitle("Stars - Customer Interface");
     view.show();
 
+
     // New Instance of QML engine for Management interface
-    QQuickView management;
+    myView management;
     // Set offline storage path for management interface
     management.engine()->setOfflineStoragePath(dir.path());
     // Set imports for management interface
@@ -49,6 +67,8 @@ int main(int argc, char *argv[])
     if (!management.errors().isEmpty())
         return -1;
     management.show();
+
+
 
     return app.exec();
 }

@@ -87,18 +87,22 @@ Rectangle {
 
     Text{
         id: testText
-        text: "?"
+        text: "!"
         anchors.fill: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        font.pointSize: 60
+        font.pointSize: 40
 
         property string command: 'CREATE TABLE IF NOT EXISTS LocalMachine(timestamp INTEGER , id INTEGER PRIMARY KEY AUTOINCREMENT, items TEXT, transactionType TEXT, totalAmount INTEGER)'
         Component.onCompleted: {
 
-            DataBase.makeTable('inventory', 'slotNum INTEGER, name TEXT, price INTEGER, quantity INTEGER, expDate TEXT')
+//            DataBase.makeTable('inventory', 'slotNum INTEGER, name TEXT, price INTEGER, quantity INTEGER, expDate TEXT')
 //            DataBase.insert('credentials')
-            text = DataBase.getData();
+//            text = DataBase.getData();
+            //text = DataBase.employeeLogin('edward', 'pineapple123')
+//            text = DataBase.employeeLogin('Janda', 'Scrum13')
+            text = "New Purchase: \nChips Ahoy: "+DataBase.purchasedToday()["Chips Ahoy"]
+
         }
     }
 
