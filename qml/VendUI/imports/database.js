@@ -22,51 +22,6 @@ function makeTable(tableName, columns) {
             )
 
 }
-///**
-//  * Fetches data using SELECT SQL function.
-//  * //TODO: Finish implementation
-//  */
-//function getData(){
-//    var vendDB = getDB();
-//    var table = arguments[0]
-//    var items = ""
-//    for(const argument in arguments){
-//        items += (argument + ",")
-//    }
-//    items = items.slice(0,-1);
-//    var test;
-//    try{
-//        vendDB.readTransaction(
-//                    function(tx){
-//                        var result = tx.executeSql('SELECT ' + items + 'FROM ' + table)
-//                        var r = ""
-//                        for (var i = 0; i < result.rows.length; i++) {
-//                            r += result.rows.item(i)
-//                        }
-//                    })
-//    } catch(err) {
-//        console.error("Could not read from Table: " + err)
-//    }
-
-//    vendDB.transaction(
-//                function(tx){
-//                    var result = tx.executeSql('SELECT * FROM credentials');
-//                    var r = ""
-//                    for (var i = 0; i < result.rows.length; i++) {
-//                        r += result.rows.item(i).user + ", " + result.rows.item(i).password + "\n"
-
-//                        console.log(JSON.stringify(result.rows.item(i)));
-//                    }
-//                    var columns = 0
-//                    for(const col in result.rows.item(0)){
-//                        columns++
-//                    }
-
-//                    console.log(columns);
-//                    test = r
-//                })
-//    return test
-//}
 
 /**
   * Takes a User Name and Password and then compares it to the database. Returns true or false.
@@ -122,8 +77,6 @@ function recordTransaction(){
         "Oreo" : arguments[7],
         "Chocolate Milk" : arguments[8]
     };
-
-
     var items= {}
 
     Object.keys(purchases).forEach(function(key) {
@@ -223,9 +176,11 @@ function purchasedToday(){
 function purchaseHistory(){
     var args = ""
     if(arguments[0]){
-        args = "ORDER BY "+arguments[0]
+        args = " ORDER BY "+arguments[0]
+        console.log("args[0]: " + args)
         if (arguments[1]){
             args += " "+arguments[1];
+            console.log("args[1]: "+args )
         }
     }
     var history =[]
@@ -234,7 +189,7 @@ function purchaseHistory(){
         db.readTransaction(
             function(tx){
                 var results = tx.executeSql('SELECT * FROM MainServer'+args)
-                let r = []
+
 
                 for(var i = 0; i < results.rows.length;i++){
                     var row = results.rows.item(i)

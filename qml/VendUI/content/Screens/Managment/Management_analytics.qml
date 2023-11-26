@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import VendUI
-import "../imports/database.js" as DataBase
+import "../../../imports/database.js" as DataBase
 
 Rectangle {
     id: inventory_managment_frame

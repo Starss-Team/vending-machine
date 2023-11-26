@@ -101,8 +101,8 @@ Rectangle {
 //            text = DataBase.getData();
             //text = DataBase.employeeLogin('edward', 'pineapple123')
 //            text = DataBase.employeeLogin('Janda', 'Scrum13')
-            var history = DataBase.purchaseHistory()
-            text = history[0].items.Coke
+            var history = DataBase.purchaseHistory("id")
+            console.log(JSON.stringify(history))
 
         }
     }

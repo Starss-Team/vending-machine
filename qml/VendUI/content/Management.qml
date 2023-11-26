@@ -13,6 +13,10 @@ Item {
     }
     Employee_Login{
         id: loginScreenMGMT
+        enabled: false
+    }
+    Management_analytics{
+        id: analyticsMGMT
     }
 
 }
