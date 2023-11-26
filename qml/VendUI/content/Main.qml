@@ -101,7 +101,8 @@ Rectangle {
 //            text = DataBase.getData();
             //text = DataBase.employeeLogin('edward', 'pineapple123')
 //            text = DataBase.employeeLogin('Janda', 'Scrum13')
-            text = "New Purchase: \nChips Ahoy: "+DataBase.purchasedToday()["Chips Ahoy"]
+            var history = DataBase.purchaseHistory()
+            text = history[0].items.Coke
 
         }
     }

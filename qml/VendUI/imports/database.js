@@ -194,14 +194,14 @@ function purchasedToday(){
                 var results = tx.executeSql('SELECT * FROM MainServer WHERE DATE(timestamp) = DATE(\'now\')')
                 var items
                 for (var i = 0; i < results.rows.length; i++){
-                    console.log(`Result ${i}: `+results.rows.item(i).items)
+//                    console.log(`Result ${i}: `+results.rows.item(i).items)
                     var arrays = JSON.parse(results.rows.item(i).items)
 
                     for (let item in arrays){
                         purchased[item] += arrays[item]
                         if(!purchased[item]){
                             purchased[item] = arrays[item]
-                            console.log("Item Added: "+item+": "+purchased[item])
+//                            console.log("Item Added: "+item+": "+purchased[item])
                         }
                     }
                 }
@@ -215,6 +215,40 @@ function purchasedToday(){
     }
 }
 
+/**
+  * Function returns all purchases in the Main Server's database.
+  * Please see the readme.md for more information on how to access the data.
+  * https://github.com/Starss-Team/vending-machine/blob/creator/README.md
+  */
+function purchaseHistory(){
+    var args = ""
+    if(arguments[0]){
+        args = "ORDER BY "+arguments[0]
+        if (arguments[1]){
+            args += " "+arguments[1];
+        }
+    }
+    var history =[]
+    var db = getDB();
+    try{
+        db.readTransaction(
+            function(tx){
+                var results = tx.executeSql('SELECT * FROM MainServer'+args)
+                let r = []
+
+                for(var i = 0; i < results.rows.length;i++){
+                    var row = results.rows.item(i)
+                    row.items = JSON.parse(row.items)
+
+
+                    history.push(row)
+                }
+            }
+
+        )
+        return history
+    }catch (err){ console.log("Could not retrieve purchases: "+err)}
+}
 
 /**
   * Allows the user to execute any given SQL command that is passed into the parameter.
