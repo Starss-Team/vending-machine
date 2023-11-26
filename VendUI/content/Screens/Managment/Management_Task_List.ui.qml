@@ -7,7 +7,6 @@ Rectangle {
     width: 1440
     height: 1024
     color: "#c2d5f2"
-    property alias location_A_Location_B_Location_CText: multipleLocationsText.text
     property alias machine_1_Machine_2_Machine_3Text: multipleMachinesText.text
     property alias qUANTITYText: quantityText.text
     property alias rEMOVE_ADDText: removeAddText.text
@@ -45,22 +44,6 @@ Rectangle {
         height: 48
         color: "#000000"
         text: qsTr("Vending Machine")
-        font.pixelSize: 40
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Inter"
-    }
-
-    Text {
-        id: multipleLocationsText
-        x: 362
-        y: 105
-        width: 204
-        height: 144
-        color: "#000000"
-        text: qsTr("Location A\nLocation B\nLocation C")
         font.pixelSize: 40
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
@@ -428,11 +411,14 @@ Rectangle {
 
     Button {
         id: allButton
-        x: 25
+        x: 345
         y: 61
-        width: 500
-        opacity: 0
-        text: qsTr("Button")
+        width: 99
+        height: 40
+        opacity: 1
+        text: qsTr("ALL")
+        font.pointSize: 25
+        icon.width: 0
 
         Connections {
             target: allButton
@@ -442,11 +428,13 @@ Rectangle {
 
     Button {
         id: locationAButton
-        x: 26
+        x: 345
         y: 107
-        width: 600
-        opacity: 0
-        text: qsTr("Button")
+        width: 233
+        height: 40
+        opacity: 1
+        text: qsTr("Location A")
+        font.pointSize: 25
 
         Connections {
             target: locationAButton
@@ -456,11 +444,13 @@ Rectangle {
 
     Button {
         id: locationBButton
-        x: 15
-        y: 159
-        width: 600
-        opacity: 0
-        text: qsTr("Button")
+        x: 345
+        y: 157
+        width: 233
+        height: 40
+        opacity: 1
+        text: qsTr("Location B")
+        font.pointSize: 25
         Connections {
             target: locationBButton
             onClicked: currentViewLocation.text = "Location B"
@@ -469,11 +459,13 @@ Rectangle {
 
     Button {
         id: locationCButton
-        x: 26
+        x: 345
         y: 205
-        width: 600
-        opacity: 0
-        text: qsTr("Button")
+        width: 233
+        height: 40
+        opacity: 1
+        text: qsTr("Location C")
+        font.pointSize: 25
         Connections {
             target: locationCButton
             onClicked: currentViewLocation.text = "Location C"
@@ -1215,20 +1207,19 @@ Rectangle {
 /*##^##
 Designer {
     D{i:0;uuid:"10feb183-3c95-5490-aab0-98933a3d7f3c"}D{i:1;uuid:"8bfe20f3-5d8b-5b74-9142-dbbf290a62f1"}
-D{i:2;uuid:"ee1f10ef-9274-5a2f-8477-9922b46bd843"}D{i:3;uuid:"e9f12245-0566-5355-a996-b0a9f0fc256b"}
-D{i:4;uuid:"4ccca54e-ff83-5d06-8e67-a1ecd9d6c30a"}D{i:5;uuid:"133c8741-9081-500a-b8ca-2e7aafb8b904"}
-D{i:6;uuid:"7b80af91-169e-5b11-a367-b393aaec9a09"}D{i:7;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:8;uuid:"af252afe-318f-5951-a946-2a5ebf4fdc47"}D{i:9;uuid:"087644d6-6abd-5c1a-8933-8e8767e5dbe0"}
-D{i:10;uuid:"ffe670b9-bf85-5252-9dca-39e74b7acc48"}D{i:11;uuid:"fd582b9b-0d84-5332-9479-63590b19e663"}
-D{i:12;uuid:"0eac1a5a-4069-579a-8214-a669b42f73b1"}D{i:13;uuid:"4b92c77b-4e97-59dd-b6d3-9f7e217ba8bd"}
-D{i:14;uuid:"c8dda610-8c56-5c57-a352-5486144f1267"}D{i:15;uuid:"dfe1d0a5-6db6-5b29-8696-8cec1f9380ff"}
-D{i:16;uuid:"3b71da8b-abe0-52dd-bc9a-d21cb83aeae2"}D{i:17;uuid:"7e921a14-b3c6-5cd3-bffe-49c7a63c9783"}
-D{i:18;uuid:"7c354151-605f-5260-a88e-958a9f49d375"}D{i:19;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}
-D{i:36;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:41;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:44;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:47;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:50;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:53;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:56;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:59;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:62;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:2;uuid:"ee1f10ef-9274-5a2f-8477-9922b46bd843"}D{i:3;uuid:"4ccca54e-ff83-5d06-8e67-a1ecd9d6c30a"}
+D{i:4;uuid:"133c8741-9081-500a-b8ca-2e7aafb8b904"}D{i:5;uuid:"7b80af91-169e-5b11-a367-b393aaec9a09"}
+D{i:6;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:7;uuid:"af252afe-318f-5951-a946-2a5ebf4fdc47"}
+D{i:8;uuid:"087644d6-6abd-5c1a-8933-8e8767e5dbe0"}D{i:9;uuid:"ffe670b9-bf85-5252-9dca-39e74b7acc48"}
+D{i:10;uuid:"fd582b9b-0d84-5332-9479-63590b19e663"}D{i:11;uuid:"0eac1a5a-4069-579a-8214-a669b42f73b1"}
+D{i:12;uuid:"4b92c77b-4e97-59dd-b6d3-9f7e217ba8bd"}D{i:13;uuid:"c8dda610-8c56-5c57-a352-5486144f1267"}
+D{i:14;uuid:"dfe1d0a5-6db6-5b29-8696-8cec1f9380ff"}D{i:15;uuid:"3b71da8b-abe0-52dd-bc9a-d21cb83aeae2"}
+D{i:16;uuid:"7e921a14-b3c6-5cd3-bffe-49c7a63c9783"}D{i:17;uuid:"7c354151-605f-5260-a88e-958a9f49d375"}
+D{i:18;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}D{i:35;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:40;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:43;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:46;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:49;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:52;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:55;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:58;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:61;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
 }
 ##^##*/
 
