@@ -2,7 +2,6 @@ import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick 2.15
 
 Rectangle {
     id: employee_login

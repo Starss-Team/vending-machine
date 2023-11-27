@@ -5,21 +5,17 @@
 #include <QIcon>
 #include <QDir>
 #include <QQmlContext>
+#include <QShortcut>
+#include <QObject>
 
-class myView : public QQuickView{
-protected:
-    void keyPressEvent(QKeyEvent *e){
-        if(e->key() == Qt::Key_F5){
-            QUrl temp = source();
+void reload(QQuickView *root){
+    QUrl temp = root->source();
 
-            engine()->clearComponentCache();
-            engine()->trimComponentCache();
-            setSource(QUrl());
-            setSource(temp);
-            //this->show();
-        }
-    }
-};
+    root->engine()->clearComponentCache();
+    root->engine()->trimComponentCache();
+    root->setSource(QUrl());
+    root->setSource(temp);
+}
 
 int main(int argc, char *argv[])
 {
@@ -39,8 +35,9 @@ int main(int argc, char *argv[])
     qWarning() << "Storage at: " << engine.offlineStoragePath();
 
     // Establishes a view using the QML Quick Engine to view Qt Design Studio .qml files
-    myView view;
+    QQuickView view;
 
+//    QObject::connect(view.shortcut, &QShortcut::activated, )
 
     //Sets the storage path that it should use for databases
     view.engine()->setOfflineStoragePath(dir.path());
@@ -53,9 +50,19 @@ int main(int argc, char *argv[])
     view.setTitle("Stars - Customer Interface");
     view.show();
 
+    QShortcut *shortcut = new QShortcut(QKeySequence(Qt::Key_F5), &view);
+    QObject::connect(shortcut, &QShortcut::activated, &view, [&view](){
+        QUrl temp = view.source();
+
+        view.engine()->clearComponentCache();
+        view.engine()->trimComponentCache();
+        view.setSource(QUrl());
+        view.setSource(temp);
+
+    });
 
     // New Instance of QML engine for Management interface
-    myView management;
+    QQuickView management;
     // Set offline storage path for management interface
     management.engine()->setOfflineStoragePath(dir.path());
     // Set imports for management interface
@@ -68,7 +75,16 @@ int main(int argc, char *argv[])
         return -1;
     management.show();
 
+    QShortcut *shortcut2 = new QShortcut(QKeySequence(Qt::Key_F5), &management);
+    QObject::connect(shortcut2, &QShortcut::activated, &management, [&management](){
+        QUrl temp = management.source();
 
+        management.engine()->clearComponentCache();
+        management.engine()->trimComponentCache();
+        management.setSource(QUrl());
+        management.setSource(temp);
+
+    });
 
     return app.exec();
 }

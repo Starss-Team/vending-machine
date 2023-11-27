@@ -9,14 +9,7 @@ Item {
 
     StackView {
         id: managementStack
-        initialItem: loginScreenMGMT
-    }
-    Employee_Login{
-        id: loginScreenMGMT
-        enabled: false
-    }
-    Management_analytics{
-        id: analyticsMGMT
+        initialItem: "../content/Screens/Managment/Employee_Login.qml"
     }
 
 }

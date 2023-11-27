@@ -85,9 +85,19 @@ Rectangle {
         ]
     }
 
+    Timer{
+        id: sync
+        interval: 10000
+        repeat: true
+        onTriggered: {
+            DataBase.syncData()
+
+        }
+    }
+
     Text{
         id: testText
-        text: "!"
+        text: "TEST"
         anchors.fill: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -95,13 +105,8 @@ Rectangle {
 
         property string command: 'CREATE TABLE IF NOT EXISTS LocalMachine(timestamp INTEGER , id INTEGER PRIMARY KEY AUTOINCREMENT, items TEXT, transactionType TEXT, totalAmount INTEGER)'
         Component.onCompleted: {
-
-//            DataBase.makeTable('inventory', 'slotNum INTEGER, name TEXT, price INTEGER, quantity INTEGER, expDate TEXT')
-//            DataBase.insert('credentials')
-//            text = DataBase.getData();
-            //text = DataBase.employeeLogin('edward', 'pineapple123')
-//            text = DataBase.employeeLogin('Janda', 'Scrum13')
-            var history = DataBase.purchaseHistory("id")
+            sync.start()
+            var history = DataBase.purchaseHistory("timestamp","DESC")
             console.log(JSON.stringify(history))
 
         }
