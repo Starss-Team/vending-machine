@@ -15,7 +15,6 @@ Rectangle {
     property alias sLOTText: slotText.text
     property alias locationText: locationText.text
     property alias iTEMText: itemText.text
-    property alias nOTES_Text: notesText.text
     property alias vending_MachineText: vendingMachineText.text
 
     Text {
@@ -102,8 +101,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine2
-        x: 9
-        y: 255
+        x: 11
+        y: 299
         width: 1380
         height: 1
         strokeWidth: 1
@@ -117,8 +116,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine3
-        x: 9
-        y: 828
+        x: 11
+        y: 872
         width: 1380
         height: 1
         strokeWidth: 1
@@ -132,8 +131,8 @@ Rectangle {
 
     Text {
         id: removeAddText
-        x: 23
-        y: 257
+        x: 25
+        y: 301
         width: 265
         height: 48
         color: "#000000"
@@ -148,8 +147,8 @@ Rectangle {
 
     Text {
         id: itemText
-        x: 481
-        y: 260
+        x: 483
+        y: 304
         width: 97
         height: 48
         color: "#000000"
@@ -164,8 +163,8 @@ Rectangle {
 
     Text {
         id: slotText
-        x: 898
-        y: 256
+        x: 868
+        y: 301
         width: 103
         height: 48
         color: "#000000"
@@ -180,8 +179,8 @@ Rectangle {
 
     Text {
         id: quantityText
-        x: 1155
-        y: 257
+        x: 1139
+        y: 301
         width: 207
         height: 47
         color: "#000000"
@@ -192,118 +191,6 @@ Rectangle {
         wrapMode: Text.Wrap
         font.weight: Font.Normal
         font.family: "Inter"
-    }
-
-    SvgPathItem {
-        id: straightLine4
-        x: 80
-        y: 494
-        width: 468
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: 90
-        path: "M 468 1 L 0 1 L 0 0 L 468 0 L 468 1 Z"
-        joinStyle: 0
-        fillColor: "#000000"
-        antialiasing: true
-    }
-
-    SvgPathItem {
-        id: straightLine5
-        x: 880
-        y: 494
-        width: 468
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: 90
-        path: "M 468 1 L 0 1 L 0 0 L 468 0 L 468 1 Z"
-        joinStyle: 0
-        fillColor: "#000000"
-        antialiasing: true
-    }
-
-    SvgPathItem {
-        id: straightLine6
-        x: 552
-        y: 494
-        width: 468
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: 90
-        path: "M 468 1 L 0 1 L 0 0 L 468 0 L 468 1 Z"
-        joinStyle: 0
-        fillColor: "#000000"
-        antialiasing: true
-    }
-
-    Text {
-        id: notesText
-        x: 13
-        y: 845
-        width: 147
-        height: 48
-        color: "#000000"
-        text: qsTr("NOTES:")
-        font.pixelSize: 40
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignTop
-        wrapMode: Text.NoWrap
-        font.weight: Font.Normal
-        font.family: "Inter"
-    }
-
-    SvgPathItem {
-        id: straightLine7
-        x: 192
-        y: 883
-        width: 1201
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: -0.095
-        path: "M 1201.001708984375 1 L 0 1 L 0 0 L 1201.001708984375 0 L 1201.001708984375 1 Z"
-        joinStyle: 0
-        fillColor: "#7a7a82"
-        antialiasing: true
-    }
-
-    SvgPathItem {
-        id: straightLine8
-        x: 192
-        y: 920
-        width: 1201
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: -0.095
-        path: "M 1201.001708984375 1 L 0 1 L 0 0 L 1201.001708984375 0 L 1201.001708984375 1 Z"
-        joinStyle: 0
-        fillColor: "#7a7a82"
-        antialiasing: true
-    }
-
-    SvgPathItem {
-        id: straightLine9
-        x: 192
-        y: 956
-        width: 1201
-        height: 1
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        rotation: -0.095
-        path: "M 1201.001708984375 1 L 0 1 L 0 0 L 1201.001708984375 0 L 1201.001708984375 1 Z"
-        joinStyle: 0
-        fillColor: "#7a7a82"
-        antialiasing: true
     }
 
     Text {
@@ -355,10 +242,12 @@ Rectangle {
 
     Button {
         id: sendListButton
-        x: 1176
-        y: 159
+        x: 1228
+        y: 966
+        width: 192
+        height: 50
         text: qsTr("Send List")
-        font.pointSize: 30
+        font.pointSize: 25
 
         Connections {
             target: sendListButton
@@ -474,8 +363,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine11
-        x: 9
-        y: 310
+        x: 11
+        y: 354
         width: 1380
         height: 1
         strokeWidth: 1
@@ -489,8 +378,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox1
-        x: 92
-        y: 317
+        x: 94
+        y: 361
         width: 140
         height: 40
         wheelEnabled: false
@@ -504,8 +393,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox1
-        x: 380
-        y: 317
+        x: 382
+        y: 361
         width: 300
         font.pointSize: 15
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -513,24 +402,24 @@ Rectangle {
 
     ComboBox {
         id: slotBox1
-        x: 880
-        y: 317
+        x: 849
+        y: 361
         font.pointSize: 15
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     }
 
     ComboBox {
         id: quantityBox1
-        x: 1189
-        y: 317
+        x: 1172
+        y: 361
         font.pointSize: 15
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     }
 
     SvgPathItem {
         id: straightLine12
-        x: 13
-        y: 368
+        x: 15
+        y: 412
         width: 1380
         height: 1
         strokeWidth: 1
@@ -544,8 +433,8 @@ Rectangle {
 
     Button {
         id: addTaskButton1
-        x: 143
-        y: 375
+        x: 145
+        y: 419
         width: 45
         height: 44
         text: qsTr("+")
@@ -566,8 +455,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine13
-        x: 13
-        y: 425
+        x: 15
+        y: 469
         width: 1380
         height: 1
         visible: true
@@ -582,8 +471,8 @@ Rectangle {
 
     Button {
         id: addTaskButton2
-        x: 143
-        y: 432
+        x: 145
+        y: 476
         width: 45
         height: 44
         visible: false
@@ -604,8 +493,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine14
-        x: 9
-        y: 482
+        x: 11
+        y: 526
         width: 1380
         height: 1
         visible: true
@@ -620,8 +509,8 @@ Rectangle {
 
     Button {
         id: addTaskButton3
-        x: 143
-        y: 490
+        x: 145
+        y: 534
         width: 45
         height: 44
         visible: false
@@ -642,8 +531,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine15
-        x: 9
-        y: 540
+        x: 11
+        y: 584
         width: 1380
         height: 1
         visible: true
@@ -658,8 +547,8 @@ Rectangle {
 
     Button {
         id: addTaskButton4
-        x: 143
-        y: 547
+        x: 145
+        y: 591
         width: 45
         height: 44
         visible: false
@@ -680,8 +569,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine16
-        x: 9
-        y: 597
+        x: 11
+        y: 641
         width: 1380
         height: 1
         visible: true
@@ -696,8 +585,8 @@ Rectangle {
 
     Button {
         id: addTaskButton5
-        x: 143
-        y: 605
+        x: 145
+        y: 649
         width: 45
         height: 44
         visible: false
@@ -718,8 +607,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine17
-        x: 9
-        y: 655
+        x: 11
+        y: 699
         width: 1380
         height: 1
         visible: true
@@ -734,8 +623,8 @@ Rectangle {
 
     Button {
         id: addTaskButton6
-        x: 143
-        y: 664
+        x: 145
+        y: 708
         width: 45
         height: 44
         visible: false
@@ -756,8 +645,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine18
-        x: 9
-        y: 714
+        x: 11
+        y: 758
         width: 1380
         height: 1
         visible: true
@@ -772,8 +661,8 @@ Rectangle {
 
     Button {
         id: addTaskButton7
-        x: 143
-        y: 721
+        x: 145
+        y: 765
         width: 45
         height: 44
         visible: false
@@ -794,8 +683,8 @@ Rectangle {
 
     SvgPathItem {
         id: straightLine19
-        x: 13
-        y: 771
+        x: 15
+        y: 815
         width: 1380
         height: 1
         visible: true
@@ -810,8 +699,8 @@ Rectangle {
 
     Button {
         id: addTaskButton8
-        x: 143
-        y: 778
+        x: 145
+        y: 822
         width: 45
         height: 44
         visible: false
@@ -831,8 +720,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox2
-        x: 92
-        y: 379
+        x: 94
+        y: 423
         width: 140
         height: 40
         visible: false
@@ -847,8 +736,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox2
-        x: 382
-        y: 379
+        x: 384
+        y: 423
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -857,8 +746,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox2
-        x: 880
-        y: 379
+        x: 849
+        y: 423
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -866,8 +755,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox2
-        x: 1189
-        y: 379
+        x: 1173
+        y: 423
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -875,8 +764,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox3
-        x: 96
-        y: 436
+        x: 98
+        y: 480
         width: 140
         height: 40
         visible: false
@@ -891,8 +780,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox3
-        x: 380
-        y: 436
+        x: 382
+        y: 480
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -901,8 +790,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox3
-        x: 880
-        y: 436
+        x: 850
+        y: 480
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -910,8 +799,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox3
-        x: 1189
-        y: 436
+        x: 1173
+        y: 480
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -919,8 +808,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox4
-        x: 92
-        y: 492
+        x: 94
+        y: 536
         width: 140
         height: 40
         visible: false
@@ -935,8 +824,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox4
-        x: 380
-        y: 492
+        x: 382
+        y: 536
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -945,8 +834,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox4
-        x: 880
-        y: 492
+        x: 850
+        y: 538
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -954,8 +843,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox4
-        x: 1189
-        y: 492
+        x: 1173
+        y: 538
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -963,8 +852,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox5
-        x: 92
-        y: 551
+        x: 94
+        y: 595
         width: 140
         height: 40
         visible: false
@@ -979,8 +868,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox5
-        x: 380
-        y: 551
+        x: 382
+        y: 595
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -989,8 +878,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox5
-        x: 880
-        y: 551
+        x: 850
+        y: 595
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -998,8 +887,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox5
-        x: 1189
-        y: 551
+        x: 1173
+        y: 595
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -1007,8 +896,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox6
-        x: 92
-        y: 609
+        x: 94
+        y: 653
         width: 140
         height: 40
         visible: false
@@ -1023,8 +912,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox6
-        x: 380
-        y: 609
+        x: 382
+        y: 653
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -1033,8 +922,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox6
-        x: 880
-        y: 609
+        x: 849
+        y: 653
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -1042,8 +931,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox6
-        x: 1189
-        y: 609
+        x: 1173
+        y: 653
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -1051,8 +940,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox7
-        x: 96
-        y: 666
+        x: 98
+        y: 710
         width: 140
         height: 40
         visible: false
@@ -1067,8 +956,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox7
-        x: 382
-        y: 668
+        x: 384
+        y: 712
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -1077,8 +966,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox7
-        x: 880
-        y: 666
+        x: 850
+        y: 712
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -1086,8 +975,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox7
-        x: 1189
-        y: 666
+        x: 1172
+        y: 712
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -1095,8 +984,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox8
-        x: 96
-        y: 725
+        x: 98
+        y: 769
         width: 140
         height: 40
         visible: false
@@ -1111,8 +1000,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox8
-        x: 382
-        y: 725
+        x: 384
+        y: 769
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -1121,8 +1010,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox8
-        x: 880
-        y: 725
+        x: 850
+        y: 769
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -1130,8 +1019,8 @@ Rectangle {
 
     ComboBox {
         id: quantityBox8
-        x: 1189
-        y: 725
+        x: 1172
+        y: 769
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
@@ -1139,8 +1028,8 @@ Rectangle {
 
     ComboBox {
         id: removeAddBox9
-        x: 96
-        y: 780
+        x: 98
+        y: 824
         width: 140
         height: 40
         visible: false
@@ -1155,8 +1044,8 @@ Rectangle {
 
     ComboBox {
         id: itemBox9
-        x: 380
-        y: 780
+        x: 382
+        y: 824
         width: 300
         visible: false
         model: ["Hershey", "Coca-Cola", "Pepsi", "Sprite", "Water", "Chips", "Doritos", "Oreos", "Chocolate Milk"]
@@ -1165,8 +1054,8 @@ Rectangle {
 
     ComboBox {
         id: slotBox9
-        x: 880
-        y: 780
+        x: 849
+        y: 824
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         font.pointSize: 15
@@ -1174,33 +1063,57 @@ Rectangle {
 
     ComboBox {
         id: quantityBox9
-        x: 1189
-        y: 780
+        x: 1173
+        y: 824
         visible: false
         model: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
         font.pointSize: 15
     }
 
-    TextArea {
-        id: notesArea
-        x: 192
-        y: 845
-        width: 1214
-        height: 150
-        wrapMode: Text.WordWrap
-        topPadding: 0
-        leftPadding: 0
-        rightPadding: 0
-        bottomInset: 1
-        leftInset: 200
-        topInset: 0
-        font.pointSize: 16
-        placeholderText: qsTr("")
-    }
-
     StackView {
         id: backToIdle
         initialItem: TaskList
+    }
+
+    Rectangle {
+        id: removeOutline
+        x: 11
+        y: 299
+        width: 327
+        height: 574
+        color: "#00ffffff"
+        border.color: "#b4000000"
+        border.width: 2
+    }
+
+    Rectangle {
+        id: itemOutline
+        x: 336
+        y: 299
+        width: 412
+        height: 574
+        color: "#00ffffff"
+        border.width: 2
+    }
+
+    Rectangle {
+        id: slotOutline
+        x: 746
+        y: 299
+        width: 346
+        height: 574
+        color: "#00ffffff"
+        border.width: 2
+    }
+
+    Rectangle {
+        id: quantityOutline
+        x: 1089
+        y: 299
+        width: 306
+        height: 574
+        color: "#00ffffff"
+        border.width: 2
     }
 }
 
@@ -1212,14 +1125,11 @@ D{i:4;uuid:"133c8741-9081-500a-b8ca-2e7aafb8b904"}D{i:5;uuid:"7b80af91-169e-5b11
 D{i:6;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:7;uuid:"af252afe-318f-5951-a946-2a5ebf4fdc47"}
 D{i:8;uuid:"087644d6-6abd-5c1a-8933-8e8767e5dbe0"}D{i:9;uuid:"ffe670b9-bf85-5252-9dca-39e74b7acc48"}
 D{i:10;uuid:"fd582b9b-0d84-5332-9479-63590b19e663"}D{i:11;uuid:"0eac1a5a-4069-579a-8214-a669b42f73b1"}
-D{i:12;uuid:"4b92c77b-4e97-59dd-b6d3-9f7e217ba8bd"}D{i:13;uuid:"c8dda610-8c56-5c57-a352-5486144f1267"}
-D{i:14;uuid:"dfe1d0a5-6db6-5b29-8696-8cec1f9380ff"}D{i:15;uuid:"3b71da8b-abe0-52dd-bc9a-d21cb83aeae2"}
-D{i:16;uuid:"7e921a14-b3c6-5cd3-bffe-49c7a63c9783"}D{i:17;uuid:"7c354151-605f-5260-a88e-958a9f49d375"}
-D{i:18;uuid:"f3e2b1fd-cae8-5a13-a434-bdcaec9b6caf"}D{i:35;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:40;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:43;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:46;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:49;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:52;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:55;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
-D{i:58;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:61;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:28;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:33;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:36;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:39;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:42;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:45;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:48;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:51;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}
+D{i:54;uuid:"c6b66da3-9226-5d70-90a1-4008ed64d697"}D{i:92}D{i:93}
 }
 ##^##*/
 
