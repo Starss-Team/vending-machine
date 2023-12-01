@@ -2,6 +2,8 @@ import VendUI
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import "../Managment"
+import "../../../imports/database.js" as DataBase
 
 Rectangle {
     id: employee_login
@@ -185,9 +187,11 @@ Rectangle {
                 var username = employeeUsernameInput.text
                 var password = employeePasswordInput.text
 
-                if( isValidLogin( username, password, Constants.validCombinations ) ) {
-                    console.log( "Login successful : WELCOME BACK, " + username );
-                    loginSuccess.push("Task_List.ui.qml")
+                // if( isValidLogin( username, password, Constants.validCombinations ) ) {
+                if(DataBase.employeeLogin(username, password)){
+                    Constants.user = username;
+                    console.log( "Login successful : WELCOME BACK, " + Constants.user );
+                    managementStack.push("ManagementIdleScreen.ui.qml")
                 } else {
                     console.log("Login failed");
                     employeeIncorrectText.visible = true;
@@ -207,19 +211,11 @@ Rectangle {
 
 
 
-    StackView {
-        id: loginSuccess
-//        initialItem: RestockerLogin
-    }
+    // StackView {
+    //     id: loginSuccess
+    //    initialItem: RestockerLogin
+    // }
 }
 
-/*##^##
-Designer {
-    D{i:0;uuid:"7ea23820-b56e-550c-8efd-cda1b8ea0fbb"}D{i:1;uuid:"da5b1f5e-34f9-5097-8e61-606a16ac3fc8"}
-D{i:2;uuid:"a88f2f44-2b48-58b3-a30a-c4836c29bbc6"}D{i:3;uuid:"c803f577-2e1a-50d3-b330-0a7836bd6786"}
-D{i:4;uuid:"4132a9af-0cda-5798-8f08-84645080c6f6"}D{i:7;uuid:"4e2a683c-6da4-5915-890f-b9687e226e2c"}
-D{i:9;uuid:"0e6a4086-2934-5ec1-94fe-aa3777c1b9e2"}D{i:10;uuid:"507dabe0-d046-5bf6-a0d4-795288e6c675"}
-D{i:11;uuid:"3363b10c-be6c-55a3-88eb-8382138c994e"}D{i:12;uuid:"248b9193-b69a-5ead-b83c-c76eeafdda08"}
-}
-##^##*/
+
 

@@ -203,5 +203,5 @@ QtObject {
         "Ngoc": "Development123"
     }
 
-    property var vendDB
+    property var user
 }

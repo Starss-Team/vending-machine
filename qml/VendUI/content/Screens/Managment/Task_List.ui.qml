@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Studio.Components 1.0
+import VendUI
 
 Rectangle {
     id: task_List
@@ -337,6 +338,7 @@ Rectangle {
         fillColor: "#7a7a82"
         antialiasing: true
     }
+
 }
 
 /*##^##
