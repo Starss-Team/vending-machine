@@ -210,7 +210,7 @@ Rectangle {
                 target: mouseAreaHistory
                 onClicked: {
                     console.log("clicked")
-                    managementStack.push("Purchase_History.qml")
+                    managementStack.push("Purchase_History.ui.qml")
                     homeButton.visible = true
                     homeButton.enabled = true
                 }
@@ -314,7 +314,7 @@ Rectangle {
                 target: mouseAreaInventory
                 onClicked: {
                     console.log("clicked")
-                    managementStack.push("Inventory_managment_frame.ui.qml")
+                    managementStack.push("Inventory_management_frame.ui.qml")
                     homeButton.visible = true
                     homeButton.enabled = true
                 }
@@ -373,6 +373,8 @@ Rectangle {
             }
         }
     }
+
+
 }
 
 /*##^##

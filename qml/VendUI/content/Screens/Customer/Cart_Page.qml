@@ -42,7 +42,7 @@ Rectangle {
                 item: qsTr("Sprite"),
                 qty: Constants.spriteQty,
                 price: Constants.spritePrice,
-                imgURL: "../../assets/image_4.png",
+                imgURL: "../../assets/image_6.png",
                 itemTotal: Constants.spritePrice * Constants.spriteQty
             },
             {
@@ -56,7 +56,7 @@ Rectangle {
                 item: qsTr("Chips"),
                 qty: Constants.chipQty,
                 price: Constants.chipPrice,
-                imgURL: "../../assets/image_6.png",
+                imgURL: "../../assets/image_4.png",
                 itemTotal: Constants.chipPrice * Constants.chipQty
             },
             {

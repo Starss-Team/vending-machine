@@ -3,6 +3,7 @@ import QtQuick.Controls
 import VendUI
 import QtQuick.Studio.Components 1.0
 import "../content/Screens/Restocker"
+import "../imports/database.js" as DataBase
 
 Item {
     width: 1024
@@ -44,5 +45,9 @@ Item {
                 }
             }
         }
+    }
+    Component.onCompleted: {
+        console.log(JSON.stringify(DataBase.purchaseHistory()))
+
     }
 }
