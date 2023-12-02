@@ -34,31 +34,30 @@ Rectangle {
 
             CheckBox {
                 id: checkBoxOne
-                x: 798
-                y: 240
+                x: 814
+                y: 256
                 width: 50
                 text: qsTr("")
-                checkable: false
+                checkable: true
                 scale: 2
             }
 
             CheckBox {
                 id: checkBoxTwo
-                x: 798
-                y: 340
+                x: 814
+                y: 356
                 width: 50
                 text: qsTr("")
-                checkable: false
+                checkable: true
                 scale: 2
             }
 
             CheckBox {
                 id: checkBoxThree
-                x: 798
-                y: 440
+                x: 814
+                y: 456
                 width: 50
-                text: qsTr("")
-                checkable: false
+                checkable: true
                 scale: 2
             }
 

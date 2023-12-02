@@ -41,7 +41,7 @@ Rectangle {
                 y: 193
                 width: 767
                 height: 774
-                source: "../../../../../../../../Downloads/Starrs Vending Machine Restocker Issue Report QR.png"
+                source: "../../images/Starrs_Vending_Machine_Restocker_Issue_Report_QR.png"
                 fillMode: Image.PreserveAspectFit
             }
 
