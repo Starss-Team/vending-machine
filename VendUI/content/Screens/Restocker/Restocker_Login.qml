@@ -10,6 +10,7 @@ Rectangle {
     height: 1366
     visible: true
     color: "#ffffff"
+    scale: 1
     property alias lOGINText: loginText.text
     property alias pASSWORDText: passwordText.text
     property alias uSERNAMEText: usernameText.text
