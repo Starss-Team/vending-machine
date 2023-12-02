@@ -181,7 +181,7 @@ Rectangle {
                 if( DataBase.employeeLogin(username,password) ) {
                     console.log( "Login successful : WELCOME BACK, " + username );
                     Constants.username = username
-                    restockStack.push("Restocker_POV.ui.qml")
+                    restockStack.push("Restocker_Actions.ui.qml")
                     usernameInput.clear()
                     passwordInput.clear()
                 } else {
@@ -201,10 +201,10 @@ Rectangle {
     }
 
 
-    StackView {
-        id: loginSuccess
-        initialItem: RestockerLogin
-    }
+//    StackView {
+//        id: loginSuccess
+//        initialItem: RestockerLogin
+//    }
 
 
 }
