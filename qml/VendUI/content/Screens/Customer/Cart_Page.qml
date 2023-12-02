@@ -42,7 +42,7 @@ Rectangle {
                 item: qsTr("Sprite"),
                 qty: Constants.spriteQty,
                 price: Constants.spritePrice,
-                imgURL: "../../assets/image_4.png",
+                imgURL: "../../assets/image_6.png",
                 itemTotal: Constants.spritePrice * Constants.spriteQty
             },
             {
@@ -56,7 +56,7 @@ Rectangle {
                 item: qsTr("Chips"),
                 qty: Constants.chipQty,
                 price: Constants.chipPrice,
-                imgURL: "../../assets/image_6.png",
+                imgURL: "../../assets/image_4.png",
                 itemTotal: Constants.chipPrice * Constants.chipQty
             },
             {
@@ -264,11 +264,13 @@ Rectangle {
         }
         Button {
             id: continueButtonCart
-            text: qsTr("Confirm")
+            x: 753
+            y: 125
+            text: qsTr("Cash only")
             anchors.right: parent.right
-            anchors.rightMargin: 200
+            anchors.rightMargin: 107
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 60
+            anchors.bottomMargin: 61
             scale: 2
             Connections {
                 target: continueButtonCart
@@ -283,11 +285,11 @@ Rectangle {
             anchors.top: parent.top
             anchors.topMargin: 125
             anchors.right: parent.right
-            anchors.rightMargin: 665
+            anchors.rightMargin: 818
             anchors.left: parent.left
-            anchors.leftMargin: 200
+            anchors.leftMargin: 48
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 60
+            anchors.bottomMargin: 61
             scale: 2
             Connections {
                 target: backButtonCart
@@ -295,6 +297,24 @@ Rectangle {
                     stackView.pop()
                 }
             }
+        }
+
+        Button {
+            id: continueButtonCart1
+            x: 498
+            y: 125
+            text: qsTr("Card Only")
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            scale: 2
+            Connections {
+                target: continueButtonCart1
+                onClicked: {
+//                            stackView.push("Cash_Pay_Screen.ui.qml")
+                        }
+            }
+            anchors.rightMargin: 362
+            anchors.bottomMargin: 61
         }
     }
     Text {
@@ -313,7 +333,7 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"2fef32db-68df-508b-9843-295776635f9c"}
+    D{i:0;uuid:"2fef32db-68df-508b-9843-295776635f9c"}D{i:34}
 }
 ##^##*/
 
