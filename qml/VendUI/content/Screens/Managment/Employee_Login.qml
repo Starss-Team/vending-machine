@@ -192,6 +192,8 @@ Rectangle {
                     Constants.user = username;
                     console.log( "Login successful : WELCOME BACK, " + Constants.user );
                     managementStack.push("ManagementIdleScreen.ui.qml")
+                    employeeUsernameInput.clear()
+                    employeePasswordInput.clear()
                 } else {
                     console.log("Login failed");
                     employeeIncorrectText.visible = true;

@@ -97,7 +97,7 @@ Rectangle {
 
     Text{
         id: testText
-        text: "TEST"
+        text: ""
         anchors.fill: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -106,8 +106,8 @@ Rectangle {
         property string command: 'CREATE TABLE IF NOT EXISTS LocalMachine(timestamp INTEGER , id INTEGER PRIMARY KEY AUTOINCREMENT, items TEXT, transactionType TEXT, totalAmount INTEGER)'
         Component.onCompleted: {
             sync.start()
-            var history = DataBase.purchaseHistory("timestamp","DESC")
-            console.log(JSON.stringify(history))
+            // var history = DataBase.purchaseHistory("timestamp","DESC")
+            // console.log(JSON.stringify(history))
 
         }
     }

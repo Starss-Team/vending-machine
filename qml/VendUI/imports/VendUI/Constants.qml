@@ -204,4 +204,5 @@ QtObject {
     }
 
     property var user
+    property var username
 }

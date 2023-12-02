@@ -21,5 +21,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     qml/VendUI/content/Management.qml \
+    qml/VendUI/content/Restocker.qml \
     qml/VendUI/content/Screens/Restocker/Confirmation.qml \
+    qml/VendUI/content/Screens/Restocker/Restocker_Actions.ui.qml \
     qml/VendUI/imports/database.js

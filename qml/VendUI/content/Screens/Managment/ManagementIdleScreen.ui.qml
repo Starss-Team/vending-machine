@@ -36,9 +36,9 @@ Rectangle {
 
     Text {
         id: username
-        x: 756
+        x: 714
         y: 38
-        width: 136
+        width: 443
         height: 61
         color: "#000000"
         text: Constants.user
@@ -106,7 +106,8 @@ Rectangle {
                 target: mouseAreaExit
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Employee_Login.qml")
+                    managementStack.pop(null)
+                    Constants.user = ""
                 }
             }
         }
@@ -157,7 +158,9 @@ Rectangle {
                 target: mouseArea
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Task_List.ui.qml")
+                    managementStack.push("Task_List.ui.qml")
+                    homeButton.visible = true
+                    homeButton.enabled = true
                 }
             }
         }
@@ -207,7 +210,9 @@ Rectangle {
                 target: mouseAreaHistory
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Purchase_History.ui.qml")
+                    managementStack.push("Purchase_History.ui.qml")
+                    homeButton.visible = true
+                    homeButton.enabled = true
                 }
             }
         }
@@ -257,7 +262,9 @@ Rectangle {
                 target: mouseAreaAnalytics
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Management_analytics.qml")
+                    managementStack.push("Management_analytics.qml")
+                    homeButton.visible = true
+                    homeButton.enabled = true
                 }
             }
         }
@@ -307,7 +314,9 @@ Rectangle {
                 target: mouseAreaInventory
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Inventory_management_frame.ui.qml")
+                    managementStack.push("Inventory_management_frame.ui.qml")
+                    homeButton.visible = true
+                    homeButton.enabled = true
                 }
             }
         }
@@ -357,15 +366,15 @@ Rectangle {
                 target: mouseAreaStatus
                 onClicked: {
                     console.log("clicked")
-                    idleView.push("Management_report_status.ui.qml")
+                    managementStack.push("Management_report_status.ui.qml")
+                    homeButton.visible = true
+                    homeButton.enabled = true
                 }
             }
         }
     }
 
-    StackView {
-        id: idleView
-    }
+
 }
 
 /*##^##

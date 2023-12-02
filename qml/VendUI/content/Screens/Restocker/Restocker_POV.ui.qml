@@ -1,5 +1,7 @@
+import VendUI
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import QtQuick.Studio.Components 1.0
 
 Rectangle {
@@ -7,34 +9,264 @@ Rectangle {
     width: 1024
     height: 1366
     color: "transparent"
-    property alias rEPORT_ISSUEText: rEPORT_ISSUE.text
-    property alias iTEMText: iTEM.text
-    property alias qTYText: qTY.text
-    property alias r_REMOVE_A_ADDText: r_REMOVE_A_ADD.text
-    property alias r_AText: r_A.text
-    property alias sLOTText: sLOT.text
+    property alias iTEMText: itemText.text
+    property alias qTYText: qtyText.text
+    property alias r_REMOVE_A_ADDText: removeAddKey.text
+    property alias r_AText: removeAddText.text
+    property alias sLOTText: slotText.text
 
     Rectangle {
-        id: restocker_POV1
+        id: restockerPOV
+
         x: 0
         y: 0
         width: 1024
         height: 1366
         color: "#5067b8"
         Rectangle {
-            id: rectangle_6
+            id: listFrame
             y: 115
             width: 875
             height: 1041
             color: "#ffffff"
             anchors.horizontalCenterOffset: 1
             anchors.horizontalCenter: parent.horizontalCenter
+
+            CheckBox {
+                id: checkBoxOne
+                x: 798
+                y: 240
+                width: 50
+                text: qsTr("")
+                checkable: false
+                scale: 2
+            }
+
+            CheckBox {
+                id: checkBoxTwo
+                x: 798
+                y: 340
+                width: 50
+                text: qsTr("")
+                checkable: false
+                scale: 2
+            }
+
+            CheckBox {
+                id: checkBoxThree
+                x: 798
+                y: 440
+                width: 50
+                text: qsTr("")
+                checkable: false
+                scale: 2
+            }
+
+            Text {
+                id: removeAddTextOne
+                x: 14
+                y: 230
+                width: 65
+                height: 60
+                text: qsTr("A")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: removeAddTextTwo
+                x: 14
+                y: 330
+                width: 65
+                height: 60
+                text: qsTr("A")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: removeAddTextThree
+                x: 14
+                y: 430
+                width: 65
+                height: 60
+                text: qsTr("R")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: itemNameOne
+                x: 106
+                y: 230
+                width: 332
+                height: 60
+                text: qsTr("Hershey Bar")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: itemNameTwo
+                x: 106
+                y: 330
+                width: 332
+                height: 60
+                text: qsTr("Pepsi")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: itemNameThree
+                x: 106
+                y: 430
+                width: 332
+                height: 60
+                text: qsTr("Chocolate Milk")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                id: slotTextOne
+                x: 505
+                y: 230
+                height: 60
+                text: qsTr("1")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: slotTextTwo
+                x: 505
+                y: 330
+                height: 60
+                text: qsTr("3")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: slotTextThree
+                x: 505
+                y: 430
+                height: 60
+                text: qsTr("9")
+                font.pixelSize: 45
+            }
+
+            TextInput {
+                id: qtyInputOne
+                x: 700
+                y: 230
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+
+                Connections {
+                    target: qtyInputOne
+                    onEditingFinished: if (qtyInputOne.text == qtyOne.text) {
+                                           checkBoxOne.checked = true
+                                       } else {
+                                           checkBoxOne.checked = false
+                                       }
+                }
+            }
+
+            TextInput {
+                id: qtyInputTwo
+                x: 700
+                y: 330
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+
+                Connections {
+                    target: qtyInputTwo
+                    onEditingFinished: if (qtyInputTwo.text == qtyTwo.text) {
+                                           checkBoxTwo.checked = true
+                                       } else {
+                                           checkBoxTwo.checked = false
+                                       }
+                }
+            }
+
+            TextInput {
+                id: qtyInputThree
+                x: 700
+                y: 430
+                width: 80
+                height: 60
+                text: qsTr("0")
+                font.pixelSize: 45
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                autoScroll: false
+
+                Connections {
+                    target: qtyInputThree
+                    onEditingFinished: if (qtyInputThree.text == qtyThree.text) {
+                                           checkBoxThree.checked = true
+                                       } else {
+                                           checkBoxThree.checked = false
+                                       }
+                }
+            }
+
+            Text {
+                id: qtyOne
+                x: 630
+                y: 230
+                height: 60
+                text: qsTr("5")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: qtyTwo
+                x: 630
+                y: 330
+                height: 60
+                text: qsTr("5")
+                font.pixelSize: 45
+            }
+
+            Text {
+                id: qtyThree
+                x: 630
+                y: 430
+                height: 60
+                text: qsTr("8")
+                font.pixelSize: 45
+            }
         }
 
         SvgPathItem {
-            id: line_3_Stroke_
-            x: 113
-            y: 697
+            id: itemSlotDivider
+            x: 57
+            y: 699
+            width: 917
+            height: 1
+            strokeWidth: 1
+            strokeStyle: 1
+            strokeColor: "transparent"
+            rotation: 90
+            path: "M 917.0784912109375 1 L 0 1 L 0 0 L 917.0784912109375 0 L 917.0784912109375 1 Z"
+
+            fillColor: "#000000"
+            antialiasing: true
+        }
+
+        SvgPathItem {
+            id: slotQtyDivider
+            x: 199
+            y: 693
             width: 917
             height: 1
             strokeWidth: 1
@@ -48,24 +280,8 @@ Rectangle {
         }
 
         SvgPathItem {
-            id: line_5_Stroke_
-            x: 268
-            y: 697
-            width: 917
-            height: 1
-            strokeWidth: 1
-            strokeStyle: 1
-            strokeColor: "transparent"
-            rotation: 90
-            path: "M 917.0784912109375 1 L 0 1 L 0 0 L 917.0784912109375 0 L 917.0784912109375 1 Z"
-            joinStyle: 0
-            fillColor: "#000000"
-            antialiasing: true
-        }
-
-        SvgPathItem {
-            id: line_4_Stroke_
-            x: 389
+            id: qtyCheckboxDivider
+            x: 314
             y: 693
             width: 917
             height: 1
@@ -80,16 +296,45 @@ Rectangle {
         }
 
         Rectangle {
-            id: rectangle_7
+            id: reportIssueBox
             x: 239
             y: 1187
             width: 545
             height: 125
             color: "#97aeff"
+
+            Text {
+                id: reportIssueText
+                x: 0
+                y: 0
+                width: 545
+                height: 125
+                text: qsTr("REPORT ISSUE")
+                font.pixelSize: 55
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+
+            Button {
+                id: reportIssueButton
+                x: 0
+                y: 2
+                width: 545
+                height: 123
+                opacity: 0
+                text: qsTr("REPORT ISSUE")
+                font.pointSize: 40
+
+                Connections {
+                    target: reportIssueButton
+                    onClicked: reportIssue.push(
+                                   "Restocker_POV_Report_Issue.ui.qml")
+                }
+            }
         }
 
         SvgPathItem {
-            id: line_1_Stroke_
+            id: horizontalDividerTop
             x: 87
             y: 232
             width: 857
@@ -103,24 +348,8 @@ Rectangle {
             antialiasing: true
         }
 
-        Text {
-            id: rEPORT_ISSUE
-            x: 244
-            y: 1187
-            width: 541
-            height: 125
-            color: "#000000"
-            text: qsTr("REPORT ISSUE")
-            font.pixelSize: 50
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            wrapMode: Text.Wrap
-            font.weight: Font.Normal
-            font.family: "Inter"
-        }
-
         Rectangle {
-            id: rectangle_8
+            id: topBar
             x: 75
             y: 115
             width: 875
@@ -128,16 +357,8 @@ Rectangle {
             color: "#97aeff"
         }
 
-        Image {
-            id: rESTOCK_LIST
-            source: "assets/rESTOCK_LIST.png"
-            anchors.verticalCenterOffset: -511
-            anchors.horizontalCenterOffset: -4
-            anchors.centerIn: parent
-        }
-
         SvgPathItem {
-            id: line_2_Stroke_
+            id: raItemDivider
             x: -277
             y: 702
             width: 917
@@ -153,7 +374,7 @@ Rectangle {
         }
 
         SvgPathItem {
-            id: line_6_Stroke_
+            id: horizontalDivideBottom
             x: 80
             y: 328
             width: 864
@@ -168,7 +389,7 @@ Rectangle {
         }
 
         Text {
-            id: r_A
+            id: removeAddText
             x: 74
             y: 260
             width: 108
@@ -184,10 +405,10 @@ Rectangle {
         }
 
         Text {
-            id: qTY
-            x: 726
+            id: qtyText
+            x: 664
             y: 260
-            width: 122
+            width: 109
             height: 69
             color: "#000000"
             text: qsTr("QTY")
@@ -200,10 +421,10 @@ Rectangle {
         }
 
         Text {
-            id: sLOT
-            x: 571
+            id: slotText
+            x: 515
             y: 260
-            width: 156
+            width: 143
             height: 69
             color: "#000000"
             text: qsTr("SLOT")
@@ -216,10 +437,10 @@ Rectangle {
         }
 
         Text {
-            id: iTEM
-            x: 190
+            id: itemText
+            x: 181
             y: 260
-            width: 382
+            width: 335
             height: 69
             color: "#000000"
             text: qsTr("ITEM")
@@ -232,14 +453,13 @@ Rectangle {
         }
 
         Text {
-            id: r_REMOVE_A_ADD
-            x: 755
-            y: 39
-            width: 188
-            height: 76
-            color: "#97aeff"
-            text: qsTr("R = REMOVE\nA = ADD")
-            font.pixelSize: 30
+            id: removeAddKey
+            x: 749
+            y: 0
+            width: 182
+            height: 31
+            color: "#000000"
+            font.pixelSize: 25
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
             wrapMode: Text.Wrap
@@ -247,20 +467,129 @@ Rectangle {
             font.family: "Inter"
         }
         clip: true
+
+        Text {
+            id: restockListText
+            x: 74
+            y: 115
+            width: 876
+            height: 120
+            color: "#5067b8"
+            text: qsTr("RESTOCK LIST")
+            font.pixelSize: 80
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        Text {
+            id: welcomeBackText
+            x: 75
+            y: 42
+            width: 280
+            height: 73
+            color: "#ffffff"
+            text: qsTr("Welcome back,")
+            font.pixelSize: 40
+            horizontalAlignment: Text.AlignLeft
+        }
+
+        Text {
+            id: usernameText
+            x: 355
+            y: 42
+            width: 280
+            height: 73
+            color: "#ffffff"
+            visible: true
+            text: Constants.username
+            font.pixelSize: 40
+        }
+
+        Text {
+            id: addKey
+            x: 765
+            y: 42
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("A = ADD")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        Text {
+            id: confirmInputKey
+            x: 765
+            y: 78
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("C = CONFIRM")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        Text {
+            id: confirmInputText
+            x: 772
+            y: 260
+            width: 84
+            height: 69
+            color: "#000000"
+            text: qsTr("C")
+            font.pixelSize: 50
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+
+        SvgPathItem {
+            id: confirmationCheckboxDivider
+            x: 397
+            y: 693
+            width: 917
+            height: 1
+            strokeWidth: 1
+            strokeStyle: 1
+            strokeColor: "#00000000"
+            rotation: 90
+            path: "M 917.0784912109375 1 L 0 1 L 0 0 L 917.0784912109375 0 L 917.0784912109375 1 Z"
+            joinStyle: 0
+            fillColor: "#000000"
+            antialiasing: true
+        }
+
+        Text {
+            id: removeKey
+            x: 765
+            y: 8
+            width: 182
+            height: 31
+            color: "#000000"
+            text: qsTr("R = REMOVE\n")
+            font.pixelSize: 25
+            horizontalAlignment: Text.AlignLeft
+            verticalAlignment: Text.AlignTop
+            wrapMode: Text.Wrap
+            font.weight: Font.Normal
+            font.family: "Inter"
+        }
+    }
+    StackView {
+        id: reportIssue
+        initialItem: Restocker_POV
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;uuid:"1afe367f-2a3c-584d-8d40-589fafa9abb3"}D{i:1;uuid:"c17a6a37-899f-5fd9-88ac-43755e1f756e"}
-D{i:2;uuid:"196f7568-e16d-55a5-a6a0-a074dc9066d4"}D{i:3;uuid:"1b410393-3c55-5efc-bee2-1fc0ba164bf6"}
-D{i:4;uuid:"f3b7ab6c-37c5-5a0c-889e-6604ac854418"}D{i:5;uuid:"5bd42ab5-86cf-5e06-9ef0-e9d52930bf21"}
-D{i:6;uuid:"249aab4a-857f-5730-b444-02468c6a6a9a"}D{i:7;uuid:"a4182411-b741-512b-b4dc-c988ad5b88d7"}
-D{i:8;uuid:"e86d61b9-bb2d-5f71-a9ce-d790471e5239"}D{i:9;uuid:"ded90ae7-8476-5196-bebf-cdf1b06bdff3"}
-D{i:10;uuid:"e95e74b9-8f0b-5bbf-b90a-bad15044148e"}D{i:11;uuid:"f55435e0-78c4-5fd4-902d-d80561bb4b52"}
-D{i:12;uuid:"248a4fb8-efb9-518a-957d-f6ef0108e789"}D{i:13;uuid:"23a12e8b-9330-5851-9f7e-b29de42b4703"}
-D{i:14;uuid:"69299e7d-cdbb-562a-9cc8-6b20961c3b9b"}D{i:15;uuid:"a6f46418-0746-522f-ae9b-794ef4982c5b"}
-D{i:16;uuid:"b8c121f7-a6b7-554c-9480-e62ecf64cc71"}D{i:17;uuid:"296adfa3-ff6d-5cfb-80a6-dc125168ea01"}
-}
-##^##*/
-

@@ -86,5 +86,30 @@ int main(int argc, char *argv[])
 
     });
 
+    // New Instance of QML engine for restock interface
+    QQuickView restock;
+    // Set offline storage path for restock interface
+    restock.engine()->setOfflineStoragePath(dir.path());
+    // Set imports for restock interface
+    restock.engine()->addImportPath("qrc:/qml/VendUI/imports");
+
+    restock.setTitle("Stars - Restocker Interface");
+    // Set QML file to use as source for this instance of Engine
+    restock.setSource(QUrl("qrc:/qml/VendUI/content/Restocker.qml"));
+    if (!restock.errors().isEmpty())
+        return -1;
+    restock.show();
+
+    QShortcut *shortcut3 = new QShortcut(QKeySequence(Qt::Key_F5), &restock);
+    QObject::connect(shortcut3, &QShortcut::activated, &restock, [&restock](){
+        QUrl temp = restock.source();
+
+        restock.engine()->clearComponentCache();
+        restock.engine()->trimComponentCache();
+        restock.setSource(QUrl());
+        restock.setSource(temp);
+
+    });
+
     return app.exec();
 }

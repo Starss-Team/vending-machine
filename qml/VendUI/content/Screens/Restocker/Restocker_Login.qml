@@ -3,13 +3,14 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick 2.15
+import "../../../imports/database.js" as DataBase
 
 Rectangle {
     id: restockerLogin
     width: 1024
     height: 1366
     visible: true
-    color: "#ffffff"
+    color: "#c2d5f2"
     property alias lOGINText: loginText.text
     property alias pASSWORDText: passwordText.text
     property alias uSERNAMEText: usernameText.text
@@ -177,9 +178,12 @@ Rectangle {
                 var username = usernameInput.text
                 var password = passwordInput.text
 
-                if( isValidLogin( username, password, Constants.validCombinations ) ) {
+                if( DataBase.employeeLogin(username,password) ) {
                     console.log( "Login successful : WELCOME BACK, " + username );
-                    loginSuccess.push("Restocker_POV.ui.qml")
+                    Constants.username = username
+                    restockStack.push("Restocker_POV.ui.qml")
+                    usernameInput.clear()
+                    passwordInput.clear()
                 } else {
                     console.log("Login failed");
                     incorrectText.visible = true;
@@ -205,10 +209,5 @@ Rectangle {
 
 }
 
-/*##^##
-Designer {
-    D{i:0;uuid:"163eb15d-bc9a-5ced-9781-39798938f258"}D{i:1;uuid:"84cd58c4-16e5-5f91-a88e-9196e2e0d1ec"}
-D{i:4;uuid:"23a76174-730b-5562-bbf8-b4123935409c"}D{i:8;uuid:"db85e049-8051-5973-a604-fbee740f557a"}
-}
-##^##*/
+
 
