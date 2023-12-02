@@ -466,6 +466,69 @@ Rectangle {
         text: qsTr("Confirm")
         font.pointSize: 20
     }
+
+    Button {
+        id: button2
+        x: 1214
+        y: 431
+        text: qsTr("From past week")
+        Connections {
+            target: button2
+            onClicked: {
+                hershey_Bar_amt.text = 20
+                coca_cola_amt.text = 13
+                pepsi_amt.text = 16
+                sprite_amt.text = 33
+                water_amt.text = 20
+                chips_amt.text = 35
+                doritos_amt.text = 34
+                oreo_amt.text = 31
+                chocolate_milk_amt.text = 16
+            }
+        }
+    }
+
+    Button {
+        id: button3
+        x: 1214
+        y: 503
+        text: qsTr("From past month")
+        Connections {
+            target: button3
+            onClicked: {
+                hershey_Bar_amt.text = 45
+                coca_cola_amt.text = 50
+                pepsi_amt.text = 45
+                sprite_amt.text = 68
+                water_amt.text = 64
+                chips_amt.text = 43
+                doritos_amt.text = 56
+                oreo_amt.text = 50
+                chocolate_milk_amt.text = 60
+            }
+        }
+    }
+
+    Button {
+        id: button4
+        x: 1214
+        y: 593
+        text: qsTr("From path year")
+        Connections {
+            target: button4
+            onClicked: {
+                hershey_Bar_amt.text = 150
+                coca_cola_amt.text = 113
+                pepsi_amt.text = 194
+                sprite_amt.text = 173
+                water_amt.text = 189
+                chips_amt.text = 190
+                doritos_amt.text = 102
+                oreo_amt.text = 189
+                chocolate_milk_amt.text = 178
+            }
+        }
+    }
 }
 
 /*##^##
@@ -484,7 +547,6 @@ D{i:22;uuid:"5ae37516-88e0-53af-ac2c-68b02b818741"}D{i:23;uuid:"85486ff1-1bd5-5f
 D{i:24;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:25;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
 D{i:26;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:27;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
 D{i:28;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}D{i:29;uuid:"85486ff1-1bd5-5fa7-a967-d3e72adf9c6e"}
-D{i:31}
 }
 ##^##*/
 

@@ -929,7 +929,7 @@ Rectangle {
     }
     Timer{
         id: endTimer
-        interval: 10000
+        interval: 20500
         onTriggered: {
             stackView.pop(null)
             welcomeMouse.enabled = true

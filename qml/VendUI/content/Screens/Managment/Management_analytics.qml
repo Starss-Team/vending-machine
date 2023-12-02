@@ -79,8 +79,8 @@ Rectangle {
 
         TextEdit {
             id: textEdit
-            x: 360
-            y: 161
+            x: 377
+            y: 155
             width: 810
             height: 53
             text: "Items                           l  Amount\n"
@@ -158,10 +158,10 @@ Rectangle {
 
         TextEdit {
             id: textEdit1
-            x: 422
-            y: 161
-            width: 1010
-            height: 551
+            x: 417
+            y: 155
+            width: 1108
+            height: 557
             text: qsTr("\nCoca-Cola:                         \nPepsi:                                 \nSprite:                                \nWater:                                \nChips:                                 \nDoritos:                              \nOreo:                                  \nChocolate Milk:                  \n")
             font.pixelSize: 40
 
@@ -275,7 +275,7 @@ Rectangle {
             y: 938
             width: 137
             height: 34
-            opacity: 0.5
+            opacity: 0
             text: qsTr("Button")
             Connections {
                 target: back_button
@@ -483,9 +483,9 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"5ead4b69-2514-5d6b-82f7-fa8a33a2629c"}D{i:2;uuid:"63fc76c7-5891-501b-9284-570a12d1087a"}
-D{i:3;uuid:"8ff1f25c-acee-5a9a-8cbb-05e0c0233b3d"}D{i:4;uuid:"6f3d7068-a6d3-5020-b4ad-a6aeb5ca28a7"}
-D{i:5;uuid:"d1f3113c-6dda-5473-8e7b-b8ff056c1549"}D{i:1;uuid:"91256ea7-07e5-59c0-8c0e-628e252570db"}
+    D{i:0;uuid:"5ead4b69-2514-5d6b-82f7-fa8a33a2629c"}D{i:1;uuid:"91256ea7-07e5-59c0-8c0e-628e252570db"}
+D{i:2;uuid:"63fc76c7-5891-501b-9284-570a12d1087a"}D{i:3;uuid:"8ff1f25c-acee-5a9a-8cbb-05e0c0233b3d"}
+D{i:4;uuid:"6f3d7068-a6d3-5020-b4ad-a6aeb5ca28a7"}D{i:5;uuid:"d1f3113c-6dda-5473-8e7b-b8ff056c1549"}
 }
 ##^##*/
 
