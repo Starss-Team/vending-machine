@@ -158,7 +158,7 @@ Rectangle {
                 target: mouseArea
                 onClicked: {
                     console.log("clicked")
-                    managementStack.push("Task_List.ui.qml")
+                    managementStack.push("Management_Task_List.ui.qml")
                     homeButton.visible = true
                     homeButton.enabled = true
                 }

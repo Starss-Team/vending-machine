@@ -264,16 +264,32 @@ Rectangle {
         }
         Button {
             id: continueButtonCart
-            x: 753
-            y: 125
-            text: qsTr("Cash only")
+            text: qsTr("Cash")
             anchors.right: parent.right
-            anchors.rightMargin: 107
+            anchors.rightMargin: 200
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 61
+            anchors.bottomMargin: 60
             scale: 2
             Connections {
                 target: continueButtonCart
+                onClicked: {
+                    stackView.push("Cash_Pay_Screen.ui.qml")
+                }
+            }
+        }
+        Button {
+            id: continueButtonCard
+            x: 719
+            y: 101
+            text: qsTr("Card")
+            anchors.right: parent.right
+            anchors.rightMargin: 200
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 110
+            scale: 2
+            enabled: false
+            Connections {
+                target: continueButtonCard
                 onClicked: {
                     stackView.push("Cash_Pay_Screen.ui.qml")
                 }
@@ -285,11 +301,11 @@ Rectangle {
             anchors.top: parent.top
             anchors.topMargin: 125
             anchors.right: parent.right
-            anchors.rightMargin: 818
+            anchors.rightMargin: 665
             anchors.left: parent.left
-            anchors.leftMargin: 48
+            anchors.leftMargin: 200
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 61
+            anchors.bottomMargin: 60
             scale: 2
             Connections {
                 target: backButtonCart
@@ -297,24 +313,6 @@ Rectangle {
                     stackView.pop()
                 }
             }
-        }
-
-        Button {
-            id: continueButtonCart1
-            x: 498
-            y: 125
-            text: qsTr("Card Only")
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
-            scale: 2
-            Connections {
-                target: continueButtonCart1
-                onClicked: {
-//                            stackView.push("Cash_Pay_Screen.ui.qml")
-                        }
-            }
-            anchors.rightMargin: 362
-            anchors.bottomMargin: 61
         }
     }
     Text {
@@ -333,7 +331,7 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;uuid:"2fef32db-68df-508b-9843-295776635f9c"}D{i:34}
+    D{i:0;uuid:"2fef32db-68df-508b-9843-295776635f9c"}
 }
 ##^##*/
 

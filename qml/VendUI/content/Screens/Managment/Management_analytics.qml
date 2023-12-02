@@ -75,6 +75,7 @@ Rectangle {
             font.bold: true
             font.weight: Font.Normal
             font.family: "Inter"
+            visible: false
         }
 
         TextEdit {

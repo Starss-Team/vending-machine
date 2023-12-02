@@ -5,7 +5,6 @@ import QtQuick.Shapes
 import QtQuick.Layouts 1.3
 import VendUI
 
-
 Rectangle {
     id: idle_Screen
     width: Constants.width
@@ -53,8 +52,8 @@ Rectangle {
             transformOrigin: Item.BottomLeft
             scale: 0.7
             fillMode: Image.PreserveAspectFit
+            visible: false
         }
-
 
         Image {
             id: ellipse_1
@@ -73,9 +72,7 @@ Rectangle {
                 fillMode: Image.PreserveAspectFit
             }
         }
-
     }
-
 }
 /*##^##
 Designer {

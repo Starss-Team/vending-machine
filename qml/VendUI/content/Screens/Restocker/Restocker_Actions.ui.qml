@@ -55,6 +55,8 @@ Item {
                         target: task
                         onClicked: {
                             restockStack.push("Restocker_POV.ui.qml")
+                            homeButton.enabled = true
+                            homeButton.visible = true
                         }
                     }
                 }

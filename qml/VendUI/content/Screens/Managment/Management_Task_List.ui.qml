@@ -37,8 +37,8 @@ Rectangle {
 
     Text {
         id: vendingMachineText
-        x: 8
-        y: 12
+        x: 10
+        y: 50
         width: 327
         height: 48
         color: "#000000"
@@ -85,8 +85,8 @@ Rectangle {
 
     Text {
         id: multipleMachinesText
-        x: 23
-        y: 105
+        x: 25
+        y: 143
         width: 284
         height: 144
         color: "#000000"
@@ -195,8 +195,8 @@ Rectangle {
 
     Text {
         id: allText1
-        x: 23
-        y: 56
+        x: 25
+        y: 94
         text: qsTr("ALL")
         font.pixelSize: 40
     }
